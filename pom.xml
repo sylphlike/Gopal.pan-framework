@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.horse.framework</groupId>
-    <artifactId>framework-parent</artifactId>
+    <artifactId>Gopal.pan-framework</artifactId>
     <packaging>pom</packaging>
 
 
