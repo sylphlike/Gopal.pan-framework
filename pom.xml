@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.horse.framework</groupId>
+    <artifactId>framework-parent</artifactId>
+    <packaging>pom</packaging>
+
+
+
+
+    <!--父POM 版本设置 一般不做修改 Springboot SpringCloud版本升级时升级版本号
+    具体子模块版本由子模块决定
+
+    主版本号(1)：当功能模块有较大的变动，比如增加多个模块或者整体架构发生变化。此版本号由项目决定是否修改。
+    子版本号(1)：当功能有一定的增加或变化，比如增加了对权限控制、增加自定义视图等功能。此版本号由项目决定是否修改。
+    阶段版本号(1)：一般是 Bug 修复或是一些小的变动，要经常发布修订版，时间间隔不限，修复一个严重的bug即可发布一个修订版。此版本号由项目经理决定是否修改。
+    日期版本号(051021):用于记录修改项目的当前日期，每天对项目的修改都需要更改日期版本号。此版本号由开发人员决定是否修改。
+    希腊字母版本号(Release):此版本号用于标注当前版本的软件处于哪个开发阶段，当软件进入到另一个阶段时需要修改此版本号。此版本号由项目决定是否修改。-->
+    <version>1.0.0-SNAPSHOT</version>
+
+
+    <modules>
+        <module>framework-norm</module>
+    </modules>
+
+
+
+    <developers>
+        <developer>
+            <id>Gopal.pan</id>
+            <name>Gopal.pan</name>
+            <email>15923508369@163.com</email>
+            <roles>
+                <role>Java Development Engineer</role>
+            </roles>
+        </developer>
+    </developers>
+
+
+
+
+    <properties>
+        <!--项目设置-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+
+        <!--核心版本依赖 修改 spring-boot.version 版本号后需要同时修改 spring-boot-starter-parent !!!-->
+        <spring-boot.version>2.2.9.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <spring-alibaba.version>2.2.1.RELEASE</spring-alibaba.version>
+
+        <!--第三方jar包版本-->
+        <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
+        <logstash-logback-encoder.version>6.2</logstash-logback-encoder.version>
+        <druid.version>1.1.22</druid.version>
+        <pagehelper.version>5.1.10</pagehelper.version>
+        <pagehelper-spring-boot-starter.version>1.2.13</pagehelper-spring-boot-starter.version>
+        <mybatis-springboot-starte.version>2.1.0</mybatis-springboot-starte.version>
+        <sharding-jbdc.version>4.0.1</sharding-jbdc.version>
+        <poi.version>3.17</poi.version>
+        <guava.version>20.0</guava.version>
+        <itextpdf.version>5.5.13</itextpdf.version>
+        <itext-asian.version>5.2.0</itext-asian.version>
+        <bcprov-jdk15on.version>1.59</bcprov-jdk15on.version>
+        <bucket4j-core.version>4.0.0</bucket4j-core.version>
+        <javax.mail.version>1.5.0-b01</javax.mail.version>
+        <google.zxing.version>3.3.3</google.zxing.version>
+        <apollo-client.version>1.4.0</apollo-client.version>
+        <java-jwt.version>3.10.2</java-jwt.version>
+        <swagger.version>2.9.2</swagger.version>
+        <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <poi.version>3.17</poi.version>
+        <reflections.version>0.9.12</reflections.version>
+        <javax.mail.version>1.4.7</javax.mail.version>
+        <qiniu-java-sdk.version>7.2.29</qiniu-java-sdk.version>
+        <ons-client.version>1.8.6.Final</ons-client.version>
+        <ip2region.version>1.7.2</ip2region.version>
+        <UserAgentUtils.version>1.21</UserAgentUtils.version>
+        <alipay-sdk-java.version>4.10.170.ALL</alipay-sdk-java.version>
+
+        <!-- springboot管理了elasticsearch版本,但版本不是所需要的，重写版本号依赖，覆盖默认的版本-->
+        <elasticsearch.version>7.4.2</elasticsearch.version>
+
+    </properties>
+
+
+</project>
