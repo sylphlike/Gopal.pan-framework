@@ -1,0 +1,93 @@
+{
+  "groups": [
+    {
+      "name": "horse.datasource",
+      "type": "com.horse.framework.amoeba.config.DataSourceInfo",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo"
+    },
+    {
+      "name": "horse.datasource.master-data-source",
+      "type": "com.horse.framework.amoeba.config.DataSourceInfo$MasterDataSource",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo"
+    },
+    {
+      "name": "horse.datasource.multiple-data-source",
+      "type": "com.horse.framework.amoeba.config.DataSourceInfo$MultipleDataSource",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo"
+    },
+    {
+      "name": "horse.mybatis",
+      "type": "com.horse.framework.amoeba.config.MybatisConfigSupper",
+      "sourceType": "com.horse.framework.amoeba.config.MybatisConfigSupper"
+    }
+  ],
+  "properties": [
+    {
+      "name": "horse.datasource.drive-class-name",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo"
+    },
+    {
+      "name": "horse.datasource.master",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo",
+      "defaultValue": false
+    },
+    {
+      "name": "horse.datasource.master-data-source.jdbc-url",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MasterDataSource"
+    },
+    {
+      "name": "horse.datasource.master-data-source.name",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MasterDataSource"
+    },
+    {
+      "name": "horse.datasource.master-data-source.password",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MasterDataSource"
+    },
+    {
+      "name": "horse.datasource.master-data-source.user-name",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MasterDataSource"
+    },
+    {
+      "name": "horse.datasource.multiple-data-source.jdbc-url",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
+    },
+    {
+      "name": "horse.datasource.multiple-data-source.name",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
+    },
+    {
+      "name": "horse.datasource.multiple-data-source.password",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
+    },
+    {
+      "name": "horse.datasource.multiple-data-source.user-name",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.horse.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
+    },
+    {
+      "name": "horse.mybatis.mapper-base-package",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.MybatisConfigSupper"
+    },
+    {
+      "name": "horse.mybatis.mapper-locations",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.MybatisConfigSupper"
+    },
+    {
+      "name": "horse.mybatis.type-aliases-package",
+      "type": "java.lang.String",
+      "sourceType": "com.horse.framework.amoeba.config.MybatisConfigSupper"
+    }
+  ],
+  "hints": []
+}
