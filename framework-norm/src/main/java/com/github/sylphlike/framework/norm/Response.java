@@ -100,10 +100,9 @@ public class Response<T> implements Cloneable , Serializable{
      * <p> email 15923508369@163.com </p>
      * 设定业务参数值，该方法不会修改业务响应码
      * @param data       业务数据
-     * @return com.github.sylphlike.norm.Response<T>
+     * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */
-
     public Response<T> date(T data){
         this.setData(data);
         return this;
@@ -119,7 +118,7 @@ public class Response<T> implements Cloneable , Serializable{
      * <p> email 15923508369@163.com </p>
      * 重置响应码
      * @param rCode     {@link RCode}
-     * @return com.github.sylphlike.norm.Response<T>
+     * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */
     public Response<T> reset(RCode rCode){
@@ -136,7 +135,7 @@ public class Response<T> implements Cloneable , Serializable{
      * 重置响应状态码
      * @param rCode             {@link RCode}
      * @param appendMessage     附加讯息(对RCode 的 message 补充描述)
-     * @return   com.github.sylphlike.norm.Response<T>
+     * @return   com.github.sylphlike.norm.Response
      * @author   Gopal.pan
      */
     public Response<T> reset(RCode rCode, String appendMessage){
@@ -153,7 +152,7 @@ public class Response<T> implements Cloneable , Serializable{
      * <p> email 15923508369@163.com </p>
      *
      * 静态方法，返回成功不带业务参数
-     * @return com.github.sylphlike.norm.Response<T>
+     * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */
     public static <T>  Response<T> success() {
@@ -166,7 +165,7 @@ public class Response<T> implements Cloneable , Serializable{
      * <p> email 15923508369@163.com </p>
      *  静态方法，返回成功并设置业务参数
      * @param t  业务参数
-     * @return   com.github.sylphlike.norm.Response<T>
+     * @return   com.github.sylphlike.norm.Response
      * @author   Gopal.pan
      */
     public static <T> Response<T> success(T t ){
@@ -179,7 +178,7 @@ public class Response<T> implements Cloneable , Serializable{
      * <p> email 15923508369@163.com </p>
      *
      * 静态方法，设置响应码和message
-     * @return com.github.sylphlike.norm.Response<T>
+     * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */
     public static <T> Response<T> error(RCode rCode) {
@@ -196,7 +195,7 @@ public class Response<T> implements Cloneable , Serializable{
      * 静态方法，设置响应码
      * @param rCode             {@link RCode}
      * @param appendMessage     附加讯息(对RCode 的 message 补充描述)
-     * @return   com.github.sylphlike.norm.Response<T>
+     * @return   com.github.sylphlike.norm.Response
      * @author   Gopal.pan
      */
     public static <T> Response<T> error(RCode rCode, String appendMessage) {
@@ -211,7 +210,7 @@ public class Response<T> implements Cloneable , Serializable{
      * <p> email 15923508369@163.com </p>
      *  静态方法，设置响应码、message、具体描述信息，异常需继承 {@link UniteException}
      * @param e     {@link UniteException}
-     * @return com.github.sylphlike.norm.Response<T>
+     * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */
     public static <T> Response<T> error(UniteException e){

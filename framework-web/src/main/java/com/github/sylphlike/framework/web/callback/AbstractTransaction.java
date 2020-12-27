@@ -72,7 +72,7 @@ public abstract class AbstractTransaction<T>{
      * <p> email 15923508369@163.com </p>
      *  事物执行抽象类，业务接口实现具体逻辑
      *
-     * @return   com.github.sylphlike.norm.Response<T>
+     * @return   com.github.sylphlike.norm.Response
      * @author   Gopal.pan
      */
     public abstract Response<T> execute() throws  Exception;

@@ -8,6 +8,98 @@
     <artifactId>Gopal.pan-framework</artifactId>
     <packaging>pom</packaging>
 
+    <!--Sonatype OSSRH POM 配置要求:https://central.sonatype.org/pages/requirements.html-->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Gopal.pan</name>
+            <email>15923508369@163.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/sylphlike/Gopal.pan-framework.git</connection>
+        <developerConnection>scm:git:ssh://github.com:sylphlike/Gopal.pan-framework.git</developerConnection>
+        <url>https://github.com/sylphlike/Gopal.pan-framework/tree/master</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>oss</id><!-- settings.xml中server节点的id-->
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <!-- Source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Javadoc  -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <charset>UTF-8</charset>
+                    <docencoding>UTF-8</docencoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
+            <layout>default</layout>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <snapshots> <enabled>false</enabled> </snapshots>
+            <releases> <enabled>true</enabled> </releases>
+        </repository>
+    </repositories>
 
 
 
@@ -19,7 +111,7 @@
     阶段版本号(1)：一般是 Bug 修复或是一些小的变动，要经常发布修订版，时间间隔不限，修复一个严重的bug即可发布一个修订版。此版本号由项目经理决定是否修改。
     日期版本号(051021):用于记录修改项目的当前日期，每天对项目的修改都需要更改日期版本号。此版本号由开发人员决定是否修改。
     希腊字母版本号(Release):此版本号用于标注当前版本的软件处于哪个开发阶段，当软件进入到另一个阶段时需要修改此版本号。此版本号由项目决定是否修改。-->
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-SYLPHLIKE</version>
 
 
     <modules>
@@ -31,28 +123,6 @@
         <module>framework-utils</module>
         <module>framework-web</module>
     </modules>
-
-
-
-    <developers>
-        <developer>
-            <name>Gopal.pan</name>
-            <email>15923508369@163.com</email>
-        </developer>
-    </developers>
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    <scm>
-        <url>https://github.com/Gopanpan/Gopal.pan-framework.git</url>
-    </scm>
-
-
-
 
     <properties>
         <!--项目设置-->
@@ -239,18 +309,11 @@
 
 
 
-    <repositories>
 
-        <repository>
-            <id>nexus-aliyun</id>
-            <name>Nexus aliyun</name>
-            <layout>default</layout>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-            <snapshots> <enabled>false</enabled> </snapshots>
-            <releases> <enabled>true</enabled> </releases>
-        </repository>
 
-    </repositories>
+
+
+
 
 
 </project>

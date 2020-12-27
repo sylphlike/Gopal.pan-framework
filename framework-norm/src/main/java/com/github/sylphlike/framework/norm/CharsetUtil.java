@@ -66,7 +66,7 @@ public class CharsetUtil {
     /**
      * 是否为Windows或者Linux（Unix）文件分隔符<br>
      * Windows平台下分隔符为\，Linux（Unix）为/
-     *      * @param c 字符
+     * @param c 字符
      * @return 是否为Windows或者Linux（Unix）文件分隔符
      * @since 4.1.11
      */
@@ -77,8 +77,8 @@ public class CharsetUtil {
 
     /**
      * 字符串UTF-8编码
-     * @param originString
-     * @return
+     * @param originString  原始字符串
+     * @return utf-8 编码后的字符串
      */
     public static String toUtf8String(String originString) {
 

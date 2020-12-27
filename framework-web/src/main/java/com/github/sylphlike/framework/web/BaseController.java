@@ -95,7 +95,7 @@ public class BaseController {
      *  包装controller层异常处理,业务controller层无需捕获处理异常
      *
      * @param LogDesc  业务功能描述
-     * @return com.github.sylphlike.norm.Response<T>
+     * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */
     protected <T> Response<T> withException(String LogDesc,final AbstractException<T> exception){

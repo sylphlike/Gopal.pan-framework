@@ -5,7 +5,7 @@
     <parent>
         <artifactId>Gopal.pan-framework</artifactId>
         <groupId>com.github.sylphlike</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0-SYLPHLIKE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -54,39 +54,22 @@
         <dependency>
             <groupId>com.github.sylphlike</groupId>
             <artifactId>framework-norm</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0-SYLPHLIKE</version>
         </dependency>
         <dependency>
             <groupId>com.github.sylphlike</groupId>
             <artifactId>framework-basis</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0-SYLPHLIKE</version>
         </dependency>
         <dependency>
             <groupId>com.github.sylphlike</groupId>
             <artifactId>framework-utils</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0-SYLPHLIKE</version>
         </dependency>
 
     </dependencies>
 
 
-    <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
-        <plugins>
-            <!-- Source attach plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+
 
 </project>
