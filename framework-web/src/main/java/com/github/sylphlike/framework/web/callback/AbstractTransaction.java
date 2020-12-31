@@ -5,8 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * 手动事物回调执行方法抽象类，
  *
@@ -68,8 +68,8 @@ public abstract class AbstractTransaction<T>{
 
 
     /**
-     * <p>  time 16:32 2020/11/25 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 16:32 2020/11/25 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  事物执行抽象类，业务接口实现具体逻辑
      *
      * @return   com.github.sylphlike.norm.Response

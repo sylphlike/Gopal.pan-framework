@@ -6,8 +6,8 @@ import com.github.sylphlike.framework.utils.general.Clock;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  *      0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000
  *      1位标识，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0

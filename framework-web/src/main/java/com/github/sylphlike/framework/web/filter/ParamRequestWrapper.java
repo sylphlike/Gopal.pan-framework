@@ -20,8 +20,8 @@ import java.util.regex.Pattern;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -83,8 +83,8 @@ public class ParamRequestWrapper extends HttpServletRequestWrapper {
 
 
     /**
-     * <p>  time 10:33 2020/11/24 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:33 2020/11/24 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  POST请求
      * @return   javax.servlet.ServletInputStream
      * @author   Gopal.pan

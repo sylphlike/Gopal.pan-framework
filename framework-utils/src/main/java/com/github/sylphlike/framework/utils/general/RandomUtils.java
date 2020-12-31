@@ -3,8 +3,8 @@ package com.github.sylphlike.framework.utils.general;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -154,7 +154,7 @@ public class RandomUtils {
 
 
     /**
-     * 获取随机数生成器对象<br>
+     * 获取随机数生成器对象
      * ThreadLocalRandom是JDK 7之后提供并发产生随机数，能够解决多个线程发生的竞争争夺。
      * @return {@link ThreadLocalRandom}
      */

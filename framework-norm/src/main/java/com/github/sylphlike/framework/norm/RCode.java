@@ -19,8 +19,8 @@ package com.github.sylphlike.framework.norm;
  *          98800 - 98899 SDK包错误码区间
  *          99900 - 99999 网关服务响应码
  *
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0

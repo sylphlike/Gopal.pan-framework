@@ -7,8 +7,8 @@ import java.util.Currency;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * 支持货币对象与double(float)/long(int)/String/BigDecimal之间相互转换。
  * 货币类在运算中提供与JDK中的BigDecimal类似的运算接口，BigDecimal的运算接口支持任意指定精度的运算功能，能够支持各种可能的财务规则。
@@ -38,9 +38,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 一组可能的元/分换算比例。
      *
-     * <p>
-     * 此处，“分”是指货币的最小单位，“元”是货币的最常用单位，
-     * 不同的币种有不同的元/分换算比例，如人民币是100，而日元为1。
+     * <p>  此处，“分”是指货币的最小单位，“元”是货币的最常用单位， 不同的币种有不同的元/分换算比例，如人民币是100，而日元为1。
      */
     private static final int[] centFactors = new int[]{1, 10, 100, 1000};
 
@@ -59,8 +57,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 缺省构造器。
      *
-     * <p>
-     * 创建一个具有缺省金额（0）和缺省币种的货币对象。
+     * <p> 创建一个具有缺省金额（0）和缺省币种的货币对象。
      */
     public Money() {
         this(0);
@@ -69,8 +66,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>yuan</code>元<code>cent</code>分和缺省币种的货币对象。
+     * <p> 创建一个具有金额<code>yuan</code>元<code>cent</code>分和缺省币种的货币对象。
      *
      * @param yuan 金额元数。
      * @param cent 金额分数。
@@ -82,8 +78,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>yuan</code>元<code>cent</code>分和指定币种的货币对象。
+     * <p> 创建一个具有金额<code>yuan</code>元<code>cent</code>分和指定币种的货币对象。
      *
      * @param yuan     金额元数。
      * @param cent     金额分数。
@@ -98,8 +93,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>元和缺省币种的货币对象。
+     * <p> 创建一个具有金额<code>amount</code>元和缺省币种的货币对象。
      *
      * @param amount 金额，以元为单位。
      */
@@ -110,8 +104,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>元和指定币种<code>currency</code>的货币对象。
+     * <p> 创建一个具有金额<code>amount</code>元和指定币种<code>currency</code>的货币对象。
      *
      * @param amount   金额，以元为单位。
      * @param currency 币种。
@@ -123,9 +116,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>元和指定币种<code>currency</code>的货币对象。
-     * 如果金额不能转换为整数分，则使用指定的取整模式<code>roundingMode</code>取整。
+     * <p>创建一个具有金额<code>amount</code>元和指定币种<code>currency</code>的货币对象。如果金额不能转换为整数分，则使用指定的取整模式<code>roundingMode</code>取整。
      *
      * @param amount       金额，以元为单位。
      * @param currency     币种。
@@ -138,13 +129,8 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有参数<code>amount</code>指定金额和缺省币种的货币对象。
-     * 如果金额不能转换为整数分，则使用四舍五入方式取整。
-     *
-     * <p>
-     * 注意：由于double类型运算中存在误差，使用四舍五入方式取整的
-     * 结果并不确定，因此，应尽量避免使用double类型创建货币类型。
+     * <p> 创建一个具有参数<code>amount</code>指定金额和缺省币种的货币对象。如果金额不能转换为整数分，则使用四舍五入方式取整。
+     * <p> 注意：由于double类型运算中存在误差，使用四舍五入方式取整的 结果并不确定，因此，应尽量避免使用double类型创建货币类型。
      * 例：
      * <code>
      * assertEquals(999, Math.round(9.995 * 100));
@@ -164,13 +150,8 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>和指定币种的货币对象。
-     * 如果金额不能转换为整数分，则使用四舍五入方式取整。
-     *
-     * <p>
-     * 注意：由于double类型运算中存在误差，使用四舍五入方式取整的
-     * 结果并不确定，因此，应尽量避免使用double类型创建货币类型。
+     * <p> 创建一个具有金额<code>amount</code>和指定币种的货币对象。 如果金额不能转换为整数分，则使用四舍五入方式取整。
+     * <p> 注意：由于double类型运算中存在误差，使用四舍五入方式取整的 结果并不确定，因此，应尽量避免使用double类型创建货币类型。
      * 例：
      * <code>
      * assertEquals(999, Math.round(9.995 * 100));
@@ -192,9 +173,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>和缺省币种的货币对象。
-     * 如果金额不能转换为整数分，则使用缺省取整模式<code>DEFAULT_ROUNDING_MODE</code>取整。
+     * <p> 创建一个具有金额<code>amount</code>和缺省币种的货币对象。 如果金额不能转换为整数分，则使用缺省取整模式<code>DEFAULT_ROUNDING_MODE</code>取整。
      *
      * @param amount 金额，以元为单位。
      */
@@ -205,9 +184,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有参数<code>amount</code>指定金额和缺省币种的货币对象。
-     * 如果金额不能转换为整数分，则使用指定的取整模式<code>roundingMode</code>取整。
+     * <p> 创建一个具有参数<code>amount</code>指定金额和缺省币种的货币对象。 如果金额不能转换为整数分，则使用指定的取整模式<code>roundingMode</code>取整。
      *
      * @param amount       金额，以元为单位。
      * @param roundingMode 取整模式
@@ -219,9 +196,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>和指定币种的货币对象。
-     * 如果金额不能转换为整数分，则使用缺省的取整模式<code>DEFAULT_ROUNDING_MODE</code>进行取整。
+     * <p> 创建一个具有金额<code>amount</code>和指定币种的货币对象。 如果金额不能转换为整数分，则使用缺省的取整模式<code>DEFAULT_ROUNDING_MODE</code>进行取整。
      *
      * @param amount   金额，以元为单位。
      * @param currency 币种
@@ -233,9 +208,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 构造器。
      *
-     * <p>
-     * 创建一个具有金额<code>amount</code>和指定币种的货币对象。
-     * 如果金额不能转换为整数分，则使用指定的取整模式<code>roundingMode</code>取整。
+     * <p> 创建一个具有金额<code>amount</code>和指定币种的货币对象。 如果金额不能转换为整数分，则使用指定的取整模式<code>roundingMode</code>取整。
      *
      * @param amount       金额，以元为单位。
      * @param currency     币种。
@@ -300,14 +273,8 @@ public class Money implements Serializable, Comparable<Money> {
 
     /**
      * 判断本货币对象与另一对象是否相等。
-     * <p>
-     * 货币对象与另一对象相等的充分必要条件是：<br>
-     * <ul>
-     *  <li>另一对象也属货币对象类。
-     *  <li>金额相同。
-     *  <li>币种相同。
-     * </ul>
      *
+     * <p>货币对象与另一对象相等的充分必要条件是：
      * @param other 待比较的另一对象。
      * @return <code>true</code>表示相等，<code>false</code>表示不相等。
      * @see Object#equals(Object)
@@ -319,13 +286,7 @@ public class Money implements Serializable, Comparable<Money> {
 
     /**
      * 判断本货币对象与另一货币对象是否相等。
-     * <p>
-     * 货币对象与另一货币对象相等的充分必要条件是：<br>
-     * <ul>
-     *  <li>金额相同。
-     *  <li>币种相同。
-     * </ul>
-     *
+     * <p> 货币对象与另一货币对象相等的充分必要条件是：金额相同 币种相同
      * @param other 待比较的另一货币对象。
      * @return <code>true</code>表示相等，<code>false</code>表示不相等。
      */
@@ -347,8 +308,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币比较。
      *
-     * <p>
-     * 比较本货币对象与另一货币对象的大小。
+     * <p> 比较本货币对象与另一货币对象的大小。
      * 如果待比较的两个货币对象的币种不同，则抛出<code>java.lang.IllegalArgumentException</code>。
      * 如果本货币对象的金额少于待比较货币对象，则返回-1。
      * 如果本货币对象的金额等于待比较货币对象，则返回0。
@@ -440,9 +400,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累减。
      *
-     * <p>
-     * 如果两货币币种相同，则本货币对象的金额等于两货币对象金额之差，并返回本货币对象的引用。
-     * 如果两货币币种不同，抛出<code>java.lang.IllegalArgumentException</code>。
+     * <p>  如果两货币币种相同，则本货币对象的金额等于两货币对象金额之差，并返回本货币对象的引用。如果两货币币种不同，抛出<code>java.lang.IllegalArgumentException</code>。
      *
      * @param other 作为减数的货币对象。
      * @return 累减后的本货币对象。
@@ -459,9 +417,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币乘法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。
-     * 本货币对象的值不变。
+     * <p> 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。 本货币对象的值不变。
      *
      * @param val 乘数
      * @return 乘法后的结果。
@@ -473,8 +429,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累乘。
      *
-     * <p>
-     * 本货币对象金额乘以乘数，并返回本货币对象。
+     * <p> 本货币对象金额乘以乘数，并返回本货币对象。
      *
      * @param val 乘数
      * @return 累乘后的本货币对象。
@@ -488,9 +443,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币乘法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。
-     * 本货币对象的值不变。如果相乘后的金额不能转换为整数分，则四舍五入。
+     * <p>  返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。 本货币对象的值不变。如果相乘后的金额不能转换为整数分，则四舍五入。
      *
      * @param val 乘数
      * @return 相乘后的结果。
@@ -502,9 +455,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累乘。
      *
-     * <p>
-     * 本货币对象金额乘以乘数，并返回本货币对象。
-     * 如果相乘后的金额不能转换为整数分，则使用四舍五入。
+     * <p> 本货币对象金额乘以乘数，并返回本货币对象。 如果相乘后的金额不能转换为整数分，则使用四舍五入。
      *
      * @param val 乘数
      * @return 累乘后的本货币对象。
@@ -518,10 +469,8 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币乘法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。
-     * 本货币对象的值不变。如果相乘后的金额不能转换为整数分，使用缺省的取整模式
-     * <code>DEFUALT_ROUNDING_MODE</code>进行取整。
+     * <p> 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。本货币对象的值不变。如果相乘后的金额不能转换为整数分，
+     * 使用缺省的取整模式 <code>DEFUALT_ROUNDING_MODE</code>进行取整。
      *
      * @param val 乘数
      * @return 相乘后的结果。
@@ -533,9 +482,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累乘。
      *
-     * <p>
-     * 本货币对象金额乘以乘数，并返回本货币对象。
-     * 如果相乘后的金额不能转换为整数分，使用缺省的取整方式
+     * <p> 本货币对象金额乘以乘数，并返回本货币对象。如果相乘后的金额不能转换为整数分，使用缺省的取整方式
      * <code>DEFUALT_ROUNDING_MODE</code>进行取整。
      *
      * @param val 乘数
@@ -548,9 +495,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币乘法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。
-     * 本货币对象的值不变。如果相乘后的金额不能转换为整数分，使用指定的取整方式
+     * <p> 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额乘以乘数。本货币对象的值不变。如果相乘后的金额不能转换为整数分，使用指定的取整方式
      * <code>roundingMode</code>进行取整。
      *
      * @param val          乘数
@@ -566,9 +511,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累乘。
      *
-     * <p>
-     * 本货币对象金额乘以乘数，并返回本货币对象。
-     * 如果相乘后的金额不能转换为整数分，使用指定的取整方式
+     * <p> 本货币对象金额乘以乘数，并返回本货币对象。 如果相乘后的金额不能转换为整数分，使用指定的取整方式
      * <code>roundingMode</code>进行取整。
      *
      * @param val          乘数
@@ -586,9 +529,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币除法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额除以除数。
-     * 本货币对象的值不变。如果相除后的金额不能转换为整数分，使用四舍五入方式取整。
+     * <p>返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额除以除数。 本货币对象的值不变。如果相除后的金额不能转换为整数分，使用四舍五入方式取整。
      *
      * @param val 除数
      * @return 相除后的结果。
@@ -600,9 +541,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累除。
      *
-     * <p>
-     * 本货币对象金额除以除数，并返回本货币对象。
-     * 如果相除后的金额不能转换为整数分，使用四舍五入方式取整。
+     * <p>本货币对象金额除以除数，并返回本货币对象。 如果相除后的金额不能转换为整数分，使用四舍五入方式取整。
      *
      * @param val 除数
      * @return 累除后的结果。
@@ -616,9 +555,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币除法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额除以除数。
-     * 本货币对象的值不变。如果相除后的金额不能转换为整数分，使用缺省的取整模式
+     * <p> 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额除以除数。 本货币对象的值不变。如果相除后的金额不能转换为整数分，使用缺省的取整模式
      * <code>DEFAULT_ROUNDING_MODE</code>进行取整。
      *
      * @param val 除数
@@ -631,9 +568,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币除法。
      *
-     * <p>
-     * 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额除以除数。
-     * 本货币对象的值不变。如果相除后的金额不能转换为整数分，使用指定的取整模式
+     * <p> 返回一个新的货币对象，币种与本货币对象相同，金额为本货币对象的金额除以除数。 本货币对象的值不变。如果相除后的金额不能转换为整数分，使用指定的取整模式
      * <code>roundingMode</code>进行取整。
      *
      * @param val          除数
@@ -649,9 +584,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累除。
      *
-     * <p>
-     * 本货币对象金额除以除数，并返回本货币对象。
-     * 如果相除后的金额不能转换为整数分，使用缺省的取整模式
+     * <p> 本货币对象金额除以除数，并返回本货币对象。 如果相除后的金额不能转换为整数分，使用缺省的取整模式
      * <code>DEFAULT_ROUNDING_MODE</code>进行取整。
      *
      * @param val 除数
@@ -664,9 +597,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币累除。
      *
-     * <p>
-     * 本货币对象金额除以除数，并返回本货币对象。
-     * 如果相除后的金额不能转换为整数分，使用指定的取整模式
+     * <p> 本货币对象金额除以除数，并返回本货币对象。 如果相除后的金额不能转换为整数分，使用指定的取整模式
      * <code>roundingMode</code>进行取整。
      *
      * @param val 除数
@@ -684,10 +615,7 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币分配。
      *
-     * <p>
-     * 将本货币对象尽可能平均分配成<code>targets</code>份。
-     * 如果不能平均分配尽，则将零头放到开始的若干份中。分配
-     * 运算能够确保不会丢失金额零头。
+     * <p> 将本货币对象尽可能平均分配成<code>targets</code>份。 如果不能平均分配尽，则将零头放到开始的若干份中。分配 算能够确保不会丢失金额零头。
      *
      * @param targets 待分配的份数
      * @return 货币对象数组，数组的长度与分配份数相同，数组元素
@@ -715,12 +643,9 @@ public class Money implements Serializable, Comparable<Money> {
     /**
      * 货币分配。
      *
-     * <p>
-     * 将本货币对象按照规定的比例分配成若干份。分配所剩的零头
-     * 从第一份开始顺序分配。分配运算确保不会丢失金额零头。
+     * <p> 将本货币对象按照规定的比例分配成若干份。分配所剩的零头 从第一份开始顺序分配。分配运算确保不会丢失金额零头。
      *
-     * @param ratios 分配比例数组，每一个比例是一个长整型，代表
-     *               相对于总数的相对数。
+     * @param ratios 分配比例数组，每一个比例是一个长整型，代表 相对于总数的相对数。
      * @return 货币对象数组，数组的长度与分配比例数组的长度相同。
      */
     public Money[] allocate(long[] ratios) {

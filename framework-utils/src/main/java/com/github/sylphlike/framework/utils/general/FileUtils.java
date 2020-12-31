@@ -11,8 +11,8 @@ import javax.imageio.stream.FileImageOutputStream;
 import java.io.*;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -316,7 +316,7 @@ public class FileUtils {
     }
 
     /**
-     * 创建文件及其父目录，如果这个文件存在，直接返回这个文件<br>
+     * 创建文件及其父目录，如果这个文件存在，直接返回这个文件
      * 此方法不对File对象类型做判断，如果File不存在，无法判断其类型
      *
      * @param file 文件对象
@@ -355,7 +355,7 @@ public class FileUtils {
 
 
     /**
-     * 是否为Windows或者Linux（Unix）文件分隔符<br>
+     * 是否为Windows或者Linux（Unix）文件分隔符
      * Windows平台下分隔符为\，Linux（Unix）为/
      * @param c 字符
      * @return 是否为Windows或者Linux（Unix）文件分隔符

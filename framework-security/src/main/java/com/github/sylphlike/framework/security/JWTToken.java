@@ -12,8 +12,8 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -59,8 +59,8 @@ public class JWTToken {
 
 
     /**
-     * <p>  time 13:28 2020/11/17 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 13:28 2020/11/17 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      * 签发指定过期时间的token
      * @param subject   内容
      * @param expires   过期时间，单位分钟
@@ -113,8 +113,8 @@ public class JWTToken {
 
 
     /**
-     * <p>  time 15:33 2020/10/8 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:33 2020/10/8 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  6位随机数
      * @param
      * @return java.lang.String

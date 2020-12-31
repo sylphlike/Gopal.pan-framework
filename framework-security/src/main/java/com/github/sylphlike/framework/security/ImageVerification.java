@@ -10,8 +10,8 @@ import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 23/10/2020 17:10  星期五 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 23/10/2020 17:10  星期五 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * 图片验证码
  * @author Gopal.pan
  * @version 1.0.0

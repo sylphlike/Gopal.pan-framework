@@ -7,8 +7,8 @@ import java.lang.annotation.Target;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * 导出实体字段属性注解，如果导出实体属性没有启用改注解，那么该字段将不会被导出
  *

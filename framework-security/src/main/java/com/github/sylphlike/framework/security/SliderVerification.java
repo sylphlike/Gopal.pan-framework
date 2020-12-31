@@ -15,8 +15,8 @@ import java.util.Iterator;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 23/10/2020 10:18  星期五 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 23/10/2020 10:18  星期五 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *  滑块认证
  *  目标图片大小需要590 * 360
  *  目标图片文件后缀为.jpg
@@ -44,8 +44,8 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 15:41 2020/10/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:41 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      * 根据模板切图
      * @return   com.github.sylphlike.security.vo.SliderVO
      * @author   Gopal.pan
@@ -183,8 +183,8 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 11:51 2020/10/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 11:51 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      * 根据模板图片抠图
      * @param oriImage
      * @param templateImage
@@ -215,8 +215,8 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 10:43 2020/10/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:43 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  小图片区域
      * @param xDistance             随机切图坐标x轴位置
      * @param y             随机切图坐标y轴位置
@@ -244,8 +244,8 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 11:50 2020/10/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 11:50 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      * 生成图像矩阵
      * @param bufferedImage
      * @return   int[][]
@@ -271,8 +271,8 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 15:16 2020/10/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:16 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  随机生成抠图坐标地址
      * @param templateImageWidth
      * @return   void

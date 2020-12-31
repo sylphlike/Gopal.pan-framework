@@ -12,8 +12,8 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * <p>  time 14/10/2020 10:23  星期三 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 14/10/2020 10:23  星期三 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  *  redis bloom 过滤器API
  *
@@ -28,8 +28,8 @@ public class RedisBloomFilter<T> {
 
 
     /**
-     * <p>  time 13:44 2020/10/14 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 13:44 2020/10/14 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  布隆过滤器添加值
      * @param bloomFilterHelper
      * @param key
@@ -56,8 +56,8 @@ public class RedisBloomFilter<T> {
 
 
     /**
-     * <p>  time 13:44 2020/10/14 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 13:44 2020/10/14 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  校验过滤器中是否存在对应的值
      * @param bloomFilterHelper
      * @param key

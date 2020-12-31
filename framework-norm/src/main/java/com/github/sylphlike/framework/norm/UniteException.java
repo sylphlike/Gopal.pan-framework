@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 /**
  * 系统异常,系统中定义异常需强制继承该异常声明
- * <p>  time 21/09/2020 14:51  星期一 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 21/09/2020 14:51  星期一 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
  * @author Gopal.pan
  * @version 1.0.0

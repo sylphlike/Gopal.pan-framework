@@ -8,8 +8,8 @@ import com.google.common.hash.Hashing;
 import org.springframework.beans.factory.annotation.Configurable;
 
 /**
- * <p>  time 14/10/2020 10:21  星期三 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 14/10/2020 10:21  星期三 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * 布隆过滤器
  * @author Gopal.pan
  * @version 1.0.0

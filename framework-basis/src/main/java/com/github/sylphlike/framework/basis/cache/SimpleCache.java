@@ -8,12 +8,10 @@ import java.util.concurrent.locks.StampedLock;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
- *
  * 简单缓存，无超时实现，默认使用{@link WeakHashMap}实现缓存自动清理
- * @param <K> 键类型
- * @param <V> 值类型
+ * <p>  K 键类型 V 值类型
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -36,12 +34,8 @@ public class SimpleCache<K, V> implements Serializable {
 
 	/**
 	 * 构造
-	 * <p>
-	 * 通过自定义Map初始化，可以自定义缓存实现。<br>
-	 * 比如使用{@link WeakHashMap}则会自动清理key，使用HashMap则不会清理<br>
-	 * 同时，传入的Map对象也可以自带初始化的键值对，防止在get时创建
-	 * </p>
 	 *
+	 * <p> 通过自定义Map初始化，可以自定义缓存实现。比如使用{@link WeakHashMap}则会自动清理key，使用HashMap则不会清理，同时，传入的Map对象也可以自带初始化的键值对，防止在get时创建
 	 * @param initMap 初始Map，用于定义Map类型
 	 */
 	public SimpleCache(Map<K, V> initMap) {

@@ -6,8 +6,8 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * <p>  time 21/09/2020 11:18  星期一 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 21/09/2020 11:18  星期一 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  *  通用分页入参
  *

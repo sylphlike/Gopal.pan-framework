@@ -16,8 +16,8 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * 身份证相关工具类
  *
@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 
 public class IdCardUtil {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(IdCardUtil.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(IdCardUtil.class);
 
 	/**
 	 * 中国公民身份证号码最小长度。
@@ -157,6 +157,7 @@ public class IdCardUtil {
 
 	/**
 	 * 判断18位身份证的合法性
+	 *
 	 * 根据〖中华人民共和国国家标准GB11643-1999〗中有关公民身份号码的规定，公民身份号码是特征组合码，由十七位数字本体码和一位数字校验码组成。<br>
 	 * 排列顺序从左至右依次为：六位数字地址码，八位数字出生日期码，三位数字顺序码和一位数字校验码。
 	 * 顺序码: 表示在同一地址码所标识的区域范围内，对同年、同月、同 日出生的人编定的顺序号，顺序码的奇数分配给男性，偶数分配 给女性。
@@ -280,11 +281,10 @@ public class IdCardUtil {
 	/**
 	 * 验证10位身份编码是否合法
 	 *
+	 * <p> [0] - 台湾、澳门、香港 [1] - 性别(男M,女F,未知N) [2] - 是否合法(合法true,不合法false) 若不是身份证件号码则返回null
 	 * @param idCard 身份编码
 	 * @return 身份证信息数组
-	 * <p>
-	 * [0] - 台湾、澳门、香港 [1] - 性别(男M,女F,未知N) [2] - 是否合法(合法true,不合法false) 若不是身份证件号码则返回null
-	 * </p>
+	 *
 	 */
 	public static String[] isValidCard10(String idCard) {
 		if (StringUtils.isBlank(idCard)) {
@@ -350,13 +350,8 @@ public class IdCardUtil {
 
 	/**
 	 * 验证香港身份证号码(存在Bug，部份特殊身份证无法检查)
-	 * <p>
-	 * 身份证前2位为英文字符，如果只出现一个英文字符则表示第一位是空格，对应数字58 前2位英文字符A-Z分别对应数字10-35 最后一位校验码为0-9的数字加上字符"A"，"A"代表10
-	 * </p>
-	 * <p>
-	 * 将身份证号码全部转换为数字，分别对应乘9-1相加的总和，整除11则证件号码有效
-	 * </p>
 	 *
+	 * <p> 身份证前2位为英文字符，如果只出现一个英文字符则表示第一位是空格，对应数字58 前2位英文字符A-Z分别对应数字10-35 最后一位校验码为0-9的数字加上字符"A"，"A"代表10将身份证号码全部转换为数字，分别对应乘9-1相加的总和，整除11则证件号码有效
 	 * @param idCard 身份证号码
 	 * @return 验证码是否符合
 	 */

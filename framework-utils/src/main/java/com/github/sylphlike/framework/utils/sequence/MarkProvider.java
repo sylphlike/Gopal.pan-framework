@@ -11,8 +11,8 @@ import java.util.List;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -24,8 +24,8 @@ public class MarkProvider {
 
 
     /**
-     * <p>  time 10:52 2020/9/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:52 2020/9/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *
      *  数据中心ID
      *
@@ -58,8 +58,8 @@ public class MarkProvider {
 
 
     /**
-     * <p>  time 11:09 2020/9/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 11:09 2020/9/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *
      * 工作机器ID
      *

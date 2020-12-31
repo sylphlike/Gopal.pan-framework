@@ -30,8 +30,8 @@ import java.util.Set;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * 全局异常处理
  *      业务中可以不捕获异常，交由该类通用处理，性能相对较差

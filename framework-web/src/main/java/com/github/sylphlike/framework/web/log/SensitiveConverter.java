@@ -8,8 +8,8 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.regex.Matcher;
 
 /**
- * <p>  time 19/10/2020 09:43  星期一 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 19/10/2020 09:43  星期一 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  *  日志脱敏转换器
  *      已实现脱敏字段：
@@ -45,8 +45,8 @@ public class SensitiveConverter  extends ClassicConverter {
 
 
     /**
-     * <p>  time 10:29 2020/10/19 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:29 2020/10/19 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  [身份证号] 指定展示几位，其他隐藏 。
      *      1101**********5762
      * @param content
@@ -66,8 +66,8 @@ public class SensitiveConverter  extends ClassicConverter {
 
 
     /**
-     * <p>  time 10:31 2020/10/19 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:31 2020/10/19 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  [手机号码] 前三位，后四位，其他隐藏
      *      138******1234
      * @param content
@@ -86,8 +86,8 @@ public class SensitiveConverter  extends ClassicConverter {
 
 
     /**
-     * <p>  time 10:31 2020/10/19 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:31 2020/10/19 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  [银行卡号] 前三位，后四位，其他隐藏
      *      622******3499
      * @param content
@@ -108,8 +108,8 @@ public class SensitiveConverter  extends ClassicConverter {
 
 
     /**
-     * <p>  time 11:06 2020/10/19 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 11:06 2020/10/19 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *   [邮箱地址] 指定展示几位，其他隐藏 。
      * @param content
      * @return java.lang.String
@@ -131,8 +131,8 @@ public class SensitiveConverter  extends ClassicConverter {
 
 
     /**
-     * <p>  time 10:31 2020/10/19 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 10:31 2020/10/19 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  基础脱敏处理 指定起止展示长度 剩余用"*"中字符替换
      * @param str               待脱敏的字符串
      * @param startLength       开始展示长度

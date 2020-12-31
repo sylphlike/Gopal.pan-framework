@@ -7,8 +7,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -88,16 +88,9 @@ public class StrValidator {
 
 
     /**
-     * 验证是否为生日<br>
-     * 只支持以下几种格式：
-     * <ul>
-     * <li>yyyyMMdd</li>
-     * <li>yyyy-MM-dd</li>
-     * <li>yyyy/MM/dd</li>
-     * <li>yyyy.MM.dd</li>
-     * <li>yyyy年MM月dd日</li>
-     * </ul>
+     * 验证是否为生日
      *
+     * <p> 只支持以下几种格式： yyyyMMdd yyyy-MM-dd yyyy/MM/dd yyyy.MM.dd yyyy年MM月dd日
      * @param value 值
      * @return 是否为生日
      */

@@ -21,8 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -89,8 +89,8 @@ public class BaseController {
 
 
     /**
-     * <p>  time 16:10 2020/9/21 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 16:10 2020/9/21 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *
      *  包装controller层异常处理,业务controller层无需捕获处理异常
      *

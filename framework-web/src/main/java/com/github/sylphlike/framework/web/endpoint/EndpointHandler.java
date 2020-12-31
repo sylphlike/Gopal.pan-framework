@@ -18,8 +18,8 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import java.util.*;
 
 /**
- * <p>  time 06/11/2020 15:40  星期五 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 06/11/2020 15:40  星期五 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  *  系统类对外提供接口服务
  * @author Gopal.pan
@@ -47,8 +47,8 @@ public class EndpointHandler {
     private String appName;
 
     /**
-     * <p>  time 15:43 2020/11/6 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:43 2020/11/6 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      * 系统中业务接口地址列表
      *
      * @return   com.github.sylphlike.norm.Response<java.lang.Object>

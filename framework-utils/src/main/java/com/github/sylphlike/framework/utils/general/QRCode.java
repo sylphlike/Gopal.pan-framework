@@ -24,8 +24,8 @@ import java.util.Map;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
  * 二维码生成工具类
  *
@@ -66,8 +66,8 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:16 2020/12/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:16 2020/12/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 生成二维码图片,保存到指定文件目录下
      * @param contents    二维码内容
      * @param savePath    二维码图片存储地址
@@ -89,8 +89,8 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:03 2020/12/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:03 2020/12/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 生成二维码图片,使用默认的宽高
      * @param contents   二维码内容
      * @return   byte[]
@@ -104,8 +104,8 @@ public class QRCode {
 
 
     /**
-     * <p>  time 14:16 2020/12/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 14:16 2020/12/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 生成二维码图片
      * @param contents    二维码内容
      * @param width       二维码宽度
@@ -130,8 +130,8 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:05 2020/12/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:05 2020/12/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 生成二维码图片带logo
      * @param contents  二维码内容
      * @param logoBytes  logo图片字节数组
@@ -144,8 +144,8 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:13 2020/12/23 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:13 2020/12/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      *  生成二维码图片带logo
      * @param contents    二维码内容
      * @param width       二维码宽度

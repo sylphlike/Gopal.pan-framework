@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * 延迟消息处理类
  *     具体业务处理类交由Spring管理，并且bean实例名称应与消息类型一致。

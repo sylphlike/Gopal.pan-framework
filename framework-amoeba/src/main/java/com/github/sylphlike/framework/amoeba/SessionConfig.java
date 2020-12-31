@@ -32,8 +32,8 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 /**
- * <p>  time 04/12/2020 15:03  星期五 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 04/12/2020 15:03  星期五 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0

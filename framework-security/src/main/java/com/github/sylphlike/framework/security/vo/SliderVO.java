@@ -3,8 +3,8 @@ package com.github.sylphlike.framework.security.vo;
 import lombok.Data;
 
 /**
- * <p>  time 23/10/2020 15:35  星期五 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 23/10/2020 15:35  星期五 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0

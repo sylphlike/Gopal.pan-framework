@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -28,8 +28,8 @@ public class SerialNumber  extends RedisAccessor{
 
 
     /**
-     * <p>  time 13:59 2020/10/8 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 13:59 2020/10/8 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  初始化指定规则的流水号
      * @param prefix         流水号规则前缀
      * @param serialLength   自增流水号长度
@@ -65,8 +65,8 @@ public class SerialNumber  extends RedisAccessor{
 
 
     /**
-     * <p>  time 14:00 2020/10/8 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 14:00 2020/10/8 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com 
      *  初始化指定规则的流水号
      * @param serialEntity
      * @return void

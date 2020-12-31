@@ -13,8 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <p>  time 10/09/2019 15:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 10/09/2019 15:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
  * RSA非对称加密工具类
  *
@@ -34,8 +34,8 @@ public class RSAEncryptUtils {
 
 
     /**
-     * <p>  time 15:46 2019/09/10 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 15:46 2019/09/10 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 生成RSA公私匙
      *  获取公私 pair.get(RSAEncryptUtils.PUBLIC_KEY)
      *  获取私匙 pair.get(RSAEncryptUtils.PRIVATE_KEY)
@@ -63,8 +63,8 @@ public class RSAEncryptUtils {
 
 
     /**
-     * <p>  time 16:47 2019/10/29 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 16:47 2019/10/29 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 公匙加密
      * @param data  待加密数据
      * @param key
@@ -86,8 +86,8 @@ public class RSAEncryptUtils {
 
 
     /**
-     * <p>  time 16:47 2019/10/29 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 16:47 2019/10/29 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 公匙解密
      * @param data
      * @param key
@@ -110,8 +110,8 @@ public class RSAEncryptUtils {
 
 
     /**
-     * <p>  time 16:49 2019/10/29 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 16:49 2019/10/29 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 私匙加密
      * @param data
      * @param key
@@ -132,8 +132,8 @@ public class RSAEncryptUtils {
 
 
     /**
-     * <p>  time 16:49 2019/10/29 【HH:mm yyyy/MM/dd】  </p>
-     * <p> email 15923508369@163.com </p>
+     * <p>  time 16:49 2019/10/29 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * 私匙解密
      * @param data
      * @param key

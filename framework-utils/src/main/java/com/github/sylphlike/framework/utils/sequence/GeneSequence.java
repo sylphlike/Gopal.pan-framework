@@ -5,8 +5,8 @@ import com.github.sylphlike.framework.utils.general.Clock;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 23/09/2020 09:10  星期三 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 23/09/2020 09:10  星期三 (dd/MM/YYYY HH:mm) 
+ * <p> email 15923508369@163.com 
  *
  * @author Gopal.pan
  * @version 1.0.0
