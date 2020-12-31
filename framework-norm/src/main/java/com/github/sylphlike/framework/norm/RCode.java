@@ -1,11 +1,9 @@
 package com.github.sylphlike.framework.norm;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * 返回状态编码接口类
  *
- * 返回状态编码接口类，
- *  具体返回枚举对象实现该接口实现不同业务系统定制的返回编码
+ * <p> 具体返回枚举对象实现该接口实现不同业务系统定制的返回编码
  *      统一返回状态码
  *          20000           success
  *          30000 - 39999 系统级别错误码区间（该类别严格上是不抛向用户端，主要用与系统错误排查）
@@ -20,6 +18,9 @@ package com.github.sylphlike.framework.norm;
  *          97700 - 97799 框架中间件错误码区间（已接入中间件 framework-glued）
  *          98800 - 98899 SDK包错误码区间
  *          99900 - 99999 网关服务响应码
+ *
+ * <p>  time 10/09/2020 18:19  星期四 【dd/MM/YYYY HH:mm】 </p>
+ * <p> email 15923508369@163.com </p>
  *
  * @author Gopal.pan
  * @version 1.0.0
