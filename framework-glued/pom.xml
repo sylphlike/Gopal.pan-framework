@@ -20,6 +20,21 @@
             <artifactId>alipay-sdk-java</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.sylphlike</groupId>
+            <artifactId>framework-norm</artifactId>
+            <version>1.0.0-SYLPHLIKE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sylphlike</groupId>
+            <artifactId>framework-basis</artifactId>
+            <version>1.0.0-SYLPHLIKE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sylphlike</groupId>
+            <artifactId>framework-utils</artifactId>
+            <version>1.0.0-SYLPHLIKE</version>
+        </dependency>
     </dependencies>
 
 
