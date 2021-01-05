@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * 系统规范的标准接口返回。
+ * 系统规范标准接口返回。
  *
  * <p> 系统规范的标准接口返回，所有接口返回该实体类，具体的业务参数为 T data.
  * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
@@ -205,10 +205,10 @@ public class Response<T> implements Cloneable , Serializable{
 
 
     /**
-     * 静态方法，设置响应码、message、具体描述信息，异常需继承 {@link UniteException}
+     * 静态方法，设置响应码、message、具体描述信息，
      * <p>  time 16:36 2020/9/21 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com
-     * @param e     {@link UniteException}
+     * @param e     异常需继承 {@link UniteException}
      * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan
      */

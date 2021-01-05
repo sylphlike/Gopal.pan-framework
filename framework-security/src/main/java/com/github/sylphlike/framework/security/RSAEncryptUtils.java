@@ -13,11 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * RSA非对称加密工具类
  * <p>  time 10/09/2019 15:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
- *
- * RSA非对称加密工具类
- *
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -33,15 +31,16 @@ public class RSAEncryptUtils {
 
 
 
+
+
+
     /**
-     * <p>  time 15:46 2019/09/10 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 生成RSA公私匙
-     *  获取公私 pair.get(RSAEncryptUtils.PUBLIC_KEY)
-     *  获取私匙 pair.get(RSAEncryptUtils.PRIVATE_KEY)
-     * @param
-     * @return   java.util.Map<java.lang.String,java.lang.String>  生成的RSA密匙对
-     * @author   Gopal.pan
+     * <p>获取公私 pair.get(RSAEncryptUtils.PUBLIC_KEY) .获取私匙 pair.get(RSAEncryptUtils.PRIVATE_KEY)
+     * <p>  time 16:03 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.util.Map
+     * @author  Gopal.pan
      */
     public static Map<String, String> generateRSAPair() {
         Map<String, String> pair = new HashMap<String, String>();
@@ -62,14 +61,17 @@ public class RSAEncryptUtils {
 
 
 
+
+
     /**
-     * <p>  time 16:47 2019/10/29 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 公匙加密
+     * <p>  time 15:59 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param data  待加密数据
-     * @param key
-     * @return   java.lang.String
-     * @author   Gopal.pan
+     * @param key   公钥
+     * @return  java.lang.String
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static String encryptByPublicKey(String data, String key) throws Exception {
 
@@ -85,14 +87,16 @@ public class RSAEncryptUtils {
 
 
 
+
     /**
-     * <p>  time 16:47 2019/10/29 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 公匙解密
-     * @param data
-     * @param key
-     * @return   java.lang.String
-     * @author   Gopal.pan
+     * <p>  time 15:58 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param data  业务数据
+     * @param key   公钥
+     * @return  java.lang.String
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static String decryptByPublicKey(String data, String key) throws Exception {
 
@@ -109,14 +113,17 @@ public class RSAEncryptUtils {
 
 
 
+
+
     /**
-     * <p>  time 16:49 2019/10/29 (HH:mm yyyy/MM/dd)
+     * 私钥加密
+     * <p>  time 15:58 2021/1/4 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com
-     * 私匙加密
-     * @param data
-     * @param key
-     * @return   java.lang.String
-     * @author   Gopal.pan
+     * @param data  业务数据
+     * @param key   私钥
+     * @return  java.lang.String
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static String encryptByPrivateKey(String data, String key) throws Exception {
 
@@ -131,14 +138,17 @@ public class RSAEncryptUtils {
 
 
 
+
+
     /**
-     * <p>  time 16:49 2019/10/29 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 私匙解密
-     * @param data
-     * @param key
-     * @return   java.lang.String
-     * @author   Gopal.pan
+     * <p>  time 16:01 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param data 业务数据
+     * @param key  私钥
+     * @return  java.lang.String
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static String decryptByPrivateKey(String data, String key) throws Exception {
 

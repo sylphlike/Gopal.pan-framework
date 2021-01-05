@@ -29,7 +29,10 @@ public class FileUtils {
 
     /**
      * 判断指定文件夹是否存在，不存在是创建文件夹
-     * @param dirPath
+     * <p>  time 10:39 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param dirPath  目录地址
+     * @author  Gopal.pan
      */
     public static void pathExistCreate(String dirPath){
         File file = new File(dirPath);
@@ -38,12 +41,14 @@ public class FileUtils {
 
     }
 
-
     /**
      * InputStream 转file
-     * @param ins
-     * @param file
-     * @throws Exception
+     * <p>  time 10:38 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param ins  输入流
+     * @param file 文件
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static void inputStreamToFile(InputStream ins, File file) throws Exception {
         OutputStream os = new FileOutputStream(file);
@@ -63,8 +68,11 @@ public class FileUtils {
 
     /**
      * 文件转字节数组
-     * @param file
-     * @return
+     * <p>  time 10:38 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param file    文件
+     * @return  byte[]
+     * @author  Gopal.pan
      */
     public static byte[] fileToByteArray(File file){
         byte[] bytes = null;
@@ -84,12 +92,14 @@ public class FileUtils {
     }
 
 
-
-
-    /** 根据byte[] 数组生成文件
+    /**
+     * 根据byte[] 数组生成文件
+     * <p>  time 10:37 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param bfile  字节数组
      * @param filePath 文件路径
      * @param fileName 文件名
+     * @author  Gopal.pan
      */
     public static void getFile(byte[] bfile, String filePath,String fileName) {
         BufferedOutputStream bos = null;  //带缓冲得文件输出流
@@ -124,10 +134,14 @@ public class FileUtils {
         }
     }
 
+
     /**
-     * 图片到byte数组
-     * @param path
-     * @return
+     * 图片转byte数组
+     * <p>  time 10:37 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param path      图片地址
+     * @return  byte[]
+     * @author  Gopal.pan
      */
     public static byte[] image2byte(String path){
         byte[] data = null;
@@ -147,12 +161,15 @@ public class FileUtils {
 
 
     /**
-     * byte数组到图片
-     * @param data
-     * @param path
+     * byte数组转图片
+     * <p>  time 10:36 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param data  数组
+     * @param path   生成图片保存地址目录
+     * @author  Gopal.pan
      */
     public static void byte2Image(byte[] data, String path){
-        if(data.length<3||path.equals("")) return;
+        if(data.length <3 ||path.equals("")) return;
         try( FileImageOutputStream imageOutput = new FileImageOutputStream(new File(path))){
             imageOutput.write(data, 0, data.length);
         } catch(Exception ex) {
@@ -161,11 +178,13 @@ public class FileUtils {
     }
 
 
-
     /**
      * 删除单个文件
-     * @param fileName  要删除的文件的文件名
-     * @return 单个文件删除成功返回true，否则返回false
+     * <p>  time 10:35 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param fileName   要删除的文件的文件名
+     * @return  boolean  单个文件删除成功返回true，否则返回false
+     * @author  Gopal.pan
      */
     public static boolean deleteFile(String fileName) {
         File file = new File(fileName);
@@ -182,10 +201,12 @@ public class FileUtils {
         }
     }
 
-
     /**
      * 删除文件或文件夹
-     * @param fileDir
+     * <p>  time 10:35 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param fileDir 文件地址
+     * @author  Gopal.pan
      */
     public static void delAllFile(File fileDir){
 
@@ -217,14 +238,16 @@ public class FileUtils {
 
 
 
-
     /**
      * 创建File对象
-     * 此方法会检查slip漏洞，漏洞说明见http://blog.nsfocus.net/zip-slip-2/
-     *
+     * <p> 此方法会检查slip漏洞，漏洞说明见http://blog.nsfocus.net/zip-slip-2/
+     * <p>  time 10:34 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param parent 父文件对象
      * @param path   文件路径
-     * @return File
+     * @return  java.io.File
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static File file(File parent, String path) throws IOException {
         return checkSlip(parent, new File(parent, path));
@@ -276,12 +299,15 @@ public class FileUtils {
 
     /**
      * 检查父完整路径是否为自路径的前半部分，如果不是说明不是子路径，可能存在slip注入。
-     * 见http://blog.nsfocus.net/zip-slip-2/
-     *
+     * <p> 见http://blog.nsfocus.net/zip-slip-2/
+     * <p>  time 10:32 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param parentFile 父文件或目录
      * @param file       子文件或目录
-     * @return 子文件或目录
-     * @throws IllegalArgumentException 检查创建的子文件不在父目录中抛出此异常
+     * @return  java.io.File  子文件或目录
+     * @throws  IllegalArgumentException ex
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static File checkSlip(File parentFile, File file) throws IllegalArgumentException, IOException {
         if (null != parentFile && null != file) {
@@ -299,13 +325,13 @@ public class FileUtils {
     }
 
 
-
     /**
      * 获得一个输出流对象
-     *
-     * @param file 文件
-     * @return 输出流对象
-
+     * <p>  time 10:34 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param file  文件
+     * @return  java.io.BufferedOutputStream
+     * @author  Gopal.pan
      */
     public static BufferedOutputStream getOutputStream(File file)  {
         try {
@@ -315,12 +341,16 @@ public class FileUtils {
         }
     }
 
+
+
     /**
      * 创建文件及其父目录，如果这个文件存在，直接返回这个文件
-     * 此方法不对File对象类型做判断，如果File不存在，无法判断其类型
-     *
+     * <p> 此方法不对File对象类型做判断，如果File不存在，无法判断其类型
+     * <p>  time 10:33 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param file 文件对象
-     * @return 文件，若路径为null，返回null
+     * @return  java.io.File 文件，若路径为null，返回null
+     * @author  Gopal.pan
      */
     public static File touch(File file) {
         if (null == file) {

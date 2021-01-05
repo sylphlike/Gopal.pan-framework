@@ -10,10 +10,10 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * <p>  time 10/12/2020 09:52  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
+ * 断言
+ * <p>  time 10/12/2020 09:52  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
- *  断言
  * @author Gopal.pan
  * @version 1.0.0
  */

@@ -18,10 +18,10 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import java.util.*;
 
 /**
- * <p>  time 06/11/2020 15:40  星期五 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
+ * 系统类对外提供接口服务
+ * <p>  time 06/11/2020 15:40  星期五 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
- *  系统类对外提供接口服务
  * @author Gopal.pan
  * @version 1.0.0
  */

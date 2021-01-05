@@ -13,10 +13,10 @@ import java.io.IOException;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
+ * 单体应用跨域配置,如果是网关请求来源，
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
- *  单体应用跨域配置,如果是网关请求来源， 会覆盖网关的跨域配置 {@link com.horse.gateway.common.config.CorsConfig }
  * @author Gopal.pan
  * @version 1.0.0
  */

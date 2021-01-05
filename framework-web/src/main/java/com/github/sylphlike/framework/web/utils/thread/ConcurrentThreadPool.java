@@ -13,11 +13,8 @@ import java.util.concurrent.*;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  *  多线程任务提交
- *      调用方式：
+ * <p> 调用方式：
  *          主线程调用
  *             List<CallableTemplate<Boolean>> tasks = new ArrayList<>();
  *             for (int x = 0; x < 21; x ++){
@@ -43,6 +40,8 @@ import java.util.concurrent.*;
  *              }
  *          }
  *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */

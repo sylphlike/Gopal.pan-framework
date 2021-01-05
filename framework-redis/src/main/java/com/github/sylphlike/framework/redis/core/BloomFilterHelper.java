@@ -8,14 +8,12 @@ import com.google.common.hash.Hashing;
 import org.springframework.beans.factory.annotation.Configurable;
 
 /**
+ * 布隆过滤器
  * <p>  time 14/10/2020 10:21  星期三 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
- * 布隆过滤器
  * @author Gopal.pan
  * @version 1.0.0
  */
-
-
 @Configurable
 public class BloomFilterHelper <T> {
     private final int numHashFunctions;

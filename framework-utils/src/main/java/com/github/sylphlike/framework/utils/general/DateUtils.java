@@ -12,11 +12,9 @@ import java.time.temporal.TemporalAdjusters;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * 时间工具类，jdk版本应大于等于1.8
- *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -26,7 +24,10 @@ public class DateUtils {
 
     /**
      * 时间转字符串形式,缺省格式为：yyyy-MM-dd HH:mm:ss
-     * @return
+     * <p>  time 11:07 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String date2String(){
         return date2String(LocalDateTime.now(), DateEnums.HYPHEN_YYYYMMddHHmmss.getPatterns());
@@ -36,9 +37,12 @@ public class DateUtils {
 
     /**
      * 时间转字符串形式,缺省格式为：yyyy-MM-dd HH:mm:ss
+     * <p>  time 11:07 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param date     java LocalDateTime
      * @param patterns 格式
-     * @return
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String date2String(LocalDateTime date,String patterns){
 
@@ -55,11 +59,15 @@ public class DateUtils {
     }
 
 
+
     /**
      * 字符串转 LocalDateTime
+     * <p>  time 11:07 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param date      时间字符串
      * @param patterns  时间字符串格式
-     * @return
+     * @return  java.time.LocalDateTime
+     * @author  Gopal.pan
      */
     public static LocalDateTime string2DateTime(String date,String patterns){
         if(StringUtils.isEmpty(date)){return null;}
@@ -69,11 +77,15 @@ public class DateUtils {
 
     }
 
+
     /**
      * 字符串转 LocalDateTime
+     * <p>  time 11:08 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param date      时间字符串
      * @param patterns  时间字符串格式
-     * @return
+     * @return  java.time.LocalDate
+     * @author  Gopal.pan
      */
     public static LocalDate string2Date(String date,String patterns){
         if(StringUtils.isEmpty(date)){return null;}
@@ -84,11 +96,13 @@ public class DateUtils {
     }
 
 
-
     /**
      * 获取当前时间的指定字符串格式,缺省格式为：yyyy-MM-dd HH:mm:ss
-     * @param patterns
-     * @return
+     * <p>  time 11:08 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param patterns  时间格式
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String getCurrentDate(String patterns){
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -103,9 +117,12 @@ public class DateUtils {
 
 
     /**
-     * 当前时间加上或减去自定义天数
-     * @param days
-     * @return
+     * 前时间加上或减去自定义天数
+     * <p>  time 11:09 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param days  加减天数
+     * @return  java.time.LocalDateTime
+     * @author  Gopal.pan
      */
     public static LocalDateTime plusDays(int days){
         LocalDateTime now = LocalDateTime.now();
@@ -113,9 +130,13 @@ public class DateUtils {
     }
 
 
+
     /**
      * 当前时间所在月份的第一天
-     * @return
+     * <p>  time 11:10 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.time.LocalDateTime
+     * @author  Gopal.pan
      */
     public static LocalDateTime firstDayOfMonth(){
         LocalDateTime now = LocalDateTime.now();
@@ -125,7 +146,10 @@ public class DateUtils {
 
     /**
      * 当前时间所在月份的最后一天
-     * @return
+     * <p>  time 11:10 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.time.LocalDateTime
+     * @author  Gopal.pan
      */
     public static LocalDateTime lastDayOfMonth(){
         LocalDateTime now = LocalDateTime.now();
@@ -135,7 +159,10 @@ public class DateUtils {
 
     /**
      * 获取今天是星期几
-     * @return
+     * <p>  time 11:10 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  int
+     * @author  Gopal.pan
      */
     public static int dayOfWeek(){
         LocalDateTime now = LocalDateTime.now();
@@ -144,16 +171,15 @@ public class DateUtils {
     }
 
 
-
-
-
-
     /**
      * 对比两个时间差
+     * <p>  time 11:10 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param contrast          对比时间
      * @param byContrast        被对比时间
      * @param dateEnums         对比类型（毫秒、秒、分、时、天）
-     * @return
+     * @return  java.lang.Long
+     * @author  Gopal.pan
      */
     public static Long durationTime(LocalDateTime contrast,LocalDateTime byContrast,DateEnums dateEnums){
         if(null == byContrast || null == contrast){return null;}
@@ -194,10 +220,13 @@ public class DateUtils {
 
     /**
      *
-     * @param datumTime
-     * @param compareTime
-     * @param compareMinutiae
-     * @return
+     * <p>  time 11:11 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param datumTime         比数
+     * @param compareTime       对比日期
+     * @param compareMinutiae   是否比较日
+     * @return  int
+     * @author  Gopal.pan
      */
     public static int dateToCompareYear(LocalDate datumTime, LocalDate compareTime,boolean compareMinutiae) {
         int datumTimeYear = datumTime.getYear();
@@ -214,14 +243,16 @@ public class DateUtils {
             }
         }
 
-
         return year;
     }
 
 
     /**
      * 当前时间年份
-     * @return
+     * <p>  time 11:17 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  int
+     * @author  Gopal.pan
      */
     public static int thisYear() {
         return LocalDate.now().getYear();
@@ -230,8 +261,11 @@ public class DateUtils {
 
     /**
      * 是否闰年
-     * @param year
-     * @return
+     * <p>  time 11:17 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param year  当前年
+     * @return  boolean
+     * @author  Gopal.pan
      */
     public static boolean isLeapYear(int year) {
         return LocalDate.of(year,1,1).isLeapYear();

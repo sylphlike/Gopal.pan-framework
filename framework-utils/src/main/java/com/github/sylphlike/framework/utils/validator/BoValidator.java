@@ -8,10 +8,9 @@ import java.util.Set;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * 业务数据校验工具类
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -22,11 +21,14 @@ public class BoValidator {
     private static final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
 
+
     /**
      * 校验实体
-     * @param obj
-     * @param <T>
-     * @return
+     * <p>  time 10:42 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param obj      需要校验的实体对象
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static <T> String validateEntity(T obj) {
         StringBuilder errorMsg = new StringBuilder();
@@ -41,14 +43,17 @@ public class BoValidator {
         return null;
     }
 
+
     /**
      * 校验实体中指定的字段
-     * @param obj
-     * @param propertyName
-     * @param <T>
-     * @return
+     * <p>  time 10:41 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param obj           实体对象
+     * @param propertyName  需要校验的字段
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
-    public static <T> String validateProperty(T obj, String propertyName) {
+     public static <T> String validateProperty(T obj, String propertyName) {
         Set<ConstraintViolation<T>> set = validator.validateProperty(obj, propertyName, Default.class);
         StringBuilder stringBuilder = new StringBuilder();
         if (set != null && set.size() != 0) {

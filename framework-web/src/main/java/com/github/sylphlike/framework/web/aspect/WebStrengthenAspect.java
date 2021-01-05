@@ -26,11 +26,10 @@ import java.lang.reflect.Method;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
- * web增强处理，1 入参出参日志记录
- *
+ * web增强处理
+ * <p> 入参出参日志记录
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */

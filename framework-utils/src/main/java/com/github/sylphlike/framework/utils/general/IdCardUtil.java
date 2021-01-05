@@ -16,11 +16,9 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * 身份证相关工具类
- *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -442,7 +440,7 @@ public class IdCardUtil {
 	 */
 	public static int getAgeByIdCard(String idCard, LocalDate dateToCompare) {
 		String birth = getBirthByIdCard(idCard);
-		return DateUtils.dateToCompareYear(DateUtils.string2Date(birth,DateEnums.yyyyMMdd.getPatterns()),dateToCompare,true);
+		return DateUtils.dateToCompareYear(Objects.requireNonNull(DateUtils.string2Date(birth, DateEnums.yyyyMMdd.getPatterns())),dateToCompare,true);
 	}
 
 	/**

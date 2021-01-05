@@ -9,24 +9,26 @@ import java.nio.charset.UnsupportedCharsetException;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * 文件编码转换工具类
- *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
 
 public class FileCharsetConverter {
-    private static Logger LOGGER =  LoggerFactory.getLogger(FileCharsetConverter.class);
+    private static final Logger LOGGER =  LoggerFactory.getLogger(FileCharsetConverter.class);
+
 
 
     /**
      * 将文件或文件夹下的所有文件转换成指定的编码集,不可以使用多级目录
+     * <p>  time 10:58 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param file              要转换的文件或文件夹全路径
      * @param fromCharsetName   源文件的编码
      * @param toCharsetName     要转换的编码
+     * @author  Gopal.pan
      */
     public static void convertCharset(String file,String fromCharsetName,  String toCharsetName){
         LOGGER.info("【framework】 文件编码集转换 file[{}],fromCharsetName[{}],toCharsetName[{}]",file,fromCharsetName,toCharsetName);
@@ -48,14 +50,15 @@ public class FileCharsetConverter {
     }
 
 
-
-
     /**
      * 把指定文件转换成指定的编码
+     * <p>  time 10:58 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param file              要转换的文件
      * @param fromCharsetName   源文件的编码
      * @param toCharsetName     要转换的编码
-     * @throws Exception
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static void convert(File file, String fromCharsetName,  String toCharsetName) throws Exception {
         String fileContent = getFileContentFromCharset(file, fromCharsetName);
@@ -63,13 +66,16 @@ public class FileCharsetConverter {
 
     }
 
+
     /**
      * 以指定编码方式读取文件，返回文件内容
-     *
+     * <p>  time 10:58 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param file              要转换的文件
      * @param fromCharsetName   源文件的编码
-     * @return
-     * @throws Exception
+     * @return  java.lang.String
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static String getFileContentFromCharset(File file,  String fromCharsetName) throws Exception {
         if (!Charset.isSupported(fromCharsetName)) {
@@ -84,12 +90,16 @@ public class FileCharsetConverter {
         return str;
     }
 
+
     /**
      * 以指定编码方式写文本文件，存在会覆盖
+     * <p>  time 10:57 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param file             要写入的文件
      * @param toCharsetName    要转换的编码
      * @param content          文件内容
-     * @throws Exception
+     * @throws  Exception e
+     * @author  Gopal.pan
      */
     public static void saveFile2Charset(File file, String toCharsetName,   String content) throws Exception {
         if (!Charset.isSupported(toCharsetName)) {

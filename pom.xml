@@ -62,7 +62,12 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
                     <docencoding>UTF-8</docencoding>
+                    <additionalOptions>
+                        <additionalOption>-Xdoclint:none</additionalOption> <!--忽略异常告警-->
+                    </additionalOptions>
+
                 </configuration>
                 <executions>
                     <execution>
@@ -298,12 +303,6 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-springboot-starte.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 

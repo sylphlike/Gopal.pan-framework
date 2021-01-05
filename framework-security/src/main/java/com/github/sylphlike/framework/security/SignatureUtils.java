@@ -9,11 +9,9 @@ import java.util.Map;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * 加签与验签工具类
- *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -23,12 +21,16 @@ public class SignatureUtils {
 
     /**
      * 创建签名
+     * <p>  time 15:10 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param signKey            签名key
      * @param filterParams       需要过滤的参数名称(可以为多个参数名称，使用字符串拼接，如果是签名参数名称则也需加入到过滤字符串中，因为验签时)
      * @param params             参数
      * @param securityTypeEnums  签名方式 {@link SecurityTypeEnums}
      * @param isClient           是否是客户端(针对 RSA 方式创建签名有效)
-     * @return
+     * @return  java.lang.String
+     * @throws  Exception ex
+     * @author  Gopal.pan
      */
     public static String createSignature(String signKey, String filterParams, Map<String,String> params,
                                          SecurityTypeEnums securityTypeEnums, boolean isClient) throws Exception {
@@ -51,15 +53,21 @@ public class SignatureUtils {
     }
 
 
+
+
     /**
      * 验证签名
+     * <p>  time 15:56 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param signKey            签名key
      * @param filterParams       签名参数名称(可以为多个参数名称)
      * @param params             参数
-     * @param securityTypeEnums       签名方式 {@link SecurityTypeEnums}
+     * @param securityTypeEnums  签名方式 {@link SecurityTypeEnums}
      * @param signParamName      签名参数的名称
      * @param isClient           是否是客户端(针对 RSA 方式创建签名有效)
-     * @return
+     * @return  boolean
+     * @throws  Exception e
+     * @author  Gopal.pan
      */
     public static boolean verifySignature(String signKey, String filterParams, Map<String,String> params,
                                           SecurityTypeEnums securityTypeEnums, String signParamName, boolean isClient) throws Exception {

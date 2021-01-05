@@ -36,11 +36,16 @@ public class RedisAccessor {
 
 
 
+
+
     /**
      * 添加数据
-     * @param key
-     * @param value
-     * @return
+     * <p>  time 11:37 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key     缓存key
+     * @param value   值
+     * @return   boolean
+     * @author   Gopal.pan
      */
     public boolean set(final String key, Object value) {
         try {
@@ -53,12 +58,17 @@ public class RedisAccessor {
     }
 
 
+
+
     /**
      * 添加数据并设置过去时间
-     * @param key
-     * @param value
-     * @param expireSecondTime
-     * @return
+     * <p>  time 11:37 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key     缓存key
+     * @param value   值
+     * @param expireSecondTime  过期时间
+     * @return   boolean
+     * @author   Gopal.pan
      */
     public boolean set(final String key, Object value, long expireSecondTime) {
         try {
@@ -73,13 +83,19 @@ public class RedisAccessor {
     }
 
 
+
+
     /**
      * 添加数据并设置过期时间(自定义过期时间单位类型)
-     * @param key
-     * @param value
-     * @param expireTime
-     * @param timeUnit
-     * @return
+     *
+     * <p>  time 11:36 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key     缓存key
+     * @param value   值
+     * @param expireTime  过期时间
+     * @param timeUnit    时间单位类型
+     * @return   boolean
+     * @author   Gopal.pan
      */
     public boolean set(String key, Object value, long expireTime, TimeUnit timeUnit) {
         try {
@@ -93,22 +109,30 @@ public class RedisAccessor {
     }
 
 
+
     /**
      * 获取值
-     * @param key
-     * @return
+     * <p>  time 11:36 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key   缓存key
+     * @return   java.lang.Object
+     * @author   Gopal.pan
      */
     public Object get(final String key) {
         return opsForValue().get(key);
     }
 
 
+
+
     /**
-     * 获取值
-     * @param key
+     *      * 获取值
+     * <p>  time 11:35 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key    缓存key
      * @param clazz  需要转换成的实体对象类型
-     * @param <T>
-     * @return
+     * @return   T
+     * @author   Gopal.pan
      */
     public <T> T get(final String key,Class<T> clazz) {
         Object obj = opsForValue().get(key);
@@ -124,20 +148,25 @@ public class RedisAccessor {
 
     /**
      * 订阅发送
-     * @param patternTopic
-     * @param value
+     * @param patternTopic  topic
+     * @param value         值
      */
     public void convertAndSend(String patternTopic, String value){
         this.redisTemplate.convertAndSend(patternTopic,value);
     }
 
 
+
+
     /**
      * 添加数据，如果存在key则不做任何操作
-     * @param key
-     * @param value
-     * @param expireSecondTime
-     * @return
+     * <p>  time 11:35 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key     缓存key
+     * @param value   值
+     * @param expireSecondTime  过期时间
+     * @return   boolean
+     * @author   Gopal.pan
      */
     public boolean setNX(String key, Object value, long expireSecondTime) {
         Boolean ifAbsent = opsForValue().setIfAbsent(key, value);
@@ -150,12 +179,18 @@ public class RedisAccessor {
     }
 
 
+
+
     /**
      * 添加数据，如果存在key则不做任何操作
-     * @param key
-     * @param value
-     * @param expireTime
-     * @return
+     * <p>  time 11:23 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key        缓存key
+     * @param value      值
+     * @param expireTime 过期时间
+     * @param timeUnit   时间单位类型
+     * @return   boolean
+     * @author   Gopal.pan
      */
     public boolean setNX(String key, Object value,long expireTime,TimeUnit timeUnit) {
         Boolean ifAbsent = opsForValue().setIfAbsent(key, value);
@@ -168,61 +203,68 @@ public class RedisAccessor {
     }
 
 
-    /**
-     * 是否存在KEY
-     * @param key
-     * @return
-     */
+
     public Boolean hasKey(String key) {
         return redisTemplate.hasKey(key);
 
     }
 
 
-    /**
-     * 删除key
-     * @param key
-     */
+
     public void delete(String key) {
         this.redisTemplate.delete(key);
     }
 
-
     /**
-     * 获取过期时间
-     * @param key
+     * <p>  time 11:24 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key     缓存key
+     * @return   java.lang.Long
+     * @author   Gopal.pan
      */
     public Long getExpire(String key){
         return redisTemplate.getExpire(key);
     }
 
 
+
     /**
      * 获取过期时间， 指定时间单位
-     * @param key
-     * @param timeUnit
-     * @return
+     * <p>  time 11:40 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key       缓存key
+     * @param timeUnit  时间单位类型
+     * @return   java.lang.Long
+     * @author   Gopal.pan
      */
     public Long getExpire(String key,TimeUnit timeUnit){
         return redisTemplate.getExpire(key,timeUnit);
     }
 
 
+
     /**
-     * 设置过期时间
-     * @param key
-     * @param expireSecondTime
-     * @return
+     * <p>  time 11:34 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key         缓存key
+     * @param expireSecondTime  过期时间
+     * @return   java.lang.Boolean
+     * @author   Gopal.pan
      */
     public Boolean expire(String key ,Long expireSecondTime){
         return redisTemplate.expire(key, expireSecondTime, TimeUnit.SECONDS);
     }
 
 
+
+
     /**
      * 获取所有 以prefixKey 为前缀的所有KEY值
-     * @param prefixKey
-     * @return
+     * <p>  time 11:33 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param prefixKey 缓存key前缀
+     * @return   Set
+     * @author   Gopal.pan
      */
     public Set<Serializable> keys(String prefixKey){
         return redisTemplate.keys(prefixKey);
@@ -233,13 +275,18 @@ public class RedisAccessor {
 
 
 
+
+
     /**
-     * list 向右侧添加集合数据
-     * @param key
-     * @param list
-     * @param expireTime
-     * @param timeUnit
-     * @return
+     *  list 向右侧添加集合数据
+     * <p>  time 11:26 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key           缓存key
+     * @param list          数据
+     * @param expireTime    过期时间
+     * @param timeUnit      时间单位类型
+     * @return   java.lang.Long
+     * @author   Gopal.pan
      */
     public Long rightPushAll(String key , List<?> list, long expireTime, TimeUnit timeUnit){
         Long rightPushAll = opsForList().rightPushAll(key, list.toArray());
@@ -250,11 +297,15 @@ public class RedisAccessor {
 
 
 
+
+
     /**
-     * list 向右侧添加集合数据
-     * @param key
-     * @param list
-     * @return
+     * <p>  time 11:27 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key           缓存key
+     * @param list          数据
+     * @return   java.lang.Long
+     * @author   Gopal.pan
      */
     public Long rightPushAll(String key , List<?> list){
         return opsForList().rightPushAll(key, list.toArray());

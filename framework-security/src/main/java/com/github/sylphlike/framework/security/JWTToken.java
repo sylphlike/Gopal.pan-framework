@@ -37,18 +37,14 @@ public class JWTToken {
     private static final Algorithm algorithm = Algorithm.HMAC256("secret");
 
 
-
-
     /**
      * 签发JWT
-     *
-     *  Header
-     *
-     *  Payload
-     *
-     *  Signature
-     * @return  String
-     *
+     * <p>  Header Payload Signature
+     * <p>  time 17:43 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param subject    内容
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String create(String subject) {
 
@@ -59,9 +55,9 @@ public class JWTToken {
 
 
     /**
-     * <p>  time 13:28 2020/11/17 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      * 签发指定过期时间的token
+     * <p>  time 13:28 2020/11/17 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param subject   内容
      * @param expires   过期时间，单位分钟
      * @return   java.lang.String
@@ -79,12 +75,13 @@ public class JWTToken {
     }
 
 
-
-
     /**
      * 验证token
-     * @param jwtStr
-     * @return
+     * <p>  time 17:43 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param jwtStr jwt字符串
+     * @return  boolean
+     * @author  Gopal.pan
      */
     public static boolean validate(String jwtStr) {
 
@@ -97,10 +94,14 @@ public class JWTToken {
 
 
 
+
     /**
      * 验证token
-     * @param jwtStr
-     * @return
+     * <p>  time 17:43 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param jwtStr    jwt字符串
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String validateSubject(String jwtStr) {
         JWTVerifier verifier = JWT.require(algorithm).withIssuer(ISSUER).build();
@@ -113,10 +114,9 @@ public class JWTToken {
 
 
     /**
+     * 6位随机数
      * <p>  time 15:33 2020/10/8 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  6位随机数
-     * @param
+     * <p> email 15923508369@163.com
      * @return java.lang.String
      * @author Gopal.pan
      */

@@ -3,11 +3,9 @@ package com.github.sylphlike.framework.utils.sequence;
 import java.util.UUID;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * 随机不重复序列
- *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -21,15 +19,12 @@ public class RandomSequence {
             "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
             "W", "X", "Y", "Z" };
 
-
-
     /**
-     * <p>  time 13:50 2020/10/8 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  十位随机不重复数字序列，不到十位的前面补0
-     * @param
-     * @return java.lang.String
-     * @author Gopal.pan
+     * 十位随机不重复数字序列，不到十位的前面补0
+     * <p>  time 17:53 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String digitalId(){
         String s = UUID.randomUUID().toString();
@@ -40,15 +35,14 @@ public class RandomSequence {
 
 
 
+
     /**
-     * <p>  time 13:45 2020/10/8 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      * 8位不重复ID
-     *  通过随机生成32位UUID，由于UUID都为十六进制，所以将UUID分成8组，每4个为一组，然后通过模62操作，结果作为索引取出字符
-     *
-     * @param
-     * @return java.lang.String
-     * @author Gopal.pan
+     * <p> 通过随机生成32位UUID，由于UUID都为十六进制，所以将UUID分成8组，每4个为一组，然后通过模62操作，结果作为索引取出字符
+     * <p>  time 17:53 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String eightUuid() {
         StringBuilder shortBuffer = new StringBuilder();

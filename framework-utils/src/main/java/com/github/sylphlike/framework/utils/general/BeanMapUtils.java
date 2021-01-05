@@ -24,10 +24,14 @@ import java.util.Map;
 public class BeanMapUtils {
     private static final Logger LOGGER =  LoggerFactory.getLogger(BeanMapUtils.class);
 
+
     /**
      * 对象转map
-     * @param obj
-     * @return
+     * <p>  time 11:18 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param obj   待转的实体对象
+     * @return  java.util.Map
+     * @author  Gopal.pan
      */
     public static Map<String, Object> beanTrans2Map(Object obj) {
 
@@ -55,14 +59,14 @@ public class BeanMapUtils {
         return null;
     }
 
-
     /**
      * map 转Java bean
-     * @param map
-     * @param beanClass
-     * @param <T>
-     * @return
-     * @throws Exception
+     * <p>  time 11:18 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param map         Map对象
+     * @param beanClass   实体对象
+     * @return  T         转换后的实体对象
+     * @author  Gopal.pan
      */
     public static  <T> T mapTransBean(Map<String, String> map, Class<T> beanClass) {
 

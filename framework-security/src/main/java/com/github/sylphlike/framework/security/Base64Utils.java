@@ -19,11 +19,15 @@ public class Base64Utils {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(Base64Utils.class);
 
-	
+
+
 	/**
 	 * base64加密字符串
-	 * @param str 带加密字符串
-	 * @return
+	 * <p>  time 17:46 2021/1/4 (HH:mm yyyy/MM/dd)
+	 * <p> email 15923508369@163.com
+	 * @param str   待加密字符串
+	 * @return  java.lang.String
+	 * @author  Gopal.pan
 	 */
 	public static String encodeBase64(String str) {
         byte[] b = null;
@@ -41,10 +45,15 @@ public class Base64Utils {
         return s;
 	}
 
+
+
     /**
-     * base64加密 byte[]
-     * @param content
-     * @return
+     * base64加密
+     * <p>  time 17:45 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param content  待加密byte数组
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String encodeBase64(byte[] content) {
         Base64.Encoder encoder = Base64.getEncoder();
@@ -52,10 +61,15 @@ public class Base64Utils {
     }
 
 
+
+
 	/**
 	 * base64解密
-	 * @param str
-	 * @return
+	 * <p>  time 17:45 2021/1/4 (HH:mm yyyy/MM/dd)
+	 * <p> email 15923508369@163.com
+	 * @param str   Base64加密字符串
+	 * @return  java.lang.String
+	 * @author  Gopal.pan
 	 */
 	public static String decodeBase64(String str) {
         String result = null;

@@ -7,11 +7,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * <p>  time 22/09/2020 14:10  星期二 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
+ * 高并发场景下System.currentTimeMillis()的性能问题的优化 调用方法；Clock.now();
+ * <p>  time 22/09/2020 14:10  星期二 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
- *  高并发场景下System.currentTimeMillis()的性能问题的优化
- *      调用方法；Clock.now();
  *
  *
  * @author Gopal.pan

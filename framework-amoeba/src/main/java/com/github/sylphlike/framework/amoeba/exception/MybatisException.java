@@ -13,9 +13,7 @@ public class MybatisException extends RuntimeException implements Serializable {
 
     private static final long serialVersionUID = -1695036681341844113L;
 
-    /**
-     * 错误描述
-     */
+    /** 错误描述*/
     private String errorMsg;
 
 

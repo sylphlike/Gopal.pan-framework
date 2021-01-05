@@ -3,10 +3,9 @@ package com.github.sylphlike.framework.web;
 import com.github.sylphlike.framework.norm.RCode;
 
 /**
- * <p>  time 19/11/2020 16:11  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
- *  框架提供的系统类错误码，和已知通用的业务错误码
+ * 框架提供的系统类错误码，和已知通用的业务错误码
+ * <p>  time 19/11/2020 16:11  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
  * @author Gopal.pan
  * @version 1.0.0

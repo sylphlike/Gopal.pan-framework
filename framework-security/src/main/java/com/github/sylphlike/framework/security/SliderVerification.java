@@ -15,15 +15,10 @@ import java.util.Iterator;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 23/10/2020 10:18  星期五 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *  滑块认证
- *  目标图片大小需要590 * 360
- *  目标图片文件后缀为.jpg
- *  模板图片文件后缀为.png
- *
- *
- *
+ * 滑块认证
+ * <p>目标图片大小需要590 * 360 目标图片文件后缀为.jpg 模板图片文件后缀为.png
+ * <p>  time 23/10/2020 10:18  星期五 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -44,9 +39,9 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 15:41 2020/10/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      * 根据模板切图
+     * <p>  time 15:41 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @return   com.github.sylphlike.security.vo.SliderVO
      * @author   Gopal.pan
      */
@@ -132,7 +127,6 @@ public class SliderVerification {
      * @param oriImage
      * @param templateImage
      * @param xDistance
-     * @param y
      * @return
      * @throws Exception
      */
@@ -183,9 +177,9 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 11:51 2020/10/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      * 根据模板图片抠图
+     * <p>  time 11:51 2020/10/23 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param oriImage
      * @param templateImage
      * @param targetImage

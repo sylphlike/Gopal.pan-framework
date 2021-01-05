@@ -24,11 +24,9 @@ import java.util.Map;
 
 
 /**
+ * 二维码生成工具类
  * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
- *
- * 二维码生成工具类
- *
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -65,14 +63,15 @@ public class QRCode {
 
 
 
+
+
     /**
-     * <p>  time 15:16 2020/12/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 生成二维码图片,保存到指定文件目录下
+     * <p>  time 10:27 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param contents    二维码内容
      * @param savePath    二维码图片存储地址
-     * @return   void
-     * @author   Gopal.pan
+     * @author  Gopal.pan
      */
     public static void QRCodeFile(String contents, String savePath){
         try {
@@ -199,12 +198,16 @@ public class QRCode {
 
 
 
+
+
     /**
      *
+     * <p>  time 10:27 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param contents  二维码内容
      * @param title     二维码title
      * @param filePath  图片保存路径地址
-     * @return
+     * @author  Gopal.pan
      */
     public static void QRCodeFile(String contents,String title,String filePath) {
 

@@ -26,9 +26,14 @@ public class OSUtils {
     private static String MAC;
     private static String HOST_NAME;
 
+
+
     /**
      * 获得内网IP
-     * @return 内网IP
+     * <p>  time 10:56 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String intranetIp(){
         try{
@@ -42,9 +47,14 @@ public class OSUtils {
         return null;
     }
 
+
+
     /**
      * 获得外网IP
-     * @return 外网IP
+     * <p>  time 10:56 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String internetIp(){
         try{
@@ -69,10 +79,12 @@ public class OSUtils {
         return null;
     }
 
-
     /**
      * 获取MAC地址 C8-FF-28-5B-32-25
-     * @return
+     * <p>  time 10:55 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.util.List
+     * @author  Gopal.pan
      */
     public static List<String> macAddress(){
         try {
@@ -122,17 +134,25 @@ public class OSUtils {
     }
 
 
+
     /**
      * 获取版本号
-     * @return
+     * <p>  time 10:54 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String serviceVersion(){
         return OSUtils.class.getPackage().getImplementationVersion();
     }
 
+
     /**
      * 得到计算机的ip,名称,操作系统名称,操作系统版本
-     * @return
+     * <p>  time 10:55 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  集合
+     * @author  Gopal.pan
      */
     public static Map<String,String> systemConfig() {
         try {

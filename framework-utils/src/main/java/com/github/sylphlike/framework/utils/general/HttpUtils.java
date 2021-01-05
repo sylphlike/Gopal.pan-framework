@@ -64,18 +64,28 @@ public class HttpUtils {
 
     /**
      * 发送 GET 请求（HTTP），不带输入数据
-     * @param url
-     * @return
+     * <p>  time 10:31 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url  api地址
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doGet(String url) throws IOException {
         return doGet(url, new HashMap<>(16));
     }
 
+
+
     /**
      * 发送 GET 请求（HTTP），K-V形式
-     * @param url
-     * @param params
-     * @return
+     * <p>  time 10:31 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url     api地址
+     * @param params  参数
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doGet(String url, Map<String, Object> params) throws IOException {
 
@@ -126,18 +136,27 @@ public class HttpUtils {
 
     /**
      * 发送 POST 请求（HTTP），不带输入数据
-     * @param url
-     * @return
+     * <p>  time 10:30 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url  api地址
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doPost(String url) throws IOException {
         return doPost(url, new HashMap<>(16));
     }
 
+
     /**
      * 发送 POST 请求（HTTP），K-V形式
-     * @param url API接口URL
+     * <p>  time 10:30 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url    API接口URL
      * @param params 参数map
-     * @return
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doPost(String url, Map<String, Object> params) throws IOException {
 
@@ -156,11 +175,17 @@ public class HttpUtils {
         return new UrlEncodedFormEntity(formParams, Consts.UTF_8);
     }
 
+
+
     /**
      * 发送 POST 请求（HTTP），JSON形式
-     * @param url
-     * @param json json对象
-     * @return
+     * <p>  time 10:30 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url   api地址
+     * @param json  json对象
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doPost(String url, Object json) throws IOException {
 
@@ -172,11 +197,16 @@ public class HttpUtils {
 
     }
 
+
     /**
      * 发送 SSL POST 请求（HTTPS），K-V形式
-     * @param url API接口URL
+     * <p>  time 10:29 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url    API接口URL
      * @param params 参数map
-     * @return
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doPostSSL(String url, Map<String, Object> params) throws IOException {
 
@@ -188,11 +218,16 @@ public class HttpUtils {
 
 
 
+
     /**
      * 发送 SSL POST 请求（HTTPS），JSON形式
-     * @param url API接口URL
+     * <p>  time 10:28 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param url  API接口URL
      * @param json JSON对象
-     * @return
+     * @return  java.lang.String
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public static String doPostSSL(String url, Object json) throws IOException {
 

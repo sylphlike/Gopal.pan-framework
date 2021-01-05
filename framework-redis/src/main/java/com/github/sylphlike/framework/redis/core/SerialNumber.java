@@ -27,16 +27,17 @@ public class SerialNumber  extends RedisAccessor{
 
 
 
+
+
     /**
-     * <p>  time 13:59 2020/10/8 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  初始化指定规则的流水号
+     * 初始化指定规则的流水号
+     * <p>  time 11:32 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param prefix         流水号规则前缀
      * @param serialLength   自增流水号长度
      * @param key            流水号在Redis中的key值
      * @param currentSerial  当前流水号已使用的最大值
-     * @return void
-     * @author Gopal.pan
+     * @author   Gopal.pan
      */
     public void initSerial(String prefix,int serialLength,String key,String currentSerial){
         StringBuilder stringBuffer = new StringBuilder();
@@ -64,13 +65,13 @@ public class SerialNumber  extends RedisAccessor{
 
 
 
+
     /**
-     * <p>  time 14:00 2020/10/8 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  初始化指定规则的流水号
-     * @param serialEntity
-     * @return void
-     * @author Gopal.pan
+     * 初始化指定规则的流水号
+     * <p>  time 11:31 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param serialEntity  原始流水号实体对象
+     * @author   Gopal.pan
      */
     public void initSerial(SerialEntity serialEntity){
         StringBuilder stringBuffer = new StringBuilder();
@@ -90,9 +91,11 @@ public class SerialNumber  extends RedisAccessor{
 
 
     /**
-     * 获取流水号
-     * @param key
-     * @return
+     * <p>  time 11:29 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key   缓存key
+     * @return   java.lang.String
+     * @author   Gopal.pan
      */
     public String leftPop(String key){
         String serial =(String) opsForList().leftPop(key);

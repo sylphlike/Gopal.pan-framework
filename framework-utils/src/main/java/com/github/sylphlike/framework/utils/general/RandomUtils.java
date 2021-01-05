@@ -24,43 +24,43 @@ public class RandomUtils {
     public static final String BASE_MIX = BASE_CHAR_LOWER + BASE_NUMBER + BASE_CHAR_UPPER;
 
 
-
-
     /**
      * 获得指定范围内的随机数[min, max)
-     *
+     * <p>  time 10:52 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param min 最小数（包含）
      * @param max 最大数（不包含）
-     * @return 随机数
+     * @return  long
+     * @author  Gopal.pan
      */
     public static long betweenLongRandom(long min, long max) {
         return getRandom().nextLong(min, max);
     }
 
 
+
     /**
      * 获得指定范围内的随机数[min, max)
-     *
+     * <p>  time 10:52 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param min 最小数（包含）
      * @param max 最大数（不包含）
-     * @return 随机数
+     * @return  long
+     * @author  Gopal.pan
      */
     public static long betweenIntRandom(int min, int max) {
         return getRandom().nextInt(min, max);
     }
 
 
-
-
-
-
-
     /**
      * 获得一个随机的字符串
-     *
+     * <p>  time 10:52 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param baseString 随机字符选取的样本
      * @param length     字符串的长度
-     * @return 随机字符串
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String randomString(String baseString, int length) {
         if (null == baseString || "".equals(baseString)) {
@@ -79,10 +79,14 @@ public class RandomUtils {
         return sb.toString();
     }
 
+
     /**
      * 获取指定长度的随机数字
+     * <p>  time 10:51 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param length 字符串的长度
-     * @return
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String randomNumber(int length){
         final StringBuilder sb = new StringBuilder(length);
@@ -95,10 +99,14 @@ public class RandomUtils {
     }
 
 
+
     /**
      * 获取指定长度的小写字符
+     * <p>  time 10:51 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param length 字符串的长度
-     * @return
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String randomCharLower(int length){
         final StringBuilder sb = new StringBuilder(length);
@@ -110,10 +118,14 @@ public class RandomUtils {
         return sb.toString();
     }
 
+
     /**
      * 获取指定长度的小写字符
+     * <p>  time 10:51 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param length 字符串的长度
-     * @return
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String randomCharUpper(int length){
         final StringBuilder sb = new StringBuilder(length);
@@ -125,11 +137,13 @@ public class RandomUtils {
         return sb.toString();
     }
 
-
     /**
      * 获取指定长度的数字字母组合
+     * <p>  time 10:50 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @param length 字符串的长度
-     * @return
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String randomMix(int length){
         final StringBuilder sb = new StringBuilder(length);

@@ -39,10 +39,15 @@ public class RedisGeneralConfig  {
     }
 
 
+
+
     /**
      * 配置Redis序列化，value使用 Jackson 可以使用 StringRedisSerializer
-     * @param redisConnectionFactory
-     * @return
+     * <p>  time 11:29 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param redisConnectionFactory  redisConnectionFactory
+     * @return   RedisTemplate
+     * @author   Gopal.pan
      */
     protected RedisTemplate<Serializable, Object> initRedisTemplate(RedisConnectionFactory redisConnectionFactory){
         Jackson2JsonRedisSerializer<?> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);

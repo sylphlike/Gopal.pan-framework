@@ -24,14 +24,12 @@ public class MarkProvider {
 
 
     /**
-     * <p>  time 10:52 2020/9/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *
-     *  数据中心ID
-     *
-     * @param maxDataCenterId
-     * @return long
-     * @author Gopal.pan
+     * 数据中心ID
+     * <p>  time 10:45 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param maxDataCenterId  最大数据中心ID
+     * @return  long
+     * @author  Gopal.pan
      */
     public static long getDataCenterId(long maxDataCenterId){
         long id = 0L;
@@ -58,15 +56,13 @@ public class MarkProvider {
 
 
     /**
-     * <p>  time 11:09 2020/9/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *
      * 工作机器ID
-     *
-     * @param dataCenterId
-     * @param maxWorkerId
-     * @return long
-     * @author Gopal.pan
+     * <p>  time 10:44 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param dataCenterId   数据中心ID
+     * @param maxWorkerId    最大工作机器ID
+     * @return  long
+     * @author  Gopal.pan
      */
     protected static long getWorkerId(long dataCenterId, long maxWorkerId) {
         StringBuilder builder = new StringBuilder();

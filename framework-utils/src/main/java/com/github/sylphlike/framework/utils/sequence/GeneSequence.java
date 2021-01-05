@@ -65,10 +65,7 @@ public class GeneSequence {
         this.workerId = MarkProvider.getWorkerId(dataCenterId, MAX_WORKER_ID);
     }
 
-    /**
-     * @param workerId      工作机器ID
-     * @param dataCenterId  序列号
-     */
+
     public GeneSequence(long workerId, long dataCenterId) {
         if (workerId > MAX_WORKER_ID || workerId < 0) {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", MAX_WORKER_ID));
@@ -81,9 +78,15 @@ public class GeneSequence {
     }
 
 
+
+
     /**
      * 获取下一个ID
-     * @return
+     * <p>  time 10:49 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param orgId 原始ID
+     * @return  long
+     * @author  Gopal.pan
      */
     public  synchronized long nextId(Long orgId) {
         long timestamp = Clock.now();

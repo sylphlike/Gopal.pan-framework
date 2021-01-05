@@ -6,7 +6,8 @@ import com.github.sylphlike.framework.utils.general.Clock;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
+ *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com 
  *
  *      0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000
@@ -66,10 +67,7 @@ public class StandardSequence {
         this.workerId = MarkProvider.getWorkerId(dataCenterId, MAX_WORKER_ID);
     }
 
-    /**
-     * @param workerId      工作机器ID
-     * @param dataCenterId  序列号
-     */
+
     public StandardSequence(long workerId, long dataCenterId) {
         if (workerId > MAX_WORKER_ID || workerId < 0) {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", MAX_WORKER_ID));
@@ -80,9 +78,14 @@ public class StandardSequence {
         this.workerId = workerId;
         this.dataCenterId = dataCenterId;
     }
+
+
     /**
      * 获取下一个ID
-     * @return
+     * <p>  time 10:43 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  long
+     * @author  Gopal.pan
      */
     public  synchronized long nextId() {
         long timestamp = Clock.now();

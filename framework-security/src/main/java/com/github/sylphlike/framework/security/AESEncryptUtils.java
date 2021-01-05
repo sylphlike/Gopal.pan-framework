@@ -13,11 +13,9 @@ import java.security.SecureRandom;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * AES对称加密工具类
- *
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
@@ -31,10 +29,7 @@ public class AESEncryptUtils {
     private static final int    ENCRYPT_KEY_LENGTH  =  128;
 
 
-    /**
-     * 生成AES秘钥
-     * @return
-     */
+
     public static String createStringKey() {
 
         try {
@@ -51,10 +46,7 @@ public class AESEncryptUtils {
     }
 
 
-    /**
-     * 生成AES秘钥
-     * @return
-     */
+
     public static SecretKey createSecretKey() {
 
         try {
@@ -71,25 +63,20 @@ public class AESEncryptUtils {
 
 
 
-
-
-
     /**
      * 转换密钥
-     * @param key   二进制密钥
-     * @return 密钥
+     * <p>  time 17:47 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param key  二进制密钥
+     * @return  java.security.Key
+     * @author  Gopal.pan
      */
     private static Key toKey(byte[] key) {
         return new SecretKeySpec(key, KEY_ALGORITHM);
     }
 
 
-    /**
-     * 加密
-     * @param data
-     * @param stringKey
-     * @return
-     */
+
     public static String encrypt(String data,String stringKey){
         try {
             Key key = toKey(Hex.decodeHex(stringKey.toCharArray()));
@@ -103,12 +90,7 @@ public class AESEncryptUtils {
     }
 
 
-    /**
-     * 解密
-     * @param data
-     * @param stringKey
-     * @return
-     */
+
     public static String decrypt(String data,String stringKey){
 
         try {

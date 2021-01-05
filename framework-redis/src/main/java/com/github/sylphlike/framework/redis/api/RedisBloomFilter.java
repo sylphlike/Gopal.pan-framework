@@ -12,10 +12,9 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * <p>  time 14/10/2020 10:23  星期三 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  *  redis bloom 过滤器API
+ * <p>  time 14/10/2020 10:23  星期三 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  *
  * @author Gopal.pan
  * @version 1.0.0
@@ -28,13 +27,12 @@ public class RedisBloomFilter<T> {
 
 
     /**
+     * 布隆过滤器添加值
      * <p>  time 13:44 2020/10/14 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  布隆过滤器添加值
-     * @param bloomFilterHelper
-     * @param key
-     * @param value
-     * @return void
+     * <p> email 15923508369@163.com
+     * @param bloomFilterHelper  布隆过滤器
+     * @param key                缓存key
+     * @param value              值
      * @author Gopal.pan
      */
     public  void add(BloomFilterHelper<T> bloomFilterHelper, String key, T value) {
@@ -59,9 +57,9 @@ public class RedisBloomFilter<T> {
      * <p>  time 13:44 2020/10/14 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com 
      *  校验过滤器中是否存在对应的值
-     * @param bloomFilterHelper
-     * @param key
-     * @param value
+     * @param bloomFilterHelper  布隆过滤器
+     * @param key                缓存key
+     * @param value              值
      * @return boolean
      * @author Gopal.pan
      */

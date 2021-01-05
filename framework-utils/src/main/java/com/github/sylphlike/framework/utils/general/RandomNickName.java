@@ -23,8 +23,11 @@ public class RandomNickName {
 
     /**
      * 获取随机昵称
-     * @param gender
-     * @return
+     * <p>  time 10:53 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param gender   性别枚举
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String nickName(Gender gender){
         if(gender == null){

@@ -27,20 +27,17 @@ import java.util.Map;
 
 
 /**
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
  * POI excel文件导出，支持超大数据量
- *      初始化excel文件 --> 添加数据 --> 渲染到客户端 -->清理临时文件
- *      new ExcelExport<>(sysUser1,list.size()).setDataList(list).write("D:\\test.xlsx").dispose();
- *
+ * <p> 初始化excel文件 -- 添加数据 -- 渲染到客户端 --清理临时文件. new ExcelExport(sysUser1,list.size()).setDataList(list).write("D:\\test.xlsx").dispose();
+ * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */
 
 public class ExcelExport<T> {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**sheet个数*/
     private int sheetCount = 1;
@@ -57,10 +54,10 @@ public class ExcelExport<T> {
 
 
     /**工作薄样式*/
-    private Map<String, CellStyle> styleMap = Maps.newLinkedHashMap();
+    private final Map<String, CellStyle> styleMap = Maps.newLinkedHashMap();
 
     /**sheet个数*/
-    private List<Sheet> sheetList = Lists.newArrayList();
+    private final List<Sheet> sheetList = Lists.newArrayList();
 
 
     private String sheetName;
@@ -68,14 +65,14 @@ public class ExcelExport<T> {
     private short  titleHeight;
     private short  headerHeight;
     private short  contentHeight;
-    private List<Map<String,Object>> property = Lists.newArrayList();
+    private final List<Map<String,Object>> property = Lists.newArrayList();
 
 
 
     /**
      * 07版本已上版本 低内存占用工作空间创建方式
      */
-    private SXSSFWorkbook sxssfWorkbook = new SXSSFWorkbook(MEMORY_CACHE_ROW);
+    private final SXSSFWorkbook sxssfWorkbook = new SXSSFWorkbook(MEMORY_CACHE_ROW);
 
 
 
@@ -284,10 +281,13 @@ public class ExcelExport<T> {
 
     /**
      * 输出到客户端 web
-     * @param response     相应流
+     * <p>  time 17:51 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param response     响应流
      * @param fileName     编码后的文件名
-     * @return
-     * @throws IOException
+     * @return  com.github.sylphlike.framework.utils.excel.core.ExcelExport
+     * @throws  IOException ex
+     * @author  Gopal.pan
      */
     public ExcelExport write(HttpServletResponse response, String fileName) throws IOException{
         response.reset();
@@ -300,8 +300,11 @@ public class ExcelExport<T> {
 
     /**
      * 输出到客户端 文件流
-     * @param fileFullPath  文件路径，包括文件名
-     * @return
+     * <p>  time 17:51 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param fileFullPath  文件地址路径
+     * @return  com.github.sylphlike.framework.utils.excel.core.ExcelExport
+     * @author  Gopal.pan
      */
     public ExcelExport write(String fileFullPath){
         try {
@@ -321,8 +324,13 @@ public class ExcelExport<T> {
 
 
 
+
     /**
      * 清理临时文件
+     * <p>  time 11:32 2021/1/5 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @return  com.github.sylphlike.framework.utils.excel.core.ExcelExport
+     * @author  Gopal.pan
      */
     public ExcelExport dispose(){
         sxssfWorkbook.dispose();

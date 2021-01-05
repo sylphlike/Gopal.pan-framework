@@ -6,11 +6,9 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * <p>  time 21/09/2020 11:18  星期一 (dd/MM/YYYY HH:mm) 
- * <p> email 15923508369@163.com 
- *
- *  通用分页入参
- *
+ * 通用分页入参
+ * <p>  time 21/09/2020 11:18  星期一 (dd/MM/YYYY HH:mm)
+ * <p> email 15923508369@163.com
  * @author Gopal.pan
  * @version 1.0.0
  */

@@ -17,8 +17,14 @@ public class Md5Utils {
 
     private static final int CODE_LENGTH = 32;
 
+
     /**
-     * 使用md5的算法进行加密
+     * md5算法进行加密
+     * <p>  time 17:31 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param plainText  明文
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String md5(String plainText) {
         byte[] secretBytes = null;
