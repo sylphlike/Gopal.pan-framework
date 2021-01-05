@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>framework-redis</artifactId>
+    <description> Redis client enhancement </description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

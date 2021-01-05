@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>framework-norm</artifactId>
-    <description> 系统基础规范 </description>
+    <description> System basic specifications </description>
 
 
     <build>

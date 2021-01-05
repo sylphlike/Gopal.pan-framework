@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>framework-basis</artifactId>
-    <description>通用配置、工具类服务，兼容webflux应用 </description>
+    <description>General configuration, tool service, compatible with webflux applications </description>
 
 
     <dependencies>
