@@ -1,5 +1,6 @@
 package com.github.sylphlike.framework.web.endpoint;
 
+import com.github.sylphlike.framework.basis.Constants;
 import com.github.sylphlike.framework.norm.CharsetUtil;
 import com.github.sylphlike.framework.norm.Response;
 import org.apache.commons.lang3.ObjectUtils;
@@ -19,6 +20,11 @@ import java.util.*;
 
 /**
  * 系统类对外提供接口服务
+ *
+ * <p> 接入需要满足规范
+ *      1 类上需有 RequestMapping 并且指定name字段值 ， 该name 用于 controllers类说明
+ *      2 方法上可以使用标准的 GetMapping,PostMapping 等， 需指定name字段值，该值用于描述方法作用
+ *      缺少1,2规范小的name值时， 接口说明字段将为空
  * <p>  time 06/11/2020 15:40  星期五 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
  *
@@ -47,19 +53,19 @@ public class EndpointHandler {
     private String appName;
 
     /**
-     * <p>  time 15:43 2020/11/6 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      * 系统中业务接口地址列表
-     *
+     * <p>  time 15:43 2020/11/6 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @return   com.github.sylphlike.norm.Response<java.lang.Object>
      * @author   Gopal.pan
      */
     @GetMapping(value = "/business/url",name = "业务接口地址列表")
     public Response<ApiVO> businessUrl(){
+        Map<Class<?>,List<ApiVO.ApiInfo>> groupMap = new HashMap<>();
+
         Map<RequestMappingInfo, HandlerMethod> map = requestMappingHandlerMapping.getHandlerMethods();
         LOGGER.info("【framework-web】系统中全部URL地址个数为[{}]",map.size());
 
-        List<ApiVO.ApiInfo> apiVOList = new ArrayList<>();
         ApiVO.ApiInfo apiInfo;
 
         Set<RequestMappingInfo> requestMappingInfos = map.keySet();
@@ -77,16 +83,41 @@ public class EndpointHandler {
             }
 
             if(!FILTER_ADDRESS.contains(urlPath) && StringUtils.isNotEmpty(urlPath)){
+
+                String[] split = ObjectUtils.defaultIfNull(requestMappingInfo.getName(), CharsetUtil.CHAR_ENGLISH_EMPTY).split("#");
+                String name = split.length == Constants.DIGITAL_TWO ? split[Constants.DIGITAL_ONE] : "";
+
                 apiInfo = new ApiVO.ApiInfo();
                 apiInfo.setMethodType(methodType);
                 apiInfo.setUrlPath(urlPath);
-                apiInfo.setName(ObjectUtils.defaultIfNull(requestMappingInfo.getName(), CharsetUtil.CHAR_ENGLISH_EMPTY));
-                apiVOList.add(apiInfo);
+                apiInfo.setName(name);
+
+                HandlerMethod handlerMethod = map.get(requestMappingInfo);
+                Class<?> beanType = handlerMethod.getBeanType();
+                List<ApiVO.ApiInfo> apiInfos = groupMap.get(beanType);
+                if(ObjectUtils.isEmpty(apiInfos)){
+                    groupMap.put(beanType,  new ArrayList<>(Collections.singletonList(apiInfo)));
+                }else {
+                    apiInfos.add(apiInfo);
+                    groupMap.put(beanType, apiInfos);
+                }
             }
         }
 
-        ApiVO apiVO = ApiVO.builder().appName(appName).apiInfoList(apiVOList).build();
-        LOGGER.info("【framework-web】系统业务URL地址个数为[{}]",apiVOList.size());
+        List<ApiVO.Controllers> controllersList = new ArrayList<>();
+        ApiVO.Controllers controllers;
+        for (Class<?> aClass : groupMap.keySet()) {
+            RequestMapping annotation = aClass.getAnnotation(RequestMapping.class);
+            controllers = new ApiVO.Controllers();
+            controllers.setName(aClass.getName());
+            controllers.setSimpleName(aClass.getSimpleName());
+            controllers.setDesc(annotation.name());
+            controllers.setApiInfoList(groupMap.get(aClass));
+
+            controllersList.add(controllers);
+        }
+
+        ApiVO apiVO = ApiVO.builder().appName(appName).controllers(controllersList).build();
         return new Response<>(apiVO);
 
     }

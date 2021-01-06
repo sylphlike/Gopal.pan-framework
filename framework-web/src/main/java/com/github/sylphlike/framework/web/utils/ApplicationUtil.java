@@ -22,7 +22,7 @@ import java.util.jar.JarFile;
 public class ApplicationUtil {
 
 
-    private static Logger LOGGER = LoggerFactory.getLogger(ApplicationUtil.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationUtil.class);
 
     // 应用程序名称 取值为 编译后的项目名称
     public static String projectName;
