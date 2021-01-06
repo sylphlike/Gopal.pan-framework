@@ -49,8 +49,8 @@ public enum FReply implements RCode {
     FW_DATA_UNAFFECTED_DELETE           (88004, "删除数据失败"),
     FW_DATA_MISS                        (88005, "数据不存在"),
     FW_DATE_DUPLICATE_KEY               (88006, "数据重复"),
-    FW_DATA_TRANSACTION                 (88999, "事物执行异常"),
-
+    FW_DATA_TRANSACTION                 (88998, "事物执行异常"),
+    FW_DATE_UNKNOWN_ERROR               (88999, "数据异常"),
 
     FW_UNKNOWN_ERROR                    (89999,"未知错误，请稍后重试或联系客服人员"),
 

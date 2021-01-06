@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -144,8 +145,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public Response<Void> handleRuntimeException(RuntimeException ex, HttpServletRequest request) {
+        Throwable cause = ex.getCause();
+        Response<Void> response;
+        if(cause instanceof SQLException){
+            response = new Response<>(FReply.FW_DATE_UNKNOWN_ERROR, cause.getMessage());
+        }else {
+            response = new Response<>(FReply.FW_UNKNOWN_ERROR);
+        }
 
-        Response<Void> response = new Response<>(FReply.FW_UNKNOWN_ERROR);
         writeLog(ex, request, response);
         return response;
     }
