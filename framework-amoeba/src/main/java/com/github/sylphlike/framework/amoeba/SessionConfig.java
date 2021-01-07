@@ -73,7 +73,7 @@ public class SessionConfig extends org.apache.ibatis.session.Configuration imple
 
         List<Class<?>> typeAliases = getTypeAliases();
         if (!typeAliases.isEmpty()) {
-            Class[] classes = new Class[typeAliases.size()];
+            Class<?>[] classes = new Class[typeAliases.size()];
             for (int x = 0; x < typeAliases.size(); x++) {
                 classes[x] = typeAliases.get(x);
             }
