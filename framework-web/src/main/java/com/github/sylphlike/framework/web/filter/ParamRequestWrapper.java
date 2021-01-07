@@ -34,8 +34,7 @@ public class ParamRequestWrapper extends HttpServletRequestWrapper {
 
     /**
      * Constructs a request object wrapping the given request.
-     *
-     * @param request
+     * @param request request
      * @throws IllegalArgumentException if the request is null
      */
     public ParamRequestWrapper(HttpServletRequest request) {
@@ -82,16 +81,15 @@ public class ParamRequestWrapper extends HttpServletRequestWrapper {
     }
 
 
-    /**
-     * <p>  time 10:33 2020/11/24 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  POST请求
-     * @return   javax.servlet.ServletInputStream
-     * @author   Gopal.pan
-     */
+
     @Override
     public ServletInputStream getInputStream() throws IOException {
-        if(super.getHeader("Content-Type").equalsIgnoreCase(MediaType.APPLICATION_JSON_VALUE)) {
+        String contentType = super.getHeader("Content-Type");
+
+        if(StringUtils.isEmpty(contentType))
+            return super.getInputStream();
+
+        if(contentType.equalsIgnoreCase(MediaType.APPLICATION_JSON_VALUE)) {
             String json = IOUtils.toString(super.getInputStream(), "utf-8");
             if (StringUtils.isEmpty(json)) {
                 return super.getInputStream();
@@ -104,12 +102,10 @@ public class ParamRequestWrapper extends HttpServletRequestWrapper {
                 map.put(s,cleanXSS(o.toString().trim()));
             }
 
-
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(JsonConfig.mapper().writeValueAsBytes(map));
             return new InputStream(byteArrayInputStream);
 
-
-        }else if(super.getHeader("Content-Type").equalsIgnoreCase(MediaType.APPLICATION_FORM_URLENCODED_VALUE)){
+        }else if(contentType.equalsIgnoreCase(MediaType.APPLICATION_FORM_URLENCODED_VALUE)){
             return super.getInputStream();
         }else {
             return super.getInputStream();
