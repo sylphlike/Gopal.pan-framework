@@ -212,6 +212,7 @@
         <mockito.verson>2.0.2-beta</mockito.verson>
         <sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
+        <javaparser-core.version>3.18.0</javaparser-core.version>
 
     </properties>
 
@@ -345,6 +346,13 @@
                 <version>${mockito.verson}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.javaparser</groupId>
+                <artifactId>javaparser-core</artifactId>
+                <version>${javaparser-core.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
