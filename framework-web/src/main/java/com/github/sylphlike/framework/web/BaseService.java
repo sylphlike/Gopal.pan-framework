@@ -1,13 +1,12 @@
 package com.github.sylphlike.framework.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sylphlike.framework.web.exception.ServiceException;
 import com.github.sylphlike.framework.basis.Constants;
 import com.github.sylphlike.framework.norm.Response;
 import com.github.sylphlike.framework.web.callback.AbstractTransaction;
+import com.github.sylphlike.framework.web.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -24,9 +23,14 @@ public class BaseService {
 
     protected final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired protected ObjectMapper mapper;
-    @Autowired protected TransactionTemplate transactionTemplate;
+    protected ObjectMapper mapper;
+    protected TransactionTemplate transactionTemplate;
 
+
+    public BaseService(ObjectMapper mapper, TransactionTemplate transactionTemplate) {
+        this.mapper = mapper;
+        this.transactionTemplate = transactionTemplate;
+    }
 
     /**
      * TransactionTemplate 编程式事物基类

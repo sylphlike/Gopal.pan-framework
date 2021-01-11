@@ -33,7 +33,12 @@ public class BaseController {
 
     protected final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired protected ObjectMapper mapper;
+    protected ObjectMapper mapper;
+    public BaseController(ObjectMapper mapper) {
+        this.mapper = mapper;
+    }
+
+
 
     protected HttpServletRequest httpServletRequest;
     protected HttpServletResponse httpServletResponse;
