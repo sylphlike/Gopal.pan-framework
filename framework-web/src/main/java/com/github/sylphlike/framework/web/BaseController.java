@@ -40,7 +40,7 @@ public class BaseController {
     protected HttpSession httpSession;
 
     /** 登录用户ID，或商户ID */
-    protected Long userId;
+    protected Long identityId;
 
 
 
@@ -59,8 +59,8 @@ public class BaseController {
         this.httpServletResponse = response;
         this.httpSession = request.getSession();
         String identityId = request.getHeader(Constants.IDENTITY_ID);
-        userId = StringUtils.isEmpty(identityId)? null : Long.valueOf(identityId);
-        UserHelper.IDENTITY_ID.set(userId);
+        this.identityId = StringUtils.isEmpty(identityId)? null : Long.valueOf(identityId);
+        UserHelper.IDENTITY_ID.set(this.identityId);
 
     }
 
