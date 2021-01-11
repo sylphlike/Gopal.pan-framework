@@ -39,7 +39,7 @@ public class BaseController {
     protected HttpServletResponse httpServletResponse;
     protected HttpSession httpSession;
 
-    /** 登录用户ID，或商户ID */
+    /** 登录用户标识，（用户ID， 商户ID） */
     protected Long identityId;
 
 

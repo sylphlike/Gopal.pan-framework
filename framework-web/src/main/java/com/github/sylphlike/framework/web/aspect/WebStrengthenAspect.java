@@ -2,6 +2,7 @@ package com.github.sylphlike.framework.web.aspect;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.sylphlike.framework.basis.UserHelper;
 import com.github.sylphlike.framework.norm.CharsetUtil;
 import com.github.sylphlike.framework.norm.Response;
 import com.github.sylphlike.framework.web.exception.AssertUtils;
@@ -27,7 +28,8 @@ import java.lang.reflect.Method;
 
 /**
  * web增强处理
- * <p> 入参出参日志记录
+ * <p> 1 入参出参日志记录
+ *     2 移除 ThreadLocal数据
  * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
  * @author Gopal.pan
@@ -75,7 +77,6 @@ public class WebStrengthenAspect {
 
     @AfterReturning(returning = "ret", pointcut = "webRequestAspectLog()")
     public void doAfterReturning(JoinPoint joinPoint,Object ret) {
-
         try {
             MethodSignature sign = (MethodSignature) joinPoint.getSignature();
             Method method = sign.getMethod();
@@ -100,6 +101,8 @@ public class WebStrengthenAspect {
                         LOGGER.info("【framework-web】响应,当前返回实体不为系统定义类型,[{}]",ret);
                     }
                 }
+                //移除用户本地线程数据
+                UserHelper.IDENTITY_ID.remove();
             }
         } catch (JsonProcessingException e) {
             LOGGER.error("【framework-web】响应,json格式化响应参数异常",e);
