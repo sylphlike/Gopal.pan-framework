@@ -32,7 +32,7 @@ public interface Constants {
     String TOKEN = "token";
 
     /** header 个人用户和企业用户合并使用字段*/
-    String IDENTITY_ID = "identityId";
+    String IDENTITY_ID = "identity_id";
 
 
 

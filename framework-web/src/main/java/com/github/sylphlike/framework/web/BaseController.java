@@ -2,6 +2,7 @@ package com.github.sylphlike.framework.web;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.sylphlike.framework.basis.UserHelper;
 import com.github.sylphlike.framework.web.callback.AbstractException;
 import com.github.sylphlike.framework.web.exception.ServiceException;
 import com.github.sylphlike.framework.basis.Constants;
@@ -39,16 +40,27 @@ public class BaseController {
     protected HttpSession httpSession;
 
     /** 登录用户ID，或商户ID */
-    protected String userId;
+    protected Long userId;
 
 
 
+    /**
+     * 初始化请求对象，
+     * <p> 同步方法，保证多线程情况下线程安全
+     * <p>  time 16:39 2021/1/11 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param request   request
+     * @param response  response
+     * @author  Gopal.pan
+     */
     @ModelAttribute
-    public void setGeneralReqAndRes(HttpServletRequest request, HttpServletResponse response){
+    public synchronized void setGeneralReqAndRes(HttpServletRequest request, HttpServletResponse response){
         this.httpServletRequest = request;
         this.httpServletResponse = response;
         this.httpSession = request.getSession();
-        this.userId = request.getHeader(Constants.IDENTITY_ID);
+        String identityId = request.getHeader(Constants.IDENTITY_ID);
+        userId = StringUtils.isEmpty(identityId)? null : Long.valueOf(identityId);
+        UserHelper.IDENTITY_ID.set(userId);
 
     }
 

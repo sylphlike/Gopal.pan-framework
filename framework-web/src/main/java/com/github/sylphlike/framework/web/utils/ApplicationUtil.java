@@ -7,6 +7,7 @@ import org.springframework.boot.system.ApplicationHome;
 
 import java.io.*;
 import java.util.Enumeration;
+import java.util.Objects;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
@@ -69,20 +70,19 @@ public class ApplicationUtil {
             }else {
                 // windows  D:\ideaWorkspace\Gopal.pan-private\Gopal.pan-schedule\Gopal.pan-schedule-client\target\classes
                 // MAC      Users/horse/IdeaProjects/Gopal.pan-private/micro-api-auth/framework-utils-feign/target/classes
-
-                String osName = OSUtils.systemConfig().get("osName");
+                String osName = Objects.requireNonNull(OSUtils.systemConfig()).get("osName");
+                String fullProjectPath;
                 if(osName.startsWith("Windows")){
-                    String fullProjectPath = absolutePath.substring(0, absolutePath.lastIndexOf("\\target\\classes"));
+                    fullProjectPath = absolutePath.substring(0, absolutePath.lastIndexOf("\\target\\classes"));
                     int projectIndex = fullProjectPath.lastIndexOf("\\");
-                    projectName =  fullProjectPath.substring(projectIndex + 1, fullProjectPath.length());
-                    projectVersion = "1.0.0-SNAPSHOT";
+                    projectName =  fullProjectPath.substring(projectIndex + 1);
                 }else {
-                    String fullProjectPath = absolutePath.substring(0, absolutePath.lastIndexOf("/target/classes"));
+                    fullProjectPath = absolutePath.substring(0, absolutePath.lastIndexOf("/target/classes"));
                     int projectIndex = fullProjectPath.lastIndexOf("/");
-                    projectName =  fullProjectPath.substring(projectIndex + 1, fullProjectPath.length());
-                    projectVersion = "1.0.0-SNAPSHOT";
+                    projectName =  fullProjectPath.substring(projectIndex + 1);
 
                 }
+                projectVersion = "1.0.0-SNAPSHOT";
             }
 
         } catch (IOException e) {

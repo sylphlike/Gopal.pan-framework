@@ -38,6 +38,12 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.sylphlike</groupId>
+            <artifactId>framework-basis</artifactId>
+            <version>1.0.0-SYLPHLIKE</version>
+        </dependency>
     </dependencies>
 
 

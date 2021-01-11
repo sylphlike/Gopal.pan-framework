@@ -100,14 +100,14 @@ public class DataSourceContextHolder {
 
 
 
-    static void changeThreadLocalVal(boolean repeatedlyExecure,boolean routedBeforeGetConn){
+    static void changeThreadLocalVal(boolean repeatedlyExecute,boolean routedBeforeGetConn){
         DataSourceVal sourceVal = THREAD_LOCAL.get();
         if(sourceVal != null){
             if(!sourceVal.forceMaster){
                 THREAD_LOCAL.remove();
             }else {
                 sourceVal.routedBeforeGetConn = routedBeforeGetConn;
-                sourceVal.repeatedlyExecute = repeatedlyExecure;
+                sourceVal.repeatedlyExecute = repeatedlyExecute;
             }
 
         }
