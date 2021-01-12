@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "sylphlike.framework.thread.async",
+      "type": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig"
+    },
+    {
+      "name": "sylphlike.framework.thread.sync",
+      "type": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sylphlike.framework.thread.async.core-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "defaultValue": 5
+    },
+    {
+      "name": "sylphlike.framework.thread.async.keep-alive-time",
+      "type": "java.lang.Long",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "defaultValue": 30
+    },
+    {
+      "name": "sylphlike.framework.thread.async.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "defaultValue": 20
+    },
+    {
+      "name": "sylphlike.framework.thread.async.queue-capacity",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "defaultValue": 500
+    },
+    {
+      "name": "sylphlike.framework.thread.sync.core-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "defaultValue": 5
+    },
+    {
+      "name": "sylphlike.framework.thread.sync.keep-alive-time",
+      "type": "java.lang.Long",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "defaultValue": 30
+    },
+    {
+      "name": "sylphlike.framework.thread.sync.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "defaultValue": 20
+    }
+  ],
+  "hints": []
+}

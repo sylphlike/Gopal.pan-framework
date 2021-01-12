@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "horse.mybatis")
+@ConfigurationProperties(prefix = "sylphlike.mybatis")
 public class MybatisConfigSupper {
 
     private String mapperBasePackage;

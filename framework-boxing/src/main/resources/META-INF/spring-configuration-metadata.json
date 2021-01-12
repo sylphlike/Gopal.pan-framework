@@ -1,75 +1,75 @@
 {
   "groups": [
     {
-      "name": "horse.framework.ons",
+      "name": "sylphlike.framework.ons",
       "type": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties",
       "sourceType": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties"
     },
     {
-      "name": "horse.framework.qiniu",
+      "name": "sylphlike.framework.qiniu",
       "type": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig"
     }
   ],
   "properties": [
     {
-      "name": "horse.framework.ons.accesskey",
+      "name": "sylphlike.framework.ons.accesskey",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties"
     },
     {
-      "name": "horse.framework.ons.enable",
+      "name": "sylphlike.framework.ons.enable",
       "type": "java.lang.Boolean",
       "sourceType": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties",
       "defaultValue": false
     },
     {
-      "name": "horse.framework.ons.group-id",
+      "name": "sylphlike.framework.ons.group-id",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties"
     },
     {
-      "name": "horse.framework.ons.namesrv-addr",
+      "name": "sylphlike.framework.ons.namesrv-addr",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties"
     },
     {
-      "name": "horse.framework.ons.secret-key",
+      "name": "sylphlike.framework.ons.secret-key",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.boxing.ons.core.ONSProperties"
     },
     {
-      "name": "horse.framework.qiniu.access-key",
+      "name": "sylphlike.framework.qiniu.access-key",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig"
     },
     {
-      "name": "horse.framework.qiniu.bucket",
+      "name": "sylphlike.framework.qiniu.bucket",
       "type": "java.lang.String",
       "description": "空间名称",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig"
     },
     {
-      "name": "horse.framework.qiniu.domain",
+      "name": "sylphlike.framework.qiniu.domain",
       "type": "java.lang.String",
       "description": "域名",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig"
     },
     {
-      "name": "horse.framework.qiniu.enable",
+      "name": "sylphlike.framework.qiniu.enable",
       "type": "java.lang.Boolean",
       "description": "是否启用",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig",
       "defaultValue": false
     },
     {
-      "name": "horse.framework.qiniu.local-temp",
+      "name": "sylphlike.framework.qiniu.local-temp",
       "type": "java.lang.String",
       "description": "本地临时根目录",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig"
     },
     {
-      "name": "horse.framework.qiniu.secret-key",
+      "name": "sylphlike.framework.qiniu.secret-key",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.boxing.qiniu.QiniuConfig"
     }

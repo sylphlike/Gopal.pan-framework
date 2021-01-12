@@ -31,6 +31,6 @@ public class ScanConfig implements EnvironmentAware {
     @Override
     public void setEnvironment(Environment environment) {
         Binder binder = Binder.get(environment);
-        this.basePackage = binder.bind("horse.mybatis.mapper-base-package", String.class).get();
+        this.basePackage = binder.bind("sylphlike.mybatis.mapper-base-package", String.class).get();
     }
 }

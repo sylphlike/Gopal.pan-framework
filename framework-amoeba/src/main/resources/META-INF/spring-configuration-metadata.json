@@ -1,90 +1,90 @@
 {
   "groups": [
     {
-      "name": "horse.datasource",
+      "name": "sylphlike.datasource",
       "type": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo"
     },
     {
-      "name": "horse.datasource.master-data-source",
+      "name": "sylphlike.datasource.master-data-source",
       "type": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MasterDataSource",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo"
     },
     {
-      "name": "horse.datasource.multiple-data-source",
+      "name": "sylphlike.datasource.multiple-data-source",
       "type": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MultipleDataSource",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo"
     },
     {
-      "name": "horse.mybatis",
+      "name": "sylphlike.mybatis",
       "type": "com.github.sylphlike.framework.amoeba.config.MybatisConfigSupper",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.MybatisConfigSupper"
     }
   ],
   "properties": [
     {
-      "name": "horse.datasource.drive-class-name",
+      "name": "sylphlike.datasource.drive-class-name",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo"
     },
     {
-      "name": "horse.datasource.master",
+      "name": "sylphlike.datasource.master",
       "type": "java.lang.Boolean",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo",
       "defaultValue": false
     },
     {
-      "name": "horse.datasource.master-data-source.jdbc-url",
+      "name": "sylphlike.datasource.master-data-source.jdbc-url",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MasterDataSource"
     },
     {
-      "name": "horse.datasource.master-data-source.name",
+      "name": "sylphlike.datasource.master-data-source.name",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MasterDataSource"
     },
     {
-      "name": "horse.datasource.master-data-source.password",
+      "name": "sylphlike.datasource.master-data-source.password",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MasterDataSource"
     },
     {
-      "name": "horse.datasource.master-data-source.user-name",
+      "name": "sylphlike.datasource.master-data-source.user-name",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MasterDataSource"
     },
     {
-      "name": "horse.datasource.multiple-data-source.jdbc-url",
+      "name": "sylphlike.datasource.multiple-data-source.jdbc-url",
       "type": "java.util.List<java.lang.String>",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
     },
     {
-      "name": "horse.datasource.multiple-data-source.name",
+      "name": "sylphlike.datasource.multiple-data-source.name",
       "type": "java.util.List<java.lang.String>",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
     },
     {
-      "name": "horse.datasource.multiple-data-source.password",
+      "name": "sylphlike.datasource.multiple-data-source.password",
       "type": "java.util.List<java.lang.String>",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
     },
     {
-      "name": "horse.datasource.multiple-data-source.user-name",
+      "name": "sylphlike.datasource.multiple-data-source.user-name",
       "type": "java.util.List<java.lang.String>",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.DataSourceInfo$MultipleDataSource"
     },
     {
-      "name": "horse.mybatis.mapper-base-package",
+      "name": "sylphlike.mybatis.mapper-base-package",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.MybatisConfigSupper"
     },
     {
-      "name": "horse.mybatis.mapper-locations",
+      "name": "sylphlike.mybatis.mapper-locations",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.MybatisConfigSupper"
     },
     {
-      "name": "horse.mybatis.type-aliases-package",
+      "name": "sylphlike.mybatis.type-aliases-package",
       "type": "java.lang.String",
       "sourceType": "com.github.sylphlike.framework.amoeba.config.MybatisConfigSupper"
     }

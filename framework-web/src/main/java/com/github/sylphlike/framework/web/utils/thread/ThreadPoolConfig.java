@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "horse.framework.thread.sync")
+@ConfigurationProperties(prefix = "sylphlike.framework.thread.sync")
 public class ThreadPoolConfig {
 
     // 核心线程数

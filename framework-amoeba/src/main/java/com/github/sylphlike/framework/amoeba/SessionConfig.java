@@ -53,7 +53,7 @@ public class SessionConfig extends org.apache.ibatis.session.Configuration imple
     @Override
     public void setEnvironment(Environment environment) {
         Binder binder = Binder.get(environment);
-        MybatisConfigSupper mybatisConfigSupper = binder.bind("horse.mybatis", MybatisConfigSupper.class).get();
+        MybatisConfigSupper mybatisConfigSupper = binder.bind("sylphlike.mybatis", MybatisConfigSupper.class).get();
 
         this.typeAliasesPackage = mybatisConfigSupper.getTypeAliasesPackage();
         this.mapperLocations = mybatisConfigSupper.getMapperLocations();

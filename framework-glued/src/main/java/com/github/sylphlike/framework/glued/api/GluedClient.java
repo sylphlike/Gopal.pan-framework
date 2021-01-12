@@ -45,7 +45,7 @@ public interface GluedClient {
      * 获取授权过的Access Token
      * <p>  time 18:09 2020/11/5 【HH:mm yyyy/MM/dd】  </p>
      * <p> email 15923508369@163.com </p>
-     * @return   com.horse.framework.glued.domain.AuthToken
+     * @return   com.github.sylphlike.framework.glued.domain.AuthToken
      * @author   Gopal.pan
      */
     AuthToken accessToken() throws Exception;

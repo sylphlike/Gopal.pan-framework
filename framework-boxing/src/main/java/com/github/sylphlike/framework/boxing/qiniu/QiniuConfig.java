@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "horse.framework.qiniu")
+@ConfigurationProperties(prefix = "sylphlike.framework.qiniu")
 public class QiniuConfig {
 
     /**是否启用 */

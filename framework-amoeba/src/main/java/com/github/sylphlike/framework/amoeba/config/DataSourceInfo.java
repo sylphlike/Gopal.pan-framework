@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Data
 @Component
-@ConfigurationProperties(prefix = "horse.datasource")
+@ConfigurationProperties(prefix = "sylphlike.datasource")
 public class DataSourceInfo {
 
     private boolean  master;

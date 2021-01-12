@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "horse.framework.ons")
+@ConfigurationProperties(prefix = "sylphlike.framework.ons")
 public class ONSProperties {
     private boolean enable;
     private String namesrvAddr;

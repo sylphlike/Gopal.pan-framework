@@ -63,7 +63,7 @@ public class MultiRouteDataSource  extends AbstractDataSource implements Applica
         Map<String, DataSourceInfo> dataSourceInfoMap = new HashMap<>();
 
         Binder binder = Binder.get(environment);
-        String drive = binder.bind("horse.datasource.drive-class-name", Bindable.of(String.class)).get();
+        String drive = binder.bind("sylphlike.datasource.drive-class-name", Bindable.of(String.class)).get();
         //初始化主数据源
         initMasterDataSource(environment ,dataSourceInfoMap,drive);
         //初始化slave数据源
@@ -76,7 +76,7 @@ public class MultiRouteDataSource  extends AbstractDataSource implements Applica
 
     private void initMasterDataSource(Environment environment, Map<String, DataSourceInfo> map, String drive) throws MybatisException {
         Binder binder = Binder.get(environment);
-        DataSourceInfo.MasterDataSource dataSource = binder.bind("horse.datasource.master-data-source", Bindable.of(DataSourceInfo.MasterDataSource.class)).get();
+        DataSourceInfo.MasterDataSource dataSource = binder.bind("sylphlike.datasource.master-data-source", Bindable.of(DataSourceInfo.MasterDataSource.class)).get();
 
         if(StringUtils.isEmpty(dataSource.getName())){ throw new MybatisException("未配置主数据源"); }
 
@@ -95,7 +95,7 @@ public class MultiRouteDataSource  extends AbstractDataSource implements Applica
 
     private void initSlaveDataSources(Environment environment, Map<String, DataSourceInfo> map, String drive) throws MybatisException {
         Binder binder = Binder.get(environment);
-        DataSourceInfo.MultipleDataSource dataSource = binder.bind("horse.datasource.multiple-data-source", Bindable.of(DataSourceInfo.MultipleDataSource.class)).get();
+        DataSourceInfo.MultipleDataSource dataSource = binder.bind("sylphlike.datasource.multiple-data-source", Bindable.of(DataSourceInfo.MultipleDataSource.class)).get();
         if(ObjectUtils.isEmpty(dataSource)){  throw new MybatisException("未配置slave数据源"); }
 
         DataSourceInfo dataSourceInfo = new DataSourceInfo();

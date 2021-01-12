@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "horse.framework.thread.async")
+@ConfigurationProperties(prefix = "sylphlike.framework.thread.async")
 public class AsyncThreadPoolConfig {
 
     // 核心线程数

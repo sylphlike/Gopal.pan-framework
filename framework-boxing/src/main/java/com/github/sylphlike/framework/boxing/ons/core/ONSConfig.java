@@ -44,7 +44,7 @@ public class ONSConfig<T>  {
 
 
 
-    @ConditionalOnProperty(prefix ="horse.framework.ons",name = "enable",havingValue = "true")
+    @ConditionalOnProperty(prefix ="sylphlike.framework.ons",name = "enable",havingValue = "true")
     @Bean(initMethod = "start", destroyMethod = "shutdown")
     public ProducerBean oneProducer() {
         LOGGER.info("【framework-boxing】实例化MQ生产者");
@@ -70,7 +70,7 @@ public class ONSConfig<T>  {
      * @throws  UniteConfigException ex
      * @author  Gopal.pan
      */
-    @ConditionalOnProperty(prefix ="horse.framework.ons",name = "enable",havingValue = "true")
+    @ConditionalOnProperty(prefix ="sylphlike.framework.ons",name = "enable",havingValue = "true")
     @Bean(initMethod = "start", destroyMethod = "shutdown")
     public ConsumerBean consumerBean() throws UniteConfigException {
         LOGGER.info("【framework-boxing】实例化MQ消费者");
@@ -104,7 +104,7 @@ public class ONSConfig<T>  {
 
     private List<Subscription> dealMessageDefinition() throws UniteConfigException {
 
-        Reflections reflections = new Reflections("com.horse");
+        Reflections reflections = new Reflections("com.github.sylphlike");
 
         Map<String,String> map;
         try {
