@@ -11,6 +11,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
@@ -29,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 public class SerialCapacityMonitor implements ApplicationRunner {
 
     private final Logger logger = LoggerFactory.getLogger(SerialCapacityMonitor.class);
-    @Autowired private RedisClient redisClient;
+    @Resource private RedisClient redisClient;
 
     @Override
     public void run(ApplicationArguments args) {
@@ -56,9 +57,7 @@ public class SerialCapacityMonitor implements ApplicationRunner {
 
     class TimeoutTimerThread implements Runnable {
 
-        private RedisClient redisClient;
-
-
+        private final RedisClient redisClient;
         public TimeoutTimerThread(RedisClient redisClient) {
             this.redisClient = redisClient;
 

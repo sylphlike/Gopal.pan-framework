@@ -1,7 +1,6 @@
 package com.github.sylphlike.framework.redis.api;
 
 import com.github.sylphlike.framework.redis.core.BloomFilterHelper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisCallback;
@@ -23,8 +22,11 @@ import java.util.List;
 @Component
 public class RedisBloomFilter<T> {
 
-    @Autowired public RedisTemplate<Serializable,Object> redisTemplate;
+    public RedisTemplate<Serializable,Object> redisTemplate;
 
+    public RedisBloomFilter(RedisTemplate<Serializable, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * 布隆过滤器添加值

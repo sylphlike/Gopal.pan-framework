@@ -44,7 +44,7 @@ public class DistributedReentrantLock implements Lock {
     /** 随机不重复业务ID*/
     private String          transactionId;
 
-    private final RedisClient redisLockClient;
+    private  RedisClient redisLockClient;
     private volatile boolean locked;
 
 

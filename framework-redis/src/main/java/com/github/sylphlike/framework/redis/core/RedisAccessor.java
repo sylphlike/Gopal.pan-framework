@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
@@ -24,7 +25,7 @@ public class RedisAccessor {
 
     protected final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired public RedisTemplate<Serializable,Object> redisTemplate;
+    @Resource public RedisTemplate<Serializable,Object> redisTemplate;
 
 
     public ValueOperations<Serializable,Object> opsForValue() {  return this.redisTemplate.opsForValue(); }

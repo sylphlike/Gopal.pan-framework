@@ -3,8 +3,11 @@ package com.github.sylphlike.framework.redis.core;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -23,7 +26,7 @@ public class SerialNumber  extends RedisAccessor{
     protected final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
 
-    @Autowired private SerialCapacityMonitor serialCapacityMonitor;
+    @Resource private SerialCapacityMonitor serialCapacityMonitor;
 
 
 
