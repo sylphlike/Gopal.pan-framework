@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.TaskDecorator;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Map;
 import java.util.concurrent.Executor;
@@ -64,7 +66,7 @@ public class AsyncThreadConfig {
         executor.setMaxPoolSize(asyncThreadPoolConfig.getMaximumPoolSize());
         executor.setQueueCapacity(asyncThreadPoolConfig.getQueueCapacity());
         executor.setThreadNamePrefix("customize default ");
-        executor.setTaskDecorator(new MdcTaskDecorator());
+        executor.setTaskDecorator(new ExecutorTaskDecorator());
         //关闭程序时，等待任务完成
         executor.setWaitForTasksToCompleteOnShutdown(true);
         //系统柜关闭等待中断时间。此处默认写死，不外部传值
@@ -80,18 +82,21 @@ public class AsyncThreadConfig {
 
 
 
-    public static class MdcTaskDecorator implements TaskDecorator {
+    public static class ExecutorTaskDecorator implements TaskDecorator {
         @Override
         public Runnable decorate(Runnable runnable) {
-            Map<String, String> contextMap = MDC.getCopyOfContextMap();
+
             return () -> {
-                if (contextMap != null) {
-                    MDC.setContextMap(contextMap);
-                }
                 try {
+                    Map<String, String> contextMap = MDC.getCopyOfContextMap();
+                    if (contextMap != null)  MDC.setContextMap(contextMap);
+                    ServletRequestAttributes context = (ServletRequestAttributes)RequestContextHolder.currentRequestAttributes();
+                    RequestContextHolder.setRequestAttributes(context);
+
                     runnable.run();
                 } finally {
                     MDC.clear();
+                    RequestContextHolder.resetRequestAttributes();
                 }
             };
         }
