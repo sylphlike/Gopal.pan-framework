@@ -64,14 +64,11 @@ public class WebStrengthenAspect {
 
         Signature signature = joinPoint.getSignature();
         MethodSignature methodSignature = (MethodSignature) signature;
-        String declaringTypeName = signature.getDeclaringTypeName();
 
-        int index = declaringTypeName.lastIndexOf(".");
-        LOGGER.info("【framework-web】请求,请求方式[{}];执行方法[{}];接口地址[{}];方法描述[{}];参数[{}]",
+        LOGGER.info("【framework-web】【request】[{}][{}][{}],params[{}]",
                 request.getMethod(),
-                StringUtils.join(declaringTypeName.substring(++index), CharsetUtil.CHAR_ENGLISH_DOT, signature.getName()),
-                request.getRequestURI(),
                 description,
+                request.getRequestURI(),
                 ParamFormat.format(methodSignature.getParameterNames(), joinPoint.getArgs()));
     }
 
@@ -90,22 +87,22 @@ public class WebStrengthenAspect {
                         logStreamLine.setCode(response.getCode());
                         logStreamLine.setMessage(response.getMessage());
                         logStreamLine.setTimestamp(response.getTimestamp());
-                        LOGGER.info("【framework-web】响应,过滤业务参数[{}]", mapper.writeValueAsString( logStreamLine) );
+                        LOGGER.info("【framework-web】【response】过滤业务参数[{}]", mapper.writeValueAsString( logStreamLine) );
                     }else {
-                        LOGGER.info("【framework-web】响应,当前返回实体不为系统定义类型,[{}]",ret);
+                        LOGGER.info("【framework-web】【response】当前返回实体不为系统定义类型,[{}]",ret);
                     }
                 }else {
                     if(ret instanceof Response){
-                        LOGGER.info("【framework-web】响应,业务参数[{}]", mapper.writeValueAsString( ret));
+                        LOGGER.info("【framework-web】【response】data[{}]", mapper.writeValueAsString( ret));
                     }else {
-                        LOGGER.info("【framework-web】响应,当前返回实体不为系统定义类型,[{}]",ret);
+                        LOGGER.info("【framework-web】【response】,当前返回实体不为系统定义类型,[{}]",ret);
                     }
                 }
                 //移除用户本地线程数据
                 UserHelper.IDENTITY_ID.remove();
             }
         } catch (JsonProcessingException e) {
-            LOGGER.error("【framework-web】响应,json格式化响应参数异常",e);
+            LOGGER.error("【framework-web】response,json格式化响应参数异常",e);
         }
 
     }
