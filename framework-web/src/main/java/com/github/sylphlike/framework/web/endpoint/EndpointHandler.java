@@ -52,12 +52,14 @@ public class EndpointHandler {
     @Value("${spring.application.name}")
     private String appName;
 
+
+
     /**
      * 系统中业务接口地址列表
-     * <p>  time 15:43 2020/11/6 (HH:mm yyyy/MM/dd)
+     * <p>  time 9:34 2021/1/26 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com
-     * @return   com.github.sylphlike.norm.Response<java.lang.Object>
-     * @author   Gopal.pan
+     * @return  com.github.sylphlike.framework.norm.Response<com.github.sylphlike.framework.web.endpoint.ApiVO>
+     * @author  Gopal.pan
      */
     @GetMapping(value = "/business/url",name = "业务接口地址列表")
     public Response<ApiVO> businessUrl(){

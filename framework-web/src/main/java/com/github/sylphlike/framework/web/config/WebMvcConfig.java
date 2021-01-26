@@ -23,9 +23,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     /**
      * 时间参数类型入参格式化
      *  只针对form表单提交，JSON参数化无效
-     *  HH:mm:ss -> LocalTime
-     *  yyyy-MM-dd -> LocalDate
-     *  yyyy-MM-dd HH:mm:ss -> LocalDateTime
+     *  HH:mm:ss - LocalTime
+     *  yyyy-MM-dd - LocalDate
+     *  yyyy-MM-dd HH:mm:ss - LocalDateTime
      * @param registry
      */
 

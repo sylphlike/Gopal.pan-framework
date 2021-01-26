@@ -80,7 +80,7 @@ public class SpringContextUtil implements ApplicationContextAware {
      * <p>  time 17:20 2021/1/6 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com
      * @param clazz  类实例
-     * @return  java.util.Map<java.lang.String,org.apache.poi.ss.formula.functions.T>
+     * @return  java.util.Map
      * @author  Gopal.pan
      */
     public static <T> Map<String, T>  getBeansOfType(Class<T> clazz){
