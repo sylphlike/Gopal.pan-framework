@@ -35,13 +35,9 @@ import java.util.Set;
  * <p>业务中可以不捕获异常，交由该类通用处理，性能相对较差 业务本身捕获异常
  * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
- *
- *
  * @author Gopal.pan
  * @version 1.0.0
  */
-
-
 @ResponseBody
 @ControllerAdvice
 public class GlobalExceptionHandler {

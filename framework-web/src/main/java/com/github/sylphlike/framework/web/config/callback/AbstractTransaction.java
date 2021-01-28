@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.callback;
+package com.github.sylphlike.framework.web.config.callback;
 
 import com.github.sylphlike.framework.norm.Response;
 import org.slf4j.Logger;
@@ -66,10 +66,9 @@ public abstract class AbstractTransaction<T>{
 
 
     /**
-     * <p>  time 16:32 2020/11/25 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      *  事物执行抽象类，业务接口实现具体逻辑
-     *
+     * <p>  time 16:32 2020/11/25 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
      * @return   com.github.sylphlike.norm.Response
      * @author   Gopal.pan
      */

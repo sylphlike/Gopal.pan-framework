@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.sylphlike.framework.basis.UserAttributes;
 import com.github.sylphlike.framework.basis.UserContextHolder;
-import com.github.sylphlike.framework.web.callback.AbstractException;
+import com.github.sylphlike.framework.web.config.callback.AbstractException;
 import com.github.sylphlike.framework.web.exception.ServiceException;
 import com.github.sylphlike.framework.basis.Constants;
 import com.github.sylphlike.framework.norm.CharsetUtil;

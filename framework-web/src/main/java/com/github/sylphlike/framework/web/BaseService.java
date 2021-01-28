@@ -3,7 +3,7 @@ package com.github.sylphlike.framework.web;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.sylphlike.framework.basis.Constants;
 import com.github.sylphlike.framework.norm.Response;
-import com.github.sylphlike.framework.web.callback.AbstractTransaction;
+import com.github.sylphlike.framework.web.config.callback.AbstractTransaction;
 import com.github.sylphlike.framework.web.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

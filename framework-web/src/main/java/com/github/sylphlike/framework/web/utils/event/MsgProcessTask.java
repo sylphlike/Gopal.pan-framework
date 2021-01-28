@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.event;
+package com.github.sylphlike.framework.web.utils.event;
 
 import com.github.sylphlike.framework.web.utils.SpringContextUtil;
 import org.slf4j.Logger;
@@ -15,17 +15,15 @@ import java.util.concurrent.TimeUnit;
  * <p>具体业务处理类交由Spring管理，并且bean实例名称应与消息类型一致。即实msgType（）方法返回的值为该类的简单类名，首字母小写
  * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
- *
- *
  * @author Gopal.pan
  * @version 1.0.0
  */
 
 public class MsgProcessTask implements Runnable {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(MsgProcessTask.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MsgProcessTask.class);
 
-    static  private Map<String, MsgConsumer>  msgConsumerMap = new ConcurrentHashMap<>();
+    static  private final Map<String, MsgConsumer>  msgConsumerMap = new ConcurrentHashMap<>();
     
     static {
         ApplicationContext applicationContext = SpringContextUtil.getApplicationContext();

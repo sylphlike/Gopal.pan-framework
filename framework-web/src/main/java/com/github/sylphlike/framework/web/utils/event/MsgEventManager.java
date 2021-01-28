@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.event;
+package com.github.sylphlike.framework.web.utils.event;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,14 +12,13 @@ import java.util.concurrent.TimeUnit;
 /**
  * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
  * <p> email 15923508369@163.com
- *
  * @author Gopal.pan
  * @version 1.0.0
  */
 
 public class MsgEventManager  {
 
-    private static Logger logger = LoggerFactory.getLogger(MsgEventManager.class);;
+    private static final Logger logger = LoggerFactory.getLogger(MsgEventManager.class);;
 
     public static DelayQueue<MsgEvent<?>> msgEventDelayQueue  = new DelayQueue<>();
 
@@ -29,7 +28,7 @@ public class MsgEventManager  {
     /** 执行线程数。核心线程数。最大线程数。消费线程数 */
     private static final int PROCESS_THREAD_SIZE = 2;
 
-    private static ThreadPoolExecutor executor = new ThreadPoolExecutor(PROCESS_THREAD_SIZE,PROCESS_THREAD_SIZE,50, TimeUnit.SECONDS,
+    private static final ThreadPoolExecutor executor = new ThreadPoolExecutor(PROCESS_THREAD_SIZE,PROCESS_THREAD_SIZE,50, TimeUnit.SECONDS,
             new LinkedBlockingDeque<>(500),new NamedThreadFactory("msg_event_poll_"));
 
 
@@ -44,7 +43,7 @@ public class MsgEventManager  {
 
     /**
      * 添加队列数据
-     * @param msgEvent
+     * @param msgEvent msgEvent
      * @return
      */
     public static boolean offerMsg(MsgEvent<?> msgEvent){

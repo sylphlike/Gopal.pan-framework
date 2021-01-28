@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.aspect;
+package com.github.sylphlike.framework.web.config.aspect;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

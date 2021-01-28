@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.aspect;
+package com.github.sylphlike.framework.web.config.aspect;
 
 import com.github.sylphlike.framework.norm.CharsetUtil;
 import com.github.sylphlike.framework.web.utils.ParamFormat;
