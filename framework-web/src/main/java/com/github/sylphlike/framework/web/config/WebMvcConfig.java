@@ -26,7 +26,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
      *  HH:mm:ss - LocalTime
      *  yyyy-MM-dd - LocalDate
      *  yyyy-MM-dd HH:mm:ss - LocalDateTime
-     * @param registry
+     * @param registry  registry
      */
 
     @Override

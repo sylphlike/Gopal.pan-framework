@@ -1,5 +1,6 @@
 package com.github.sylphlike.framework.web.utils;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.sylphlike.framework.basis.JsonConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +24,8 @@ import java.util.Map;
 public class ParamFormat {
     private static final Logger LOGGER = LoggerFactory.getLogger(ParamFormat.class);
 
+    private static final ObjectMapper mapper = JsonConfig.mapper();
+
     public static String format(String[] parameterNames, Object[] args){
 
         Map<String,Object> map = new HashMap<>();
@@ -36,7 +39,7 @@ public class ParamFormat {
                 }
                 map.put(parameterNames[i],arg);
             }
-            return JsonConfig.mapper().writeValueAsString(map);
+            return mapper.writeValueAsString(map);
 
         } catch (Exception e) {
             LOGGER.error("【framework-web】请求参数格式化处理异常,返回原始参数", e);
