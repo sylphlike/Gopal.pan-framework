@@ -1,6 +1,7 @@
 package com.github.sylphlike.framework.amoeba.datasource;
 
-import com.github.sylphlike.framework.basis.UserHelper;
+import com.github.sylphlike.framework.basis.UserContextHolder;
+import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlCommandType;
@@ -34,6 +35,9 @@ import java.util.Properties;
 public class DataBasesRoutInterceptor implements Interceptor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DataBasesRoutInterceptor.class);
+
+    /** 自动填充字段定义 */
+    private static final String CREATE_USER = "createUser",UPDATE_USER = "updateUser", CREATE_TIME = "createTime",UPDATE_TIME = "updateTime";
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
@@ -88,26 +92,26 @@ public class DataBasesRoutInterceptor implements Interceptor {
 
         //获取参数
         Object parameter = invocation.getArgs()[1];
-        Field[]fields = parameter.getClass().getDeclaredFields();
+        Field[] fields = parameter.getClass().getDeclaredFields();
 
         for(Field field: fields){
             //注入对应的属性值
-            if (field.getName().equals("createTime") && SqlCommandType.INSERT.equals(sqlCommandType)){
+            if (field.getName().equals(CREATE_TIME) && SqlCommandType.INSERT.equals(sqlCommandType)){
                 field.setAccessible(true);
                 field.set(parameter, LocalDateTime.now());
             }
-            if (field.getName().equals("createUser") && SqlCommandType.INSERT.equals(sqlCommandType)){
+            if (field.getName().equals(CREATE_USER) && SqlCommandType.INSERT.equals(sqlCommandType)){
                 field.setAccessible(true);
-                field.set(parameter, UserHelper.IDENTITY_ID.get());
+                field.set(parameter, UserContextHolder.getRequestAttributes().getUserId());
             }
 
-            if (field.getName().equals("updateTime") && SqlCommandType.UPDATE.equals(sqlCommandType)){
+            if (field.getName().equals(UPDATE_TIME) && SqlCommandType.UPDATE.equals(sqlCommandType)){
                 field.setAccessible(true);
                 field.set(parameter,LocalDateTime.now());
             }
-            if (field.getName().equals("updateUser") && SqlCommandType.UPDATE.equals(sqlCommandType)){
+            if (field.getName().equals(UPDATE_USER) && SqlCommandType.UPDATE.equals(sqlCommandType)){
                 field.setAccessible(true);
-                field.set(parameter,UserHelper.IDENTITY_ID.get());
+                field.set(parameter, UserContextHolder.getRequestAttributes().getUserId());
             }
         }
     }

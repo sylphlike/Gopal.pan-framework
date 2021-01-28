@@ -2,18 +2,13 @@ package com.github.sylphlike.framework.web.aspect;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sylphlike.framework.basis.UserHelper;
-import com.github.sylphlike.framework.norm.CharsetUtil;
+import com.github.sylphlike.framework.basis.UserContextHolder;
 import com.github.sylphlike.framework.norm.Response;
 import com.github.sylphlike.framework.web.exception.AssertUtils;
 import com.github.sylphlike.framework.web.utils.ParamFormat;
-import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,19 +32,19 @@ import java.lang.reflect.Method;
  */
 @Aspect
 @Component
-public class WebStrengthenAspect {
-    private final Logger LOGGER =  LoggerFactory.getLogger(WebStrengthenAspect.class);
+public class WebAspect {
+    private final Logger LOGGER =  LoggerFactory.getLogger(WebAspect.class);
 
     private final ObjectMapper mapper;
 
-    public WebStrengthenAspect(ObjectMapper mapper) {
+    public WebAspect(ObjectMapper mapper) {
         this.mapper = mapper;
     }
 
     @Pointcut("execution(public * com.github.sylphlike.framework.web.BaseController+.*(..))")
-    public void webRequestAspectLog(){}
+    public void webPointcut(){}
 
-    @Before( value = "webRequestAspectLog()")
+    @Before( value = "webPointcut()")
     public void doBefore(JoinPoint joinPoint) {
         if(joinPoint.getSignature().getName().equals("setGeneralReqAndRes")){
             return;
@@ -72,7 +67,7 @@ public class WebStrengthenAspect {
                 ParamFormat.format(methodSignature.getParameterNames(), joinPoint.getArgs()));
     }
 
-    @AfterReturning(returning = "ret", pointcut = "webRequestAspectLog()")
+    @AfterReturning(returning = "ret", pointcut = "webPointcut()")
     public void doAfterReturning(JoinPoint joinPoint,Object ret) {
         try {
             MethodSignature sign = (MethodSignature) joinPoint.getSignature();
@@ -98,8 +93,8 @@ public class WebStrengthenAspect {
                         LOGGER.info("【framework-web】【response】,当前返回实体不为系统定义类型,[{}]",ret);
                     }
                 }
-                //移除用户本地线程数据
-                UserHelper.IDENTITY_ID.remove();
+
+                UserContextHolder.resetUserAttributes();
             }
         } catch (JsonProcessingException e) {
             LOGGER.error("【framework-web】response,json格式化响应参数异常",e);
@@ -107,6 +102,19 @@ public class WebStrengthenAspect {
 
     }
 
+
+    /**
+     * 移除当前请求用户上下文，不处理异常， 异常由通用异常处理
+     * <p>  time 11:54 2021/1/28 (HH:mm yyyy/MM/dd)
+     * <p> email 15923508369@163.com
+     * @param throwable  Throwable
+     * @author  Gopal.pan
+     */
+    @AfterThrowing(throwing = "throwable", pointcut = "webPointcut()")
+    public void afterThrowing(Throwable throwable){
+        UserContextHolder.resetUserAttributes();
+
+    }
 
 
 

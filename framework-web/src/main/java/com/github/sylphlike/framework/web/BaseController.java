@@ -1,8 +1,10 @@
 package com.github.sylphlike.framework.web;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sylphlike.framework.basis.UserHelper;
+import com.github.sylphlike.framework.basis.UserAttributes;
+import com.github.sylphlike.framework.basis.UserContextHolder;
 import com.github.sylphlike.framework.web.callback.AbstractException;
 import com.github.sylphlike.framework.web.exception.ServiceException;
 import com.github.sylphlike.framework.basis.Constants;
@@ -11,7 +13,6 @@ import com.github.sylphlike.framework.norm.Response;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,8 +45,8 @@ public class BaseController {
     protected HttpServletResponse httpServletResponse;
     protected HttpSession httpSession;
 
-    /** 登录用户标识，（用户ID， 商户ID） */
-    protected Long identityId;
+    /** 当前线程登录用户属性 (线程安全) */
+    protected UserAttributes userAttributes;
 
 
 
@@ -63,9 +64,17 @@ public class BaseController {
         this.httpServletRequest = request;
         this.httpServletResponse = response;
         this.httpSession = request.getSession();
-        String identityId = request.getHeader(Constants.IDENTITY_ID);
-        this.identityId = StringUtils.isEmpty(identityId)? null : Long.valueOf(identityId);
-        UserHelper.IDENTITY_ID.set(this.identityId);
+
+        try {
+            String userContext = request.getHeader(Constants.USER_CONTEXT);
+            if(StringUtils.isNotEmpty(userContext)){
+                UserAttributes userAttributes = mapper.readValue(userContext, UserAttributes.class);
+                this.userAttributes = userAttributes;
+                UserContextHolder.setUserAttributes(userAttributes);
+            }
+        } catch (JsonProcessingException e) {
+            LOGGER.error("【framework-web】初始化请求对象,系统异常", e);
+        }
 
     }
 

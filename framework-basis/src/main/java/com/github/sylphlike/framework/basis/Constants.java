@@ -31,8 +31,8 @@ public interface Constants {
     /** 登陆授权，角色资源授权 用户携带header名称 */
     String TOKEN = "token";
 
-    /** header 个人用户和企业用户合并使用字段*/
-    String IDENTITY_ID = "identity_id";
+    /** 用户请求上下文 */
+    String USER_CONTEXT = "USER_CONTEXT";
 
 
 
