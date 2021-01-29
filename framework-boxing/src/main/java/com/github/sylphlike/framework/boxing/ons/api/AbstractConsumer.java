@@ -25,11 +25,12 @@ public abstract class AbstractConsumer<T> implements MessageListener {
 
 
 
+
     /**
      * 监听的topic和tag
-     * <p>  time 15:13 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
-     * @return  com.github.sylphlike.boxing.ons.api.MessageDefinition
+     * <p>  time 18:24 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @return  com.github.sylphlike.framework.boxing.ons.api.MessageDefinition
      * @author  Gopal.pan
      */
     public abstract MessageDefinition definition();
@@ -38,8 +39,8 @@ public abstract class AbstractConsumer<T> implements MessageListener {
 
     /**
      * 具体业务处理
-     * <p>  time 15:12 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:24 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param message  业务数据
      * @return  com.aliyun.openservices.ons.api.Action
      * @author  Gopal.pan

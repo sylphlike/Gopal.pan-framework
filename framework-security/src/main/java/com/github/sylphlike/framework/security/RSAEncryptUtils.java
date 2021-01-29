@@ -36,9 +36,9 @@ public class RSAEncryptUtils {
 
     /**
      * 生成RSA公私匙
-     * <p>获取公私 pair.get(RSAEncryptUtils.PUBLIC_KEY) .获取私匙 pair.get(RSAEncryptUtils.PRIVATE_KEY)
-     * <p>  time 16:03 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>获取公私 pair.get(RSAEncryptUtils.PUBLIC_KEY) .获取私匙 pair.get(RSAEncryptUtils.PRIVATE_KEY) </p>
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.util.Map
      * @author  Gopal.pan
      */
@@ -65,8 +65,8 @@ public class RSAEncryptUtils {
 
     /**
      * 公匙加密
-     * <p>  time 15:59 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param data  待加密数据
      * @param key   公钥
      * @return  java.lang.String
@@ -90,8 +90,8 @@ public class RSAEncryptUtils {
 
     /**
      * 公匙解密
-     * <p>  time 15:58 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param data  业务数据
      * @param key   公钥
      * @return  java.lang.String
@@ -117,8 +117,8 @@ public class RSAEncryptUtils {
 
     /**
      * 私钥加密
-     * <p>  time 15:58 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param data  业务数据
      * @param key   私钥
      * @return  java.lang.String
@@ -142,8 +142,8 @@ public class RSAEncryptUtils {
 
     /**
      * 私匙解密
-     * <p>  time 16:01 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param data 业务数据
      * @param key  私钥
      * @return  java.lang.String

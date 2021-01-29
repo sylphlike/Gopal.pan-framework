@@ -33,8 +33,8 @@ public class SerialNumber  extends RedisAccessor{
 
     /**
      * 初始化指定规则的流水号
-     * <p>  time 11:32 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param prefix         流水号规则前缀
      * @param serialLength   自增流水号长度
      * @param key            流水号在Redis中的key值
@@ -70,8 +70,8 @@ public class SerialNumber  extends RedisAccessor{
 
     /**
      * 初始化指定规则的流水号
-     * <p>  time 11:31 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param serialEntity  原始流水号实体对象
      * @author   Gopal.pan
      */
@@ -93,8 +93,8 @@ public class SerialNumber  extends RedisAccessor{
 
 
     /**
-     * <p>  time 11:29 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key   缓存key
      * @return   java.lang.String
      * @author   Gopal.pan

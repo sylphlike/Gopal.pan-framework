@@ -22,8 +22,8 @@ public class Base64Utils {
 
 	/**
 	 * base64加密字符串
-	 * <p>  time 17:46 2021/1/4 (HH:mm yyyy/MM/dd)
-	 * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
 	 * @param str   待加密字符串
 	 * @return  java.lang.String
 	 * @author  Gopal.pan
@@ -48,8 +48,8 @@ public class Base64Utils {
 
     /**
      * base64加密
-     * <p>  time 17:45 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param content  待加密byte数组
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -64,8 +64,8 @@ public class Base64Utils {
 
 	/**
 	 * base64解密
-	 * <p>  time 17:45 2021/1/4 (HH:mm yyyy/MM/dd)
-	 * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
 	 * @param str   Base64加密字符串
 	 * @return  java.lang.String
 	 * @author  Gopal.pan

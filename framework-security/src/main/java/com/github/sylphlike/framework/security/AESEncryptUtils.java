@@ -65,8 +65,8 @@ public class AESEncryptUtils {
 
     /**
      * 转换密钥
-     * <p>  time 17:47 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key  二进制密钥
      * @return  java.security.Key
      * @author  Gopal.pan

@@ -38,8 +38,8 @@ public class JWTToken {
 
     /**
      * 签发JWT
-     * <p>  Header Payload Signature
-     * <p>  time 17:43 2021/1/4 (HH:mm yyyy/MM/dd)
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * <p> email 15923508369@163.com
      * @param subject    内容
      * @return  java.lang.String
@@ -55,8 +55,8 @@ public class JWTToken {
 
     /**
      * 签发指定过期时间的token
-     * <p>  time 13:28 2020/11/17 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param subject   内容
      * @param expires   过期时间，单位分钟
      * @return   java.lang.String
@@ -76,8 +76,8 @@ public class JWTToken {
 
     /**
      * 验证token
-     * <p>  time 17:43 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param jwtStr jwt字符串
      * @return  boolean
      * @author  Gopal.pan
@@ -96,8 +96,8 @@ public class JWTToken {
 
     /**
      * 验证token
-     * <p>  time 17:43 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param jwtStr    jwt字符串
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -114,8 +114,8 @@ public class JWTToken {
 
     /**
      * 6位随机数
-     * <p>  time 15:33 2020/10/8 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @return java.lang.String
      * @author Gopal.pan
      */

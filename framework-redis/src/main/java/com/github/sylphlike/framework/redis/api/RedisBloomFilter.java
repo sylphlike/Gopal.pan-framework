@@ -29,8 +29,8 @@ public class RedisBloomFilter<T> {
 
     /**
      * 布隆过滤器添加值
-     * <p>  time 13:44 2020/10/14 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param bloomFilterHelper  布隆过滤器
      * @param key                缓存key
      * @param value              值
@@ -55,9 +55,9 @@ public class RedisBloomFilter<T> {
 
 
     /**
-     * <p>  time 13:44 2020/10/14 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  校验过滤器中是否存在对应的值
+     * 校验过滤器中是否存在对应的值
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param bloomFilterHelper  布隆过滤器
      * @param key                缓存key
      * @param value              值

@@ -17,8 +17,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 中文名称 只显示第一个汉字,其他隐藏为 *
-     * <p>  time 17:40 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param chineseName  明文中文名称
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -32,8 +32,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 身份证号 显示最后四位，其他隐藏。共计18位或者15位
-     * <p>  time 17:40 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param idCardNum  明文身份号
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -46,8 +46,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 固定电话 显示最后四位
-     * <p>  time 17:39 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param fixedPhone  明文固定电话号码
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -61,8 +61,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 移动电话,显示前三后四   159****8369
-     * <p>  time 17:39 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param mobilePhone     明文移动电话号码
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -76,8 +76,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 电子邮箱  邮箱前缀显示三位@及后面的地址显示 159********@163.com
-     * <p>  time 17:37 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param email  明文电子邮箱
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -92,8 +92,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 银行卡号，前六后四  621661*********7010
-     * <p>  time 17:33 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param bankCard  银行卡号
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -110,8 +110,8 @@ public class MaskSensitiveUtils {
 
     /**
      * 银行卡号，前一后四 6*****************7010
-     * <p>  time 17:32 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param bankCard  银行卡号
      * @return  java.lang.String
      * @author  Gopal.pan

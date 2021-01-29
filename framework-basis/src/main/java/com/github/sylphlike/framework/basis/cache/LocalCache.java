@@ -34,23 +34,29 @@ public class LocalCache {
 
     /**
      * 将key-value 保存到本地缓存并制定该缓存的过期时间
-     *
-     * @param key
-     * @param value
+     * <p>  time 18:20 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param key         key
+     * @param value       值
      * @param expireTime  过期时间，如果是-1 则表示永不过期  单位毫秒
-     * @return
+     * @return  boolean
+     * @author  Gopal.pan
      */
     public static boolean putValue(String key, Object value, int expireTime) {
         return putCloneValue(key, value, expireTime);
     }
 
+
+
     /**
      * 将值通过序列化clone 处理后保存到缓存中，可以解决值引用的问题
-     *
-     * @param key
-     * @param value
-     * @param expireTime
-     * @return
+     * <p>  time 18:21 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param key         key
+     * @param value       值
+     * @param expireTime  过期时间，如果是-1 则表示永不过期  单位毫秒
+     * @return  boolean
+     * @author  Gopal.pan
      */
     private static boolean putCloneValue(String key, Object value, int expireTime) {
         try {
@@ -69,11 +75,14 @@ public class LocalCache {
 
 
 
+
     /**
      * 从本地缓存中获取key对应的值，如果该值不存则则返回null
-     *
-     * @param key
-     * @return
+     * <p>  time 18:21 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param key  key
+     * @return  java.lang.Object
+     * @author  Gopal.pan
      */
     public static Object getValue(String key) {
         CacheEntity cacheEntity = cache.get(key);
@@ -84,11 +93,6 @@ public class LocalCache {
 
     }
 
-    /**
-     * 移除缓存
-     * @param key
-     * @return
-     */
     public static boolean removeValue(String key){
         CacheEntity remove = cache.remove(key);
         if(null !=remove){
@@ -98,13 +102,7 @@ public class LocalCache {
 
     }
 
-    /**
-     *
-     * 序列化 克隆处理
-     *
-     * @param object
-     * @return
-     */
+
     private static <T extends Serializable> T clone(T object) {
         T cloneObject = null;
         try {
@@ -122,10 +120,11 @@ public class LocalCache {
         return cloneObject;
     }
 
-
-
     /**
      * 缓存过期处理
+     * <p>  time 18:22 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @author  Gopal.pan
      */
     static class TimeoutTimerThread implements Runnable {
         public void run() {

@@ -40,8 +40,8 @@ public class SliderVerification {
 
     /**
      * 根据模板切图
-     * <p>  time 15:41 2020/10/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @return   com.github.sylphlike.security.vo.SliderVO
      * @author   Gopal.pan
      */
@@ -123,12 +123,13 @@ public class SliderVerification {
 
     /**
      * 抠图后原图处理
-     *
-     * @param oriImage
-     * @param templateImage
-     * @param xDistance
-     * @return
-     * @throws Exception
+     * <p>  time 18:32 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param oriImage      原始图片
+     * @param templateImage 模板图片
+     * @param xDistance     x轴距离
+     * @return  java.awt.image.BufferedImage
+     * @author  Gopal.pan
      */
     private static BufferedImage oriPictureByTemplate(BufferedImage oriImage, BufferedImage templateImage, int xDistance) throws Exception {
 
@@ -180,9 +181,9 @@ public class SliderVerification {
      * 根据模板图片抠图
      * <p>  time 11:51 2020/10/23 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com
-     * @param oriImage
-     * @param templateImage
-     * @param targetImage
+     * @param oriImage      原始图片
+     * @param templateImage 模板图片
+     * @param targetImage   目标图片
      * @return   java.awt.image.BufferedImage
      * @author   Gopal.pan
      */
@@ -209,17 +210,15 @@ public class SliderVerification {
 
 
     /**
-     * <p>  time 10:43 2020/10/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *  小图片区域
-     * @param xDistance             随机切图坐标x轴位置
-     * @param y             随机切图坐标y轴位置
+     * 小图片区域
+     * <p>  time 18:33 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param xDistance     随机切图坐标x轴位置
      * @param targetWidth   切图后目标宽度
      * @param targetHeight  切图后目标高度
-     * @param inputStream   源文件输入流
-     * @param targetType    目标图片类型
-     * @return   java.awt.image.BufferedImage
-     * @author   Gopal.pan
+     * @param inputStream   源文件输入
+     * @return  java.awt.image.BufferedImage
+     * @author  Gopal.pan
      */
     private static BufferedImage getTargetArea(int xDistance, int targetWidth, int targetHeight, InputStream inputStream) throws Exception {
         Iterator<ImageReader> imageReaderList = ImageIO.getImageReadersByFormatName(IMAGE_TYPE_JPG);
@@ -237,13 +236,15 @@ public class SliderVerification {
 
 
 
+
+
     /**
-     * <p>  time 11:50 2020/10/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      * 生成图像矩阵
-     * @param bufferedImage
-     * @return   int[][]
-     * @author   Gopal.pan
+     * <p>  time 18:34 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param bufferedImage    bufferedImage
+     * @return  int[][]
+     * @author  Gopal.pan
      */
     private static int[][] getData(BufferedImage bufferedImage) {
         int[][] data = new int[bufferedImage.getWidth()][bufferedImage.getHeight()];
@@ -257,20 +258,13 @@ public class SliderVerification {
 
 
 
-
-
-
-
-
-
-
     /**
-     * <p>  time 15:16 2020/10/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
      *  随机生成抠图坐标地址
-     * @param templateImageWidth
-     * @return   void
-     * @author   Gopal.pan
+     * <p>  time 18:35 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param templateImageWidth  模板图像宽度
+     * @return  int
+     * @author  Gopal.pan
      */
     private static int generateCutoutCoordinates(int templateImageWidth) {
 

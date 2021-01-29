@@ -21,8 +21,8 @@ public class SignatureUtils {
 
     /**
      * 创建签名
-     * <p>  time 15:10 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param signKey            签名key
      * @param filterParams       需要过滤的参数名称(可以为多个参数名称，使用字符串拼接，如果是签名参数名称则也需加入到过滤字符串中，因为验签时)
      * @param params             参数
@@ -57,8 +57,8 @@ public class SignatureUtils {
 
     /**
      * 验证签名
-     * <p>  time 15:56 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param signKey            签名key
      * @param filterParams       签名参数名称(可以为多个参数名称)
      * @param params             参数

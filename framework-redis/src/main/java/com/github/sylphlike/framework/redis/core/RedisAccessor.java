@@ -40,8 +40,8 @@ public class RedisAccessor {
 
     /**
      * 添加数据
-     * <p>  time 11:37 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key     缓存key
      * @param value   值
      * @return   boolean
@@ -62,8 +62,8 @@ public class RedisAccessor {
 
     /**
      * 添加数据并设置过去时间
-     * <p>  time 11:37 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key     缓存key
      * @param value   值
      * @param expireSecondTime  过期时间
@@ -87,9 +87,8 @@ public class RedisAccessor {
 
     /**
      * 添加数据并设置过期时间(自定义过期时间单位类型)
-     *
-     * <p>  time 11:36 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key     缓存key
      * @param value   值
      * @param expireTime  过期时间
@@ -112,8 +111,8 @@ public class RedisAccessor {
 
     /**
      * 获取值
-     * <p>  time 11:36 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key   缓存key
      * @return   java.lang.Object
      * @author   Gopal.pan
@@ -126,9 +125,9 @@ public class RedisAccessor {
 
 
     /**
-     *      * 获取值
-     * <p>  time 11:35 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * 获取值
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key    缓存key
      * @param clazz  需要转换成的实体对象类型
      * @return   T
@@ -146,10 +145,15 @@ public class RedisAccessor {
     }
 
 
+
+
     /**
      * 订阅发送
+     * <p>  time 18:29 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param patternTopic  topic
      * @param value         值
+     * @author  Gopal.pan
      */
     public void convertAndSend(String patternTopic, String value){
         this.redisTemplate.convertAndSend(patternTopic,value);
@@ -160,8 +164,8 @@ public class RedisAccessor {
 
     /**
      * 添加数据，如果存在key则不做任何操作
-     * <p>  time 11:35 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key     缓存key
      * @param value   值
      * @param expireSecondTime  过期时间
@@ -183,8 +187,8 @@ public class RedisAccessor {
 
     /**
      * 添加数据，如果存在key则不做任何操作
-     * <p>  time 11:23 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key        缓存key
      * @param value      值
      * @param expireTime 过期时间
@@ -216,8 +220,9 @@ public class RedisAccessor {
     }
 
     /**
-     * <p>  time 11:24 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * 获取过期时间
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key     缓存key
      * @return   java.lang.Long
      * @author   Gopal.pan
@@ -230,8 +235,8 @@ public class RedisAccessor {
 
     /**
      * 获取过期时间， 指定时间单位
-     * <p>  time 11:40 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key       缓存key
      * @param timeUnit  时间单位类型
      * @return   java.lang.Long
@@ -244,8 +249,8 @@ public class RedisAccessor {
 
 
     /**
-     * <p>  time 11:34 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key         缓存key
      * @param expireSecondTime  过期时间
      * @return   java.lang.Boolean
@@ -260,8 +265,8 @@ public class RedisAccessor {
 
     /**
      * 获取所有 以prefixKey 为前缀的所有KEY值
-     * <p>  time 11:33 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param prefixKey 缓存key前缀
      * @return   Set
      * @author   Gopal.pan
@@ -279,8 +284,8 @@ public class RedisAccessor {
 
     /**
      *  list 向右侧添加集合数据
-     * <p>  time 11:26 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key           缓存key
      * @param list          数据
      * @param expireTime    过期时间
@@ -300,8 +305,8 @@ public class RedisAccessor {
 
 
     /**
-     * <p>  time 11:27 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param key           缓存key
      * @param list          数据
      * @return   java.lang.Long

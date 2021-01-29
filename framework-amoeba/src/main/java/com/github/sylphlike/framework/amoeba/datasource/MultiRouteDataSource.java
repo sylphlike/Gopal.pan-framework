@@ -52,11 +52,7 @@ public class MultiRouteDataSource  extends AbstractDataSource implements Applica
     private final String SLAVE = "SLAVE";
 
 
-    /**
-     * 重写此方法将多个数据源注册到容器中
-     *
-     * @throws Exception
-     */
+
     @Override
     public void afterPropertiesSet() throws Exception {
         Map<String, DataSourceInfo> dataSourceInfoMap = new HashMap<>();

@@ -52,11 +52,7 @@ public class CharsetUtil {
     public static final String STRING_ENGLISH_DOT = ".";
 
 
-    /**
-     * 系统默认字符集编码
-     *
-     * @return 系统字符集编码
-     */
+     /** 系统默认字符集编码 */
     public static Charset defaultCharset() {
         return Charset.defaultCharset();
     }
@@ -64,10 +60,11 @@ public class CharsetUtil {
 
     /**
      * 是否为Windows或者Linux（Unix）文件分隔符
-     * Windows平台下分隔符为\，Linux（Unix）为/
+     * <p>  time 18:26 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param c 字符
      * @return 是否为Windows或者Linux（Unix）文件分隔符
-     * @since 4.1.11
+     * @author  Gopal.pan
      */
     public static boolean isFileSeparator(char c) {
         return CHAR_ENGLISH_SLASH == c || CHAR_ENGLISH_BACKSLASH == c;
@@ -76,8 +73,11 @@ public class CharsetUtil {
 
     /**
      * 字符串UTF-8编码
+     * <p>  time 18:27 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param originString  原始字符串
      * @return utf-8 编码后的字符串
+     * @author  Gopal.pan
      */
     public static String toUtf8String(String originString) {
 

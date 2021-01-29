@@ -28,8 +28,8 @@ public class ONSProducer {
 
     /**
      * 发送普通消息 不带业务主键
-     * <p>  time 15:08 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:24 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param topic     topic
      * @param tags      tags
      * @param message   业务数据

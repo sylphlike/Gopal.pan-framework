@@ -37,16 +37,20 @@ public class SimpleCache<K, V> implements Serializable {
 	 * <p> 通过自定义Map初始化，可以自定义缓存实现。比如使用{@link WeakHashMap}则会自动清理key，使用HashMap则不会清理，同时，传入的Map对象也可以自带初始化的键值对，防止在get时创建
 	 * @param initMap 初始Map，用于定义Map类型
 	 */
+
+	/**
+	 * 构造
+	 * <p> 通过自定义Map初始化，可以自定义缓存实现。比如使用{@link WeakHashMap}则会自动清理key，使用HashMap则不会清理，同时，传入的Map对象也可以自带初始化的键值对，防止在get时创建 </p>
+	 * <p>  time 18:22 2021/1/29      </p>
+	 * <p> email 15923508369@163.com  </p>
+	 * @param initMap   初始Map，用于定义Map类型
+	 * @author  Gopal.pan
+	 */
 	public SimpleCache(Map<K, V> initMap) {
 		this.cache = initMap;
 	}
 
-	/**
-	 * 从缓存池中查找值
-	 *
-	 * @param key 键
-	 * @return 值
-	 */
+
 	public V get(K key) {
 		long stamp = lock.readLock();
 		try {
@@ -58,13 +62,7 @@ public class SimpleCache<K, V> implements Serializable {
 
 
 
-	/**
-	 * 放入缓存
-	 *
-	 * @param key   键
-	 * @param value 值
-	 * @return 值
-	 */
+
 	public V put(K key, V value) {
 		// 独占写锁
 		final long stamp = lock.writeLock();
@@ -76,12 +74,7 @@ public class SimpleCache<K, V> implements Serializable {
 		return value;
 	}
 
-	/**
-	 * 移除缓存
-	 *
-	 * @param key 键
-	 * @return 移除的值
-	 */
+
 	public V remove(K key) {
 		// 独占写锁
 		final long stamp = lock.writeLock();
@@ -92,9 +85,7 @@ public class SimpleCache<K, V> implements Serializable {
 		}
 	}
 
-	/**
-	 * 清空缓存池
-	 */
+
 	public void clear() {
 		// 独占写锁
 		final long stamp = lock.writeLock();

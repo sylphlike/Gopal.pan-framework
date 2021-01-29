@@ -21,8 +21,8 @@ public class GoSerializer {
 
     /**
      * 对象序列化
-     * <p>  time 15:00 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:24 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param obj 待序列化对象
      * @return  byte[]
      * @author  Gopal.pan
@@ -51,8 +51,8 @@ public class GoSerializer {
 
     /**
      * 反序列化
-     * <p>  time 15:00 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:24 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @param byteArray  字节数组
      * @return  java.lang.Object
      * @author  Gopal.pan

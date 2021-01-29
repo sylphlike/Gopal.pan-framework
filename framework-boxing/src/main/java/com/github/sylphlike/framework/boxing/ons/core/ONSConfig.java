@@ -63,8 +63,8 @@ public class ONSConfig<T>  {
 
     /**
      * 消息接收端
-     * <p>  time 15:07 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 18:24 2021/1/29      </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  com.aliyun.openservices.ons.api.bean.ConsumerBean
      * @throws  UniteConfigException ex
      * @author  Gopal.pan
