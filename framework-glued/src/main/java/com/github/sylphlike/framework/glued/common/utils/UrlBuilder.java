@@ -11,8 +11,8 @@ import java.util.StringJoiner;
 
 /**
  *  URL构造
- * <p>  time 05/11/2020 15:32  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

@@ -4,8 +4,8 @@ package com.github.sylphlike.framework.web.utils.thread;
 
 /**
  * 默认异步线程池名称配置
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0
  */

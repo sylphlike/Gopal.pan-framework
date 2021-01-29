@@ -7,11 +7,9 @@ import java.time.LocalDateTime;
 
 /**
  * 系统规范标准接口返回。
- *
- * <p> 系统规范的标准接口返回，所有接口返回该实体类，具体的业务参数为 T data.
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
- *
+ * <p> 系统规范的标准接口返回，所有接口返回该实体类，具体的业务参数为 T data </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

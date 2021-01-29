@@ -24,8 +24,9 @@ import java.util.*;
  *      1 类上需有 RequestMapping 并且指定name字段值 ， 该name 用于 controllers类说明
  *      2 方法上可以使用标准的 GetMapping,PostMapping 等， 需指定name字段值，该值用于描述方法作用
  *      缺少1,2规范小的name值时， 接口说明字段将为空
- * <p>  time 06/11/2020 15:40  星期五 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0
  */

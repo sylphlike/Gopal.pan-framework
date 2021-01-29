@@ -8,11 +8,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 高并发场景下System.currentTimeMillis()的性能问题的优化 调用方法；Clock.now();
- * <p>  time 22/09/2020 14:10  星期二 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
- *
- *
- *
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

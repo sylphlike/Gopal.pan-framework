@@ -16,9 +16,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * 滑块认证
- * <p>目标图片大小需要590 * 360 目标图片文件后缀为.jpg 模板图片文件后缀为.png
- * <p>  time 23/10/2020 10:18  星期五 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * <p>目标图片大小需要590 * 360 目标图片文件后缀为.jpg 模板图片文件后缀为.png </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

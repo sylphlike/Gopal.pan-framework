@@ -9,13 +9,12 @@ import java.util.Currency;
 /**
  * 支持货币对象与double(float)/long(int)/String/BigDecimal之间相互转换。
  * <p>货币类在运算中提供与JDK中的BigDecimal类似的运算接口，BigDecimal的运算接口支持任意指定精度的运算功能，能够支持各种可能的财务规则。
- * 推荐使用Money，不建议直接使用BigDecimal的原因之一在于，使用BigDecimal，同样金额和币种的货币使用BigDecimal存在多种可能 的表示，例如：new BigDecimal("10.5")与new BigDecimal("10.50")不相等，因为scale不等。使得Money类，同样金额和币种的货币只有一种表示方式，new Money("10.5")和new Money("10.50")应该是相等的。
- * 不推荐直接使用BigDecimal的另一原因在于， BigDecimal是Immutable，一旦创建就不可更改，对BigDecimal进行任意运算都会生成一个新的BigDecimal对象，因此对于大批量统计的性能不够满意。Money类是mutable的，对大批量统计提供较好的支持。
- * 提供基本的格式化功能。
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
- *
- *
+ *    推荐使用Money，不建议直接使用BigDecimal的原因之一在于，使用BigDecimal，同样金额和币种的货币使用BigDecimal存在多种可能 的表示，例如：new BigDecimal("10.5")与new BigDecimal("10.50")不相等，因为scale不等。使得Money类，同样金额和币种的货币只有一种表示方式，new Money("10.5")和new Money("10.50")应该是相等的。
+ *    不推荐直接使用BigDecimal的另一原因在于， BigDecimal是Immutable，一旦创建就不可更改，对BigDecimal进行任意运算都会生成一个新的BigDecimal对象，因此对于大批量统计的性能不够满意。Money类是mutable的，对大批量统计提供较好的支持。
+ *    提供基本的格式化功能。
+ * </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

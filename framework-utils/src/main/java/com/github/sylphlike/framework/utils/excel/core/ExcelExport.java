@@ -28,9 +28,9 @@ import java.util.Map;
 
 /**
  * POI excel文件导出，支持超大数据量
- * <p> 初始化excel文件 -- 添加数据 -- 渲染到客户端 --清理临时文件. new ExcelExport(sysUser1,list.size()).setDataList(list).write("D:\\test.xlsx").dispose();
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * <p> 初始化excel文件 -- 添加数据 -- 渲染到客户端 --清理临时文件. new ExcelExport(sysUser1,list.size()).setDataList(list).write("D:\\test.xlsx").dispose(); </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

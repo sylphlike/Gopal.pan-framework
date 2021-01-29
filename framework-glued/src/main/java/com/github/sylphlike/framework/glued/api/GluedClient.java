@@ -20,11 +20,9 @@ import java.io.IOException;
  *         GluedClient instants = DefaultAuthSource.valueOf(accessTokenClient.getPlatform()).instants(accessTokenClient);
  *
  *         AuthToken accessToken = instants.accessToken();
- *
- *
- * <p>  time 28/10/2020 14:31  星期三 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
- *
+ * </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

@@ -10,11 +10,10 @@ import java.util.regex.Matcher;
 /**
  * 日志脱敏转换器
  * <p>已实现脱敏字段：   1 身份证号  2 手机号码 3 银行卡号 4 邮箱地址
- * <p>使用方法. 需要在业务系统的日志配置文件中增加 转换规则配置: <conversionRule conversionWord="m" converterClass="com.github.sylphlike.web.log.SensitiveConverter"> </conversionRule>
- *
- * <p>  time 19/10/2020 09:43  星期一 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
- *
+ *    使用方法. 需要在业务系统的日志配置文件中增加 转换规则配置: <conversionRule conversionWord="m" converterClass="com.github.sylphlike.web.log.SensitiveConverter"> </conversionRule>
+ * </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0
  */

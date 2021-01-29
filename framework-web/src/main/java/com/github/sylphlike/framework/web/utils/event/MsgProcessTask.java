@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 延迟消息处理类
- * <p>具体业务处理类交由Spring管理，并且bean实例名称应与消息类型一致。即实msgType（）方法返回的值为该类的简单类名，首字母小写
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * <p>具体业务处理类交由Spring管理，并且bean实例名称应与消息类型一致。即实msgType（）方法返回的值为该类的简单类名，首字母小写 </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0
  */

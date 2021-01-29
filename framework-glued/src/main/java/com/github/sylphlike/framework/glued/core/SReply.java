@@ -4,9 +4,8 @@ package com.github.sylphlike.framework.glued.core;
 import com.github.sylphlike.framework.norm.RCode;
 
 /**
- * <p>  time 19/11/2020 16:50  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
- *
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

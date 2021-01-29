@@ -6,8 +6,8 @@ import lombok.ToString;
 
 /**
  *  用户信息业务参数
- * <p>  time 10/11/2020 10:54  星期二 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

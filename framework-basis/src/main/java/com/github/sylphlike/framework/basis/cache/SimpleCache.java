@@ -9,10 +9,9 @@ import java.util.concurrent.locks.StampedLock;
 
 /**
  * 简单缓存，无超时实现，默认使用{@link WeakHashMap}实现缓存自动清理
- * <p>  K 键类型 V 值类型
- * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com 
- *
+ * <p>  K 键类型 V 值类型              </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

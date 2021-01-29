@@ -4,8 +4,8 @@ import com.github.sylphlike.framework.norm.RCode;
 
 /**
  * 框架提供的系统类错误码，和已知通用的业务错误码
- * <p>  time 19/11/2020 16:11  星期四 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0
  */

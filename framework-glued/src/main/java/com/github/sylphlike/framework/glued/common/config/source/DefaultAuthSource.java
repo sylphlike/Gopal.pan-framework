@@ -7,9 +7,8 @@ import com.github.sylphlike.framework.glued.core.AuthWeiboRequest;
 import com.github.sylphlike.framework.glued.domain.input.ClientConfig;
 
 /**
- * <p>  time 05/11/2020 14:58  星期四 【dd/MM/YYYY HH:mm】 </p>
- * <p> email 15923508369@163.com </p>
- *
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

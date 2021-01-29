@@ -20,8 +20,8 @@ import java.time.format.DateTimeFormatter;
  *   LocalDate     序列化配置全局配置 全局格式为 yyyy-MM-dd
  *   LocalTime     序列化配置全局配置 全局格式为 HH:mm:ss
  *   Long类型转换成 String类型
- * <p>  time 03/11/2020 17:50  星期二 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */

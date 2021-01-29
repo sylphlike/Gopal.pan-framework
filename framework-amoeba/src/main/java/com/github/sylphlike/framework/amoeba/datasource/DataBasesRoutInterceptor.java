@@ -18,10 +18,9 @@ import java.util.Properties;
 
 /**
  * 数据库路由拦截器
- * <p> 1 指定使用的数据库
- *     2 字段自动填充
- * <p>  time 04/12/2020 16:24  星期五 (dd/MM/YYYY HH:mm)
- * <p> email 15923508369@163.com 
+ * <p> 1 指定使用的数据库 ,2 字段自动填充 </p>
+ * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
  */
