@@ -81,8 +81,8 @@ public class GeneSequence {
 
     /**
      * 获取下一个ID
-     * <p>  time 10:49 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param orgId 原始ID
      * @return  long
      * @author  Gopal.pan

@@ -278,11 +278,10 @@ public class ExcelExport<T> {
     }
 
 
-
     /**
      * 输出到客户端 web
-     * <p>  time 17:51 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param response     响应流
      * @param fileName     编码后的文件名
      * @return  com.github.sylphlike.framework.utils.excel.core.ExcelExport
@@ -300,8 +299,8 @@ public class ExcelExport<T> {
 
     /**
      * 输出到客户端 文件流
-     * <p>  time 17:51 2021/1/4 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param fileFullPath  文件地址路径
      * @return  com.github.sylphlike.framework.utils.excel.core.ExcelExport
      * @author  Gopal.pan
@@ -327,8 +326,8 @@ public class ExcelExport<T> {
 
     /**
      * 清理临时文件
-     * <p>  time 11:32 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  com.github.sylphlike.framework.utils.excel.core.ExcelExport
      * @author  Gopal.pan
      */

@@ -35,16 +35,13 @@ public class SensitiveConverter extends ClassicConverter {
         return content;
     }
 
-
-
-
     /**
-     *  [身份证号] 指定展示几位，其他隐藏  1101**********5762
-     * <p>  time 10:29 2020/10/19 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
-     * @param content 原始带脱敏字符串
-     * @return java.lang.String
-     * @author Gopal.pan
+     * 身份证号 前4后4，其他隐藏
+     * <p>  time 15:57 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param content  原始带脱敏字符串
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     private static String idCard(String content){
         Matcher matcher = PatternPool.CITIZEN_ID_18.matcher(content);
@@ -59,9 +56,9 @@ public class SensitiveConverter extends ClassicConverter {
 
 
     /**
-     *  [手机号码] 前三位，后四位，其他隐藏 138******1234
-     * <p>  time 10:31 2020/10/19 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * 手机号码 前三位，后四位，其他隐藏 138******1234
+     * <p>  time 15:57 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param content 原始带脱敏字符串
      * @return java.lang.String
      * @author Gopal.pan
@@ -78,9 +75,9 @@ public class SensitiveConverter extends ClassicConverter {
 
 
     /**
-     *  [银行卡号] 前三位，后四位，其他隐藏 622******3499
-     * <p>  time 10:31 2020/10/19 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * 银行卡号 前三位，后四位，其他隐藏 622******3499
+     * <p>  time 15:57 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param content 原始带脱敏字符串
      * @return java.lang.String
      * @author Gopal.pan
@@ -99,9 +96,9 @@ public class SensitiveConverter extends ClassicConverter {
 
 
     /**
-     *  [邮箱地址] 指定展示几位，其他隐藏 。
-     * <p>  time 11:06 2020/10/19 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * 邮箱地址 前3，其他隐藏 。
+     * <p>  time 15:57 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param content 原始带脱敏字符串
      * @return java.lang.String
      * @author Gopal.pan
@@ -123,8 +120,8 @@ public class SensitiveConverter extends ClassicConverter {
 
     /**
      *  基础脱敏处理 指定起止展示长度 剩余用"*"中字符替换
-     * <p>  time 10:31 2020/10/19 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:57 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param str               待脱敏的字符串
      * @param startLength       开始展示长度
      * @param endLength         末尾展示长度

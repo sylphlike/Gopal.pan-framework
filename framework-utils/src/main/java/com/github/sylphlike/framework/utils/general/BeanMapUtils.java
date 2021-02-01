@@ -26,8 +26,8 @@ public class BeanMapUtils {
 
     /**
      * 对象转map
-     * <p>  time 11:18 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param obj   待转的实体对象
      * @return  java.util.Map
      * @author  Gopal.pan
@@ -60,8 +60,8 @@ public class BeanMapUtils {
 
     /**
      * map 转Java bean
-     * <p>  time 11:18 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param map         Map对象
      * @param beanClass   实体对象
      * @return  T         转换后的实体对象

@@ -44,7 +44,7 @@ public class MsgEventManager  {
     /**
      * 添加队列数据
      * @param msgEvent msgEvent
-     * @return
+     * @return boolean
      */
     public static boolean offerMsg(MsgEvent<?> msgEvent){
 

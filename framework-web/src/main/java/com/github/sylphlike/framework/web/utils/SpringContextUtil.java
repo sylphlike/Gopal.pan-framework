@@ -40,7 +40,7 @@ public class SpringContextUtil implements ApplicationContextAware {
 
 
     /**
-     *
+     * 根据名称获取对象
      * <p>  time 17:18 2021/1/6 (HH:mm yyyy/MM/dd)
      * <p> email 15923508369@163.com
      * @param name   bean名称

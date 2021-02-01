@@ -67,8 +67,8 @@ public class QRCode {
 
     /**
      * 生成二维码图片,保存到指定文件目录下
-     * <p>  time 10:27 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param contents    二维码内容
      * @param savePath    二维码图片存储地址
      * @author  Gopal.pan
@@ -88,9 +88,9 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:03 2020/12/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 生成二维码图片,使用默认的宽高
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param contents   二维码内容
      * @return   byte[]
      * @author   Gopal.pan
@@ -103,9 +103,9 @@ public class QRCode {
 
 
     /**
-     * <p>  time 14:16 2020/12/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 生成二维码图片
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param contents    二维码内容
      * @param width       二维码宽度
      * @param height      二维码高度
@@ -129,9 +129,9 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:05 2020/12/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
      * 生成二维码图片带logo
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param contents  二维码内容
      * @param logoBytes  logo图片字节数组
      * @return   byte[]
@@ -143,9 +143,9 @@ public class QRCode {
 
 
     /**
-     * <p>  time 15:13 2020/12/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
-     *  生成二维码图片带logo
+     * 生成二维码图片带logo
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param contents    二维码内容
      * @param width       二维码宽度
      * @param height      二维码高度
@@ -201,9 +201,9 @@ public class QRCode {
 
 
     /**
-     *
-     * <p>  time 10:27 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * 生成二维码图片
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param contents  二维码内容
      * @param title     二维码title
      * @param filePath  图片保存路径地址

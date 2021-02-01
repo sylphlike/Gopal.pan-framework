@@ -68,28 +68,35 @@ public class ConcurrentThreadPool {
                 TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
     }
 
+
+
     /**
      * 提交单个任务
-     * @param task
-     * @param <V>
-     * @return
-     * @throws InterruptedException
-     * @throws ExecutionException
+     * <p>  time 16:00 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param task  可执行类
+     * @return  V
+     * @throws  ExecutionException  ex
+     * @throws  InterruptedException ex
+     * @author  Gopal.pan
      */
-    public   <V> V submit(CallableTemplate<V> task) throws InterruptedException, ExecutionException {
+    public   <V> V submit(CallableTemplate<V> task) throws ExecutionException, InterruptedException {
         LOGGER.info("【framework-web】 提交多线程任务 [{}]",task);
         Future<V> result = threadPoolExecutor.submit(task);
         return result.get();
     }
 
 
+
     /**
      * 批量提交多个任务
-     * @param tasks
-     * @param <V>
-     * @return
-     * @throws InterruptedException
-     * @throws ExecutionException
+     * <p>  time 16:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param tasks   可执行类
+     * @return  java.util.List<V>
+     * @throws  ExecutionException  ex
+     * @throws  InterruptedException ex
+     * @author  Gopal.pan
      */
     public <V> List<V> invokeAll(List<? extends CallableTemplate<V>> tasks)  throws InterruptedException, ExecutionException {
 

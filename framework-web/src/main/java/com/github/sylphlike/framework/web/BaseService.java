@@ -77,10 +77,14 @@ public class BaseService {
     }
 
 
+
     /**
      * 校验数据库插入单挑记录是否成功
-     * @param effectRow 影响行数
-     * @return
+     * <p>  time 16:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param effectRow  数据库影响行数
+     * @return  com.github.sylphlike.framework.norm.Response<java.lang.Void>
+     * @author  Gopal.pan
      */
     protected Response<Void> checkAddData(int effectRow){
         LOGGER.info("【framework-web】校验数据库单条数据入库,影响行数[{}]",effectRow);
@@ -90,11 +94,13 @@ public class BaseService {
 
     }
 
-
     /**
      * 校验数据库修改一条记录是否成功
-     * @param effectRow 影响行数
-     * @return
+     * <p>  time 16:47 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param effectRow  数据库影响行数
+     * @return  com.github.sylphlike.framework.norm.Response<java.lang.Void>
+     * @author  Gopal.pan
      */
     protected Response<Void> checkUpdateData(int effectRow){
         LOGGER.info("【framework-web】校验数据库单条数据修改,影响行数[{}]",effectRow);

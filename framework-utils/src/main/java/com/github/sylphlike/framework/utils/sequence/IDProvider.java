@@ -21,9 +21,8 @@ public class IDProvider {
 
     /**
      * 标准snowflake 算法
-     * <p>  time 13:56 2020/9/22 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
-     *
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return long
      * @author Gopal.pan
      */
@@ -34,8 +33,8 @@ public class IDProvider {
 
     /**
      * 雪花算法 + 基因法
-     * <p>  time 11:22 2020/9/23 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param originalId  原始序列号
      * @return long
      * @author Gopal.pan

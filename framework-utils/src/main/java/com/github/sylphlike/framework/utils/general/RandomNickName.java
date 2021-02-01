@@ -21,11 +21,12 @@ public class RandomNickName {
     }
 
 
+
     /**
      * 获取随机昵称
-     * <p>  time 10:53 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
-     * @param gender   性别枚举
+     * <p>  time 15:10 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
+     * @param gender  获取随机昵称
      * @return  java.lang.String
      * @author  Gopal.pan
      */

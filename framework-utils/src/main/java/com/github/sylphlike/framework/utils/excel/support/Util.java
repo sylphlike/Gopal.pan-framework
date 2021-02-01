@@ -19,8 +19,8 @@ public class Util {
 
     /**
      * 根据反射，通过方法名称获取方法值，忽略大小写的
-     * <p>  time 11:19 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param methodName    方法名称
      * @param obj           对象
      * @param args          参数
@@ -41,8 +41,8 @@ public class Util {
 
     /**
      * 通过code值获取对应的描述信息
-     * <p>  time 11:20 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param code           code
      * @param enumT          枚举类
      * @param methodNames    方法名称
@@ -69,8 +69,8 @@ public class Util {
 
     /**
      * 枚举转map结合code 作为map的key,description作为map的value
-     * <p>  time 11:21 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param enumT          枚举类
      * @param methodNames    方法名称
      * @return  java.util.Map

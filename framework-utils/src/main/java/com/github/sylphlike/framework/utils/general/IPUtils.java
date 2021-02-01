@@ -32,9 +32,9 @@ public class IPUtils {
 
     /**
      * 获取用户真实IP地址
-     * <p> 不使用request.getRemoteAddr()的原因是有可能用户使用了代理软件方式避免真实IP地址, 如果通过了多级反向代理的话，X-Forwarded-For的值并不止一个，而是一串IP值
-     * <p>  time 11:02 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p> 不使用request.getRemoteAddr()的原因是有可能用户使用了代理软件方式避免真实IP地址, 如果通过了多级反向代理的话，X-Forwarded-For的值并不止一个，而是一串IP值 </p>
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param request  request对象
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -75,8 +75,8 @@ public class IPUtils {
 
     /**
      * 获取获取服务器IP地址 多网卡版
-     * <p>  time 10:28 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.lang.String
      * @author  Gopal.pan
      */
@@ -108,8 +108,8 @@ public class IPUtils {
 
     /**
      * 获取服务器IP地址
-     * <p>  time 11:02 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.lang.String
      * @author  Gopal.pan
      */

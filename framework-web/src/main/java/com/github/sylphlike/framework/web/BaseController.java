@@ -114,11 +114,9 @@ public class BaseController {
 
 
     /**
+     * 包装controller层异常处理,业务controller层无需捕获处理异常
      * <p>  time 16:10 2020/9/21 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com 
-     *
-     *  包装controller层异常处理,业务controller层无需捕获处理异常
-     *
+     * <p> email 15923508369@163.com
      * @param LogDesc  业务功能描述
      * @return com.github.sylphlike.norm.Response
      * @author Gopal.pan

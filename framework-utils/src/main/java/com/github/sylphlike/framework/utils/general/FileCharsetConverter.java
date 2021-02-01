@@ -23,8 +23,8 @@ public class FileCharsetConverter {
 
     /**
      * 将文件或文件夹下的所有文件转换成指定的编码集,不可以使用多级目录
-     * <p>  time 10:58 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param file              要转换的文件或文件夹全路径
      * @param fromCharsetName   源文件的编码
      * @param toCharsetName     要转换的编码
@@ -37,8 +37,10 @@ public class FileCharsetConverter {
             File dirFile = new File(file);
             if(dirFile.isDirectory()){
                 File[] files = dirFile.listFiles();
-                for (File  singleFile: files ) {
-                    convert(singleFile,fromCharsetName ,toCharsetName);
+                if(files != null){
+                    for (File  singleFile: files ) {
+                        convert(singleFile,fromCharsetName ,toCharsetName);
+                    }
                 }
             }else {
                 convert(dirFile,fromCharsetName ,toCharsetName);
@@ -52,8 +54,8 @@ public class FileCharsetConverter {
 
     /**
      * 把指定文件转换成指定的编码
-     * <p>  time 10:58 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param file              要转换的文件
      * @param fromCharsetName   源文件的编码
      * @param toCharsetName     要转换的编码
@@ -69,8 +71,8 @@ public class FileCharsetConverter {
 
     /**
      * 以指定编码方式读取文件，返回文件内容
-     * <p>  time 10:58 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:02 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param file              要转换的文件
      * @param fromCharsetName   源文件的编码
      * @return  java.lang.String
@@ -91,14 +93,15 @@ public class FileCharsetConverter {
     }
 
 
+
+
     /**
      * 以指定编码方式写文本文件，存在会覆盖
-     * <p>  time 10:57 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param file             要写入的文件
      * @param toCharsetName    要转换的编码
      * @param content          文件内容
-     * @throws  Exception e
      * @author  Gopal.pan
      */
     public static void saveFile2Charset(File file, String toCharsetName,   String content) throws Exception {

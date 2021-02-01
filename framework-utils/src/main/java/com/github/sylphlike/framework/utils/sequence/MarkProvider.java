@@ -24,8 +24,8 @@ public class MarkProvider {
 
     /**
      * 数据中心ID
-     * <p>  time 10:45 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param maxDataCenterId  最大数据中心ID
      * @return  long
      * @author  Gopal.pan
@@ -56,8 +56,8 @@ public class MarkProvider {
 
     /**
      * 工作机器ID
-     * <p>  time 10:44 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param dataCenterId   数据中心ID
      * @param maxWorkerId    最大工作机器ID
      * @return  long

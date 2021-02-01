@@ -14,8 +14,8 @@ public class SensitiveUtils {
 
     /**
      * 只显示第一个汉字，其他隐藏为2个星号
-     * <p>  time 16:48 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param fullName  明文中文名称
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -32,8 +32,8 @@ public class SensitiveUtils {
 
     /**
      * 身份证号 前六位，后四位，其他用星号隐藏每位1个星号
-     * <p>  time 16:52 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param cardNum   份证号
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -49,8 +49,8 @@ public class SensitiveUtils {
 
     /**
      * 固定电话 后四位，其他隐藏
-     * <p>  time 16:55 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param num 固定电话
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -66,8 +66,8 @@ public class SensitiveUtils {
 
     /**
      * 手机号码 前三位，后四位
-     * <p>  time 16:58 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param num  手机号码
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -82,8 +82,8 @@ public class SensitiveUtils {
 
     /**
      * 地址 前六位
-     * <p>  time 17:01 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param address  地址
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -102,8 +102,8 @@ public class SensitiveUtils {
 
     /**
      * 电子邮件 @符号前三位
-     * <p>  time 17:03 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param email 电子邮件
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -124,8 +124,8 @@ public class SensitiveUtils {
 
     /**
      *  银行卡号 前六位，后四位，其他用星号隐藏每位1个星号
-     * <p>  time 17:04 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param cardNum 银行卡号
      * @return  java.lang.String
      * @author  Gopal.pan
@@ -140,8 +140,8 @@ public class SensitiveUtils {
 
     /**
      * 车牌号 前两位后一位
-     * <p>  time 17:05 2021/1/28 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:11 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @param carNumber 车牌号
      * @return  java.lang.String
      * @author  Gopal.pan

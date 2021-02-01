@@ -29,8 +29,8 @@ public class OSUtils {
 
     /**
      * 获得内网IP
-     * <p>  time 10:56 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.lang.String
      * @author  Gopal.pan
      */
@@ -50,8 +50,8 @@ public class OSUtils {
 
     /**
      * 获得外网IP
-     * <p>  time 10:56 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.lang.String
      * @author  Gopal.pan
      */
@@ -80,8 +80,8 @@ public class OSUtils {
 
     /**
      * 获取MAC地址 C8-FF-28-5B-32-25
-     * <p>  time 10:55 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.util.List
      * @author  Gopal.pan
      */
@@ -136,8 +136,8 @@ public class OSUtils {
 
     /**
      * 获取版本号
-     * <p>  time 10:54 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  java.lang.String
      * @author  Gopal.pan
      */
@@ -148,8 +148,8 @@ public class OSUtils {
 
     /**
      * 得到计算机的ip,名称,操作系统名称,操作系统版本
-     * <p>  time 10:55 2021/1/5 (HH:mm yyyy/MM/dd)
-     * <p> email 15923508369@163.com
+     * <p>  time 15:06 2021/2/1       </p>
+     * <p> email 15923508369@163.com  </p>
      * @return  集合
      * @author  Gopal.pan
      */
