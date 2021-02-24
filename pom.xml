@@ -181,6 +181,7 @@
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <skipTests>true</skipTests>
 
         <!--核心版本依赖 修改 spring-boot.version 版本号后需要同时修改 spring-boot-starter-parent !!!-->
         <spring-boot.version>2.2.9.RELEASE</spring-boot.version>
