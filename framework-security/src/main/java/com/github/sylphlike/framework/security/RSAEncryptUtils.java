@@ -32,10 +32,10 @@ public class RSAEncryptUtils {
     public static final String SIGNATURE_ALGORITHM = "MD5withRSA";
 
     /** 获取公钥的key */
-    private static final String PUBLIC_KEY = "RSAPublicKey";
+    public static final String PUBLIC_KEY = "RSAPublicKey";
 
     /** 获取私钥的key */
-    private static final String PRIVATE_KEY = "RSAPrivateKey";
+    public static final String PRIVATE_KEY = "RSAPrivateKey";
 
     /** RSA最大加密明文大小 */
     private static final int MAX_ENCRYPT_BLOCK = 117;
@@ -58,8 +58,8 @@ public class RSAEncryptUtils {
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
         Map<String, Object> keyMap = new HashMap<>(2);
-        keyMap.put(PUBLIC_KEY, publicKey);
-        keyMap.put(PRIVATE_KEY, privateKey);
+        keyMap.put(PUBLIC_KEY, Base64.getEncoder().encodeToString(publicKey.getEncoded()));
+        keyMap.put(PRIVATE_KEY, Base64.getEncoder().encodeToString(privateKey.getEncoded()));
         return keyMap;
     }
 
@@ -152,28 +152,7 @@ public class RSAEncryptUtils {
         return getBytes(data, keyFactory, publicK, Cipher.ENCRYPT_MODE, MAX_ENCRYPT_BLOCK);
     }
 
-    private static byte[] getBytes(byte[] data, KeyFactory keyFactory, Key publicK, int encryptMode, int maxEncryptBlock) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, IOException {
-        Cipher cipher = getCipher(keyFactory, publicK, encryptMode);
-        int inputLen = data.length;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        int offSet = 0;
-        byte[] cache;
-        int i = 0;
-        // 对数据分段加密
-        while (inputLen - offSet > 0) {
-            if (inputLen - offSet > maxEncryptBlock) {
-                cache = cipher.doFinal(data, offSet, maxEncryptBlock);
-            } else {
-                cache = cipher.doFinal(data, offSet, inputLen - offSet);
-            }
-            out.write(cache, 0, cache.length);
-            i++;
-            offSet = i * maxEncryptBlock;
-        }
-        byte[] encryptedData = out.toByteArray();
-        out.close();
-        return encryptedData;
-    }
+
 
 
     /**
@@ -210,11 +189,7 @@ public class RSAEncryptUtils {
         return getBytes(data, keyFactory, privateK, Cipher.ENCRYPT_MODE, MAX_ENCRYPT_BLOCK);
     }
 
-    private static Cipher getCipher(KeyFactory keyFactory, Key privateK, int encryptMode) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {
-        Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
-        cipher.init(encryptMode, privateK);
-        return cipher;
-    }
+
 
 
     /**
@@ -326,5 +301,35 @@ public class RSAEncryptUtils {
 
 
 
+
+    private static byte[] getBytes(byte[] data, KeyFactory keyFactory, Key publicK, int encryptMode, int maxEncryptBlock) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, IOException {
+        Cipher cipher = getCipher(keyFactory, publicK, encryptMode);
+        int inputLen = data.length;
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        int offSet = 0;
+        byte[] cache;
+        int i = 0;
+        // 对数据分段加密
+        while (inputLen - offSet > 0) {
+            if (inputLen - offSet > maxEncryptBlock) {
+                cache = cipher.doFinal(data, offSet, maxEncryptBlock);
+            } else {
+                cache = cipher.doFinal(data, offSet, inputLen - offSet);
+            }
+            out.write(cache, 0, cache.length);
+            i++;
+            offSet = i * maxEncryptBlock;
+        }
+        byte[] encryptedData = out.toByteArray();
+        out.close();
+        return encryptedData;
+    }
+
+
+    private static Cipher getCipher(KeyFactory keyFactory, Key privateK, int encryptMode) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {
+        Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+        cipher.init(encryptMode, privateK);
+        return cipher;
+    }
 
 }
