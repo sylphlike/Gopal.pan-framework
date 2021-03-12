@@ -38,26 +38,29 @@ public class RSAEncryptUtils {
     public static final String PRIVATE_KEY = "RSAPrivateKey";
 
     /** RSA最大加密明文大小 */
-    private static final int MAX_ENCRYPT_BLOCK = 117;
+    private static final int MAX_ENCRYPT_BLOCK = 245;
 
     /** RSA最大解密密文大小*/
-    private static final int MAX_DECRYPT_BLOCK = 128;
+    private static final int MAX_DECRYPT_BLOCK = 256;
 
 
     /**
-     * 生成密钥对
+     * 生成密钥对，默认为2048位证书
+     * 1024位的证书，加密时最大支持117个字节，解密时为128；
+     * 2048位的证书，加密时最大支持245个字节，解密时为256。
+     * 加密时支持的最大字节数：证书位数/8 -11（比如：2048位的证书，支持的最大加密字节数：2048/8 - 11 = 245）
      * <p>  time 14:06 2021/3/3       </p>
      * <p> email 15923508369@163.com  </p>
      * @return  java.util.Map<java.lang.String,java.lang.Object>
      * @author  Gopal.pan
      */
-    public static Map<String, Object> genKeyPair() throws Exception {
+    public static Map<String, String> genKeyPair() throws Exception {
         KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance(KEY_ALGORITHM);
-        keyPairGen.initialize(1024);
+        keyPairGen.initialize(2048);
         KeyPair keyPair = keyPairGen.generateKeyPair();
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
-        Map<String, Object> keyMap = new HashMap<>(2);
+        Map<String, String> keyMap = new HashMap<>(2);
         keyMap.put(PUBLIC_KEY, Base64.getEncoder().encodeToString(publicKey.getEncoded()));
         keyMap.put(PRIVATE_KEY, Base64.getEncoder().encodeToString(privateKey.getEncoded()));
         return keyMap;
@@ -265,39 +268,6 @@ public class RSAEncryptUtils {
         return getBytes(encryptedData, keyFactory, privateK, Cipher.DECRYPT_MODE, MAX_DECRYPT_BLOCK);
     }
 
-
-
-
-
-    /**
-     * 获取私钥
-     * <p>  time 14:09 2021/3/3       </p>
-     * <p> email 15923508369@163.com  </p>
-     * @param keyMap 密钥对
-     * @return  java.lang.String
-     * @throws  Exception ex
-     * @author  Gopal.pan
-     */
-    public static String getPrivateKey(Map<String, Object> keyMap) throws Exception {
-        Key key = (Key) keyMap.get(PRIVATE_KEY);
-        return Base64.getEncoder().encodeToString(key.getEncoded());
-    }
-
-
-
-    /**
-     * 获取公钥
-     * <p>  time 14:10 2021/3/3       </p>
-     * <p> email 15923508369@163.com  </p>
-     * @param keyMap 密钥对
-     * @return  java.lang.String
-     * @throws  Exception ex
-     * @author  Gopal.pan
-     */
-    public static String getPublicKey(Map<String, Object> keyMap) throws Exception {
-        Key key = (Key) keyMap.get(PUBLIC_KEY);
-        return Base64.getEncoder().encodeToString(key.getEncoded());
-    }
 
 
 
