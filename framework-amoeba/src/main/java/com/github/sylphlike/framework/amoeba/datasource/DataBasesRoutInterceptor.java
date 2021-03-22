@@ -1,5 +1,6 @@
 package com.github.sylphlike.framework.amoeba.datasource;
 
+import com.github.sylphlike.framework.basis.UserAttributes;
 import com.github.sylphlike.framework.basis.UserContextHolder;
 import org.apache.ibatis.annotations.Update;
 import org.apache.ibatis.executor.Executor;
@@ -11,6 +12,7 @@ import org.apache.ibatis.session.RowBounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
 import java.time.LocalDateTime;
@@ -85,6 +87,10 @@ public class DataBasesRoutInterceptor implements Interceptor {
      * @author  Gopal.pan
      */
     private void autoFill(Invocation invocation ) throws IllegalAccessException {
+        UserAttributes userAttributes = UserContextHolder.getRequestAttributes();
+        if(StringUtils.isEmpty(userAttributes))
+            return;
+
         Object[] objects = invocation.getArgs();
         MappedStatement mappedStatement = (MappedStatement) objects[0];
         SqlCommandType sqlCommandType = mappedStatement.getSqlCommandType();
@@ -101,7 +107,7 @@ public class DataBasesRoutInterceptor implements Interceptor {
             }
             if (field.getName().equals(CREATE_USER) && SqlCommandType.INSERT.equals(sqlCommandType)){
                 field.setAccessible(true);
-                field.set(parameter, UserContextHolder.getRequestAttributes().getUserId());
+                field.set(parameter, userAttributes.getUserId());
             }
 
             if (field.getName().equals(UPDATE_TIME) && SqlCommandType.UPDATE.equals(sqlCommandType)){
@@ -110,7 +116,7 @@ public class DataBasesRoutInterceptor implements Interceptor {
             }
             if (field.getName().equals(UPDATE_USER) && SqlCommandType.UPDATE.equals(sqlCommandType)){
                 field.setAccessible(true);
-                field.set(parameter, UserContextHolder.getRequestAttributes().getUserId());
+                field.set(parameter, userAttributes.getUserId());
             }
         }
     }
