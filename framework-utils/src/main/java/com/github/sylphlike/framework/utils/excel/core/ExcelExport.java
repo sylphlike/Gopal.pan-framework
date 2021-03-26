@@ -216,7 +216,7 @@ public class ExcelExport<T> {
     private void dealSheetData(List<T> sheetExportList, Sheet sheet) throws ExcelException {
 
         try {
-            /** 数据内容起始号行*/
+            /* 数据内容起始号行*/
             int contentStartIndex = topOccupancyIndex;
             for(Object obj:sheetExportList){
                 int cellNum = 0;
@@ -231,9 +231,12 @@ public class ExcelExport<T> {
                     boolean enumTransform = annotation.enumTransform();
                     if(enumTransform){
                         Object o = field.get(obj);
-                        Class<?> enumClass = o.getClass();
-                        Method method = enumClass.getDeclaredMethod("desc");
-                        Object invoke = method.invoke(o);
+                        Object invoke = null;
+                        if(null != o){
+                            Class<?> enumClass = o.getClass();
+                            Method method = enumClass.getDeclaredMethod("desc");
+                            invoke = method.invoke(o);
+                        }
                         addCall(row,cellNum++,null == invoke ? "--" : invoke);
                     } else if(!StringUtils.isEmpty(dateFormat)){
                         Object va = field.get(obj);
