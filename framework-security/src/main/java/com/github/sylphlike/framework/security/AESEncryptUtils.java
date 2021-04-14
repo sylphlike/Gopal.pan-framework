@@ -26,7 +26,7 @@ public class AESEncryptUtils {
     private static final String ALGORITHM           = "AES/ECB/PKCS5Padding";
     private static final String CHAR_SET            = "utf-8";
     private static final String KEY_ALGORITHM       = "AES";
-    private static final int    ENCRYPT_KEY_LENGTH  =  128;
+    private static final int    ENCRYPT_KEY_LENGTH  =  256;
 
 
 

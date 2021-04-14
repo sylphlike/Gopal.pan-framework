@@ -24,7 +24,7 @@ public enum SecurityTypeEnums {
         this.code = code;
     }
 
-    private String code;
+    private final String code;
 
     public String getCode() {
         return code;

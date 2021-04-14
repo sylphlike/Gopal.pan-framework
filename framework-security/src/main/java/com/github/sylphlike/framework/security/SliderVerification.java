@@ -107,8 +107,10 @@ public class SliderVerification {
             e.printStackTrace();
         } finally {
             try {
-                targetFileInputStream.close();
-                outputStream.close();
+                if(targetFileInputStream != null)
+                    targetFileInputStream.close();
+                if(outputStream != null)
+                    outputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

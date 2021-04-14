@@ -67,7 +67,8 @@ public class ImageVerification {
             e.printStackTrace();
         } finally {
             try {
-                os.close();
+                if(os != null)
+                    os.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
