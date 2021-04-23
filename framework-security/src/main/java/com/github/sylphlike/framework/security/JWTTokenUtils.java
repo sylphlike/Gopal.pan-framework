@@ -5,11 +5,10 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>  time 17:56 2021/01/29  星期五 </p>
@@ -18,9 +17,7 @@ import java.util.UUID;
  * @version 1.0.0
  */
 
-public class JWTToken {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(JWTToken.class);
+public class JWTTokenUtils {
 
     public static String[] chars = new String[] { "a", "b", "c", "d", "e", "f",
             "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
@@ -36,18 +33,18 @@ public class JWTToken {
     private static final Algorithm algorithm = Algorithm.HMAC256("secret");
 
 
+
     /**
-     * 签发JWT
-     * <p>  time 18:27 2021/1/29      </p>
+     * 签发JWT 默认token失效时间为30分钟
+     * <p>  time 16:37 2021/4/21      </p>
      * <p> email 15923508369@163.com  </p>
-     * <p> email 15923508369@163.com
-     * @param subject    内容
+     * @param subject  内容
      * @return  java.lang.String
      * @author  Gopal.pan
      */
     public static String create(String subject) {
 
-        return create(subject,30L);
+        return create(subject,30L, TimeUnit.MINUTES);
 
     }
 
@@ -55,30 +52,39 @@ public class JWTToken {
 
     /**
      * 签发指定过期时间的token
-     * <p>  time 18:27 2021/1/29      </p>
+     * <p>  time 16:37 2021/4/21      </p>
      * <p> email 15923508369@163.com  </p>
      * @param subject   内容
-     * @param expires   过期时间，单位分钟
-     * @return   java.lang.String
-     * @author   Gopal.pan
+     * @param expires   过期时间
+     * @param timeUnit  时间单位
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
-    public static String create(String subject,Long expires) {
+    public static String create(String subject, Long expires, TimeUnit timeUnit) {
+        long millisExpires;
+        if (!TimeUnit.MILLISECONDS.equals(timeUnit)){
+            millisExpires = timeUnit.toMillis(expires);
+        }else {
+            millisExpires = expires;
+        }
+
         return JWT.create()
                 .withKeyId(sixUuid())
                 .withJWTId(sixUuid())
                 .withIssuer(ISSUER)
                 .withIssuedAt(new Date())
-                .withExpiresAt(new Date(new Date().getTime() +  expires * 60000 ))  //默认token 失效时间为30分钟
+                .withExpiresAt(new Date(new Date().getTime() +  millisExpires ))
                 .withSubject(subject)
                 .sign(algorithm);
     }
 
 
+
     /**
      * 验证token
-     * <p>  time 18:27 2021/1/29      </p>
+     * <p>  time 16:38 2021/4/21      </p>
      * <p> email 15923508369@163.com  </p>
-     * @param jwtStr jwt字符串
+     * @param jwtStr  待验证token
      * @return  boolean
      * @author  Gopal.pan
      */
@@ -93,12 +99,11 @@ public class JWTToken {
 
 
 
-
     /**
      * 验证token
-     * <p>  time 18:27 2021/1/29      </p>
+     * <p>  time 16:38 2021/4/21      </p>
      * <p> email 15923508369@163.com  </p>
-     * @param jwtStr    jwt字符串
+     * @param jwtStr  待验证token
      * @return  java.lang.String
      * @author  Gopal.pan
      */
@@ -111,13 +116,12 @@ public class JWTToken {
 
 
 
-
     /**
      * 6位随机数
-     * <p>  time 18:27 2021/1/29      </p>
+     * <p>  time 16:39 2021/4/21      </p>
      * <p> email 15923508369@163.com  </p>
-     * @return java.lang.String
-     * @author Gopal.pan
+     * @return  java.lang.String
+     * @author  Gopal.pan
      */
     public static String sixUuid() {
         StringBuilder shortBuffer = new StringBuilder();
