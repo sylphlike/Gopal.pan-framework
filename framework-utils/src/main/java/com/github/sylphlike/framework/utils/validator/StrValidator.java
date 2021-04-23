@@ -16,85 +16,13 @@ import java.util.regex.Pattern;
 public class StrValidator {
 
     /**
-     * 英文字母 、数字和下划线
-     */
-    public final static Pattern GENERAL = PatternPool.GENERAL;
-    /**
-     * 数字
-     */
-    public final static Pattern NUMBERS = PatternPool.NUMBERS;
-    /**
-     * 分组
-     */
-    public final static Pattern GROUP_VAR = PatternPool.GROUP_VAR;
-    /**
-     * IP v4
-     */
-    public final static Pattern IPV4 = PatternPool.IPV4;
-    /**
-     * IP v6
-     */
-    public final static Pattern IPV6 = PatternPool.IPV6;
-    /**
-     * 货币
-     */
-    public final static Pattern MONEY = PatternPool.MONEY;
-    /**
-     * 邮件
-     */
-    public final static Pattern EMAIL = PatternPool.EMAIL;
-    /**
-     * 移动电话
-     */
-    public final static Pattern MOBILE = PatternPool.MOBILE;
-    /**
-     * 身份证号码
-     */
-    public final static Pattern CITIZEN_ID = PatternPool.CITIZEN_ID;
-    /**
-     * 邮编
-     */
-    public final static Pattern ZIP_CODE = PatternPool.ZIP_CODE;
-    /**
-     * 生日
-     */
-    public final static Pattern BIRTHDAY = PatternPool.BIRTHDAY;
-    /**
-     * URL
-     */
-    public final static Pattern URL = PatternPool.URL;
-    /**
-     * Http URL
-     */
-    public final static Pattern URL_HTTP = PatternPool.URL_HTTP;
-    /**
-     * 中文字、英文字母、数字和下划线
-     */
-    public final static Pattern GENERAL_WITH_CHINESE = PatternPool.GENERAL_WITH_CHINESE;
-    /**
-     * UUID
-     */
-    public final static Pattern UUID = PatternPool.UUID;
-    /**
-     * 不带横线的UUID
-     */
-    public final static Pattern UUID_SIMPLE = PatternPool.UUID_SIMPLE;
-    /**
-     * 中国车牌号码
-     */
-    public final static Pattern PLATE_NUMBER = PatternPool.PLATE_NUMBER;
-
-
-
-    /**
      * 验证是否为生日
-     *
      * <p> 只支持以下几种格式： yyyyMMdd yyyy-MM-dd yyyy/MM/dd yyyy.MM.dd yyyy年MM月dd日
      * @param value 值
      * @return 是否为生日
      */
     public static boolean isBirthday(CharSequence value) {
-        final Matcher matcher = BIRTHDAY.matcher(value);
+        final Matcher matcher = PatternPool.BIRTHDAY.matcher(value);
         if (matcher.find()) {
             int year = Integer.parseInt(matcher.group(1));
             int month = Integer.parseInt(matcher.group(3));
@@ -107,7 +35,6 @@ public class StrValidator {
 
     /**
      * 验证是否为生日
-     *
      * @param year  年，从1900年开始计算
      * @param month 月，从1开始计数
      * @param day   日，从1开始计数

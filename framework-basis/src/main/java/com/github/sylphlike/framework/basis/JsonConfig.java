@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.regex.Pattern;
 
 /**
  * 全局Jackson格式化配置，一旦定义后全局不可修改,参数使用个性化@JsonFormat 配置无效
@@ -28,10 +29,14 @@ import java.time.format.DateTimeFormatter;
 public class JsonConfig {
 
     // 默认时间类型序列化，反序列化格式
-    private static final String DATE_TIME_PATTEN = "yyyy-MM-dd HH:mm:ss";
-    private static final String DATE_PATTEN = "yyyy-MM-dd";
-    private static final String TIME_PATTEN = "HH:mm:ss";
+    private static final String DATE_TIME = "yyyy-MM-dd HH:mm:ss";
+    private static final String DATE = "yyyy-MM-dd";
+    private static final String TIME = "HH:mm:ss";
 
+    // 时间正则
+    private static final Pattern DATE_TIME_PATTERN = Pattern.compile("^\\d{4}(\\-\\d{1,2}){2}\\s+\\d{1,2}(\\:\\d{1,2}){2}$");
+    private static final Pattern DATE_PATTERN = Pattern.compile("^\\d{4}(\\-\\d{1,2}){2}$");
+    private static final Pattern TIME_PATTERN = Pattern.compile("^\\d{1,2}(\\:\\d{1,2}){2}$");
 
 
     public static ObjectMapper mapper(){
@@ -58,14 +63,18 @@ public class JsonConfig {
     public static class LocalDateTimeSerializer extends JsonSerializer<LocalDateTime> {
         @Override
         public void serialize(LocalDateTime value, JsonGenerator gen, SerializerProvider serializers)throws IOException {
-            gen.writeString(value.format(DateTimeFormatter.ofPattern(DATE_TIME_PATTEN)));
+            gen.writeString(value.format(DateTimeFormatter.ofPattern(DATE_TIME)));
         }
     }
 
     public static class LocalDateTimeDeserializer extends JsonDeserializer<LocalDateTime> {
         @Override
         public LocalDateTime deserialize(JsonParser p, DeserializationContext deserializationContext)throws IOException {
-            return LocalDateTime.parse(p.getValueAsString(), DateTimeFormatter.ofPattern(DATE_TIME_PATTEN));
+            String valueAsString = p.getValueAsString();
+            if(DATE_TIME_PATTERN.matcher(valueAsString).matches())
+                return LocalDateTime.parse(valueAsString, DateTimeFormatter.ofPattern(DATE_TIME));
+
+             return LocalDateTime.parse(p.getValueAsString());
         }
     }
 
@@ -73,7 +82,7 @@ public class JsonConfig {
     public static class LocalDateSerializer extends JsonSerializer<LocalDate> {
         @Override
         public void serialize(LocalDate value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-            gen.writeString(value.format(DateTimeFormatter.ofPattern(DATE_PATTEN)));
+            gen.writeString(value.format(DateTimeFormatter.ofPattern(DATE)));
         }
     }
 
@@ -81,7 +90,10 @@ public class JsonConfig {
     public static class LocalDateDeserializer extends JsonDeserializer<LocalDate> {
         @Override
         public LocalDate deserialize(JsonParser p, DeserializationContext deserializationContext)throws IOException {
-            return LocalDate.parse(p.getValueAsString(), DateTimeFormatter.ofPattern(DATE_PATTEN));
+            String valueAsString = p.getValueAsString();
+            if(DATE_PATTERN.matcher(valueAsString).matches())
+                return LocalDate.parse(valueAsString, DateTimeFormatter.ofPattern(DATE));
+            return LocalDate.parse(valueAsString);
         }
     }
 
@@ -90,7 +102,7 @@ public class JsonConfig {
     public static class LocalTimeSerializer extends JsonSerializer<LocalTime>{
         @Override
         public void serialize(LocalTime value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-            gen.writeString(value.format(DateTimeFormatter.ofPattern(TIME_PATTEN)));
+            gen.writeString(value.format(DateTimeFormatter.ofPattern(TIME)));
         }
 
     }
@@ -99,7 +111,10 @@ public class JsonConfig {
     public static class LocalTimeDeserializer extends JsonDeserializer<LocalTime> {
         @Override
         public LocalTime deserialize(JsonParser p, DeserializationContext deserializationContext)throws IOException {
-            return LocalTime.parse(p.getValueAsString(), DateTimeFormatter.ofPattern(TIME_PATTEN));
+            String valueAsString = p.getValueAsString();
+            if(TIME_PATTERN.matcher(valueAsString).matches())
+                return LocalTime.parse(p.getValueAsString(), DateTimeFormatter.ofPattern(TIME));
+            return LocalTime.parse(valueAsString);
         }
     }
 }

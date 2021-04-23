@@ -13,7 +13,6 @@ public class Regular {
 
     /**
      * 给定内容是否匹配正则
-     *
      * @param pattern 模式
      * @param content 内容
      * @return 正则为null或者""则不检查，返回true，内容为null返回false
