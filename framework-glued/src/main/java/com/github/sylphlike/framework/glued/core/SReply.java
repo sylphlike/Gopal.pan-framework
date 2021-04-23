@@ -12,29 +12,25 @@ import com.github.sylphlike.framework.norm.RCode;
 public enum  SReply implements RCode {
 
 
-    // 900001-910000统一登录中间件错误码区间
-    GLUED_NOT_SUPPORT_OPERATION                      (97700,"不支持该类型操作"),
+    GLUED_NOT_SUPPORT_OPERATION         ("C00X977000","不支持该类型操作"),
 
     ;
 
 
 
 
-    private final int code;
-
+    private final String code;
     private final String message;
 
 
 
-    public int getCode() {
-        return code;
-    }
+    public String getCode() { return code; }
     public String getMessage() {
         return message;
     }
 
 
-    SReply(int code, String message) {
+    SReply(String code, String message) {
         this.code = code;
         this.message = message;
     }

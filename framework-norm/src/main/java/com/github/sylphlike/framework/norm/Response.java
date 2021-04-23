@@ -20,14 +20,13 @@ public class Response<T> implements Cloneable , Serializable{
     private static final long serialVersionUID = 355207958304927788L;
 
     /** 成功响应状态码*/
-    private static final int     DEFAULT_CODE = 20000;
+    private static final String    DEFAULT_CODE = "200000";
     /** 成功响应消息摘要*/
-    private static final String  DEFAULT_MESSAGE = "success";
+    private static final String DEFAULT_MESSAGE = "success";
 
 
     /** 执行结果状态码*/
-    private int code;
-
+    private String code;
 
     /** 执行结果消息摘要 */
     private String message;
@@ -46,8 +45,8 @@ public class Response<T> implements Cloneable , Serializable{
      * @author  Gopal.pan
      */
     public  Response() {
-        this.code           = DEFAULT_CODE;
-        this.message        = DEFAULT_MESSAGE;
+        this.code    = DEFAULT_CODE;
+        this.message = DEFAULT_MESSAGE;
     }
 
 
@@ -59,8 +58,8 @@ public class Response<T> implements Cloneable , Serializable{
      * @author   Gopal.pan
      */
     public  Response(RCode rCode) {
-        this.code           = rCode.getCode();
-        this.message        = rCode.getMessage();
+        this.code    = rCode.getCode();
+        this.message = rCode.getMessage();
     }
 
 
@@ -73,8 +72,8 @@ public class Response<T> implements Cloneable , Serializable{
      * @author   Gopal.pan
      */
     public  Response(RCode rCode, String appendMessage) {
-        this.code           = rCode.getCode();
-        this.message        = rCode.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + appendMessage;
+        this.code    = rCode.getCode();
+        this.message = rCode.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + appendMessage;
     }
 
 
@@ -86,9 +85,9 @@ public class Response<T> implements Cloneable , Serializable{
      * @author Gopal.pan
      */
     public  Response(T data) {
-        this.code           = DEFAULT_CODE;
-        this.message        = DEFAULT_MESSAGE;
-        this.data           = data;
+        this.code    = DEFAULT_CODE;
+        this.message = DEFAULT_MESSAGE;
+        this.data    = data;
     }
 
 
@@ -121,8 +120,8 @@ public class Response<T> implements Cloneable , Serializable{
      * @author Gopal.pan
      */
     public Response<T> reset(RCode rCode){
-        this.code           = rCode.getCode();
-        this.message        = rCode.getMessage();
+        this.code    = rCode.getCode();
+        this.message = rCode.getMessage();
         return this;
     }
 
@@ -138,8 +137,8 @@ public class Response<T> implements Cloneable , Serializable{
      * @author   Gopal.pan
      */
     public Response<T> reset(RCode rCode, String appendMessage){
-        this.code           = rCode.getCode();
-        this.message        = rCode.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + appendMessage;
+        this.code    = rCode.getCode();
+        this.message = rCode.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + appendMessage;
         return this;
 
     }
@@ -230,7 +229,7 @@ public class Response<T> implements Cloneable , Serializable{
      */
     @Transient
     public boolean isSuccess(){
-        return DEFAULT_CODE == this.getCode();
+        return DEFAULT_CODE.equals( this.getCode());
 
     }
 
@@ -244,17 +243,17 @@ public class Response<T> implements Cloneable , Serializable{
      */
     @Transient
     public boolean isFail(){
-        return DEFAULT_CODE != this.getCode();
+        return !DEFAULT_CODE.equals(this.getCode());
 
     }
 
 
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 

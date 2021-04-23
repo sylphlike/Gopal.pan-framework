@@ -13,19 +13,15 @@ public class UniteException extends RuntimeException implements Serializable {
 
     private static final long serialVersionUID = -7993953108123296363L;
 
-    public UniteException(String message) {
-        super(message);
-    }
+    public UniteException(String message) {super(message); }
 
     /** 错误主码 */
-    protected int code;
+    protected String code;
 
     /** 错误描述 */
     protected String message;
 
-    public int getCode() {
-        return code;
-    }
+    public String getCode() {  return code; }
     public String getMessage() {
         return message;
     }
