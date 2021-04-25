@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -67,7 +68,8 @@ public class BaseController {
         try {
             String userContext = request.getHeader(Constants.USER_CONTEXT);
             if(StringUtils.isNotEmpty(userContext)){
-                UserAttributes userAttributes = mapper.readValue(userContext, UserAttributes.class);
+                String decode = URLDecoder.decode(userContext, StandardCharsets.UTF_8);
+                UserAttributes userAttributes = mapper.readValue(decode, UserAttributes.class);
                 this.userAttributes = userAttributes;
                 UserContextHolder.setUserAttributes(userAttributes);
             }
