@@ -71,6 +71,27 @@
             <artifactId>poi-ooxml</artifactId>
         </dependency>
 
+
+
+        <!--解析手机号信息（所属运营商，地区等）-->
+        <dependency>
+            <groupId>com.googlecode.libphonenumber</groupId>
+            <artifactId>libphonenumber</artifactId>
+            <version>${libphonenumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.libphonenumber</groupId>
+            <artifactId>geocoder</artifactId>
+            <version>${libphonenumber-geocoder.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.libphonenumber</groupId>
+            <artifactId>carrier</artifactId>
+            <version>${libphonenumber-carrier.version}</version>
+        </dependency>
+
+
+
     </dependencies>
 
 

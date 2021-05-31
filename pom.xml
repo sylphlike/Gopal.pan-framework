@@ -48,6 +48,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -61,6 +62,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <charset>UTF-8</charset>
                     <encoding>UTF-8</encoding>
@@ -98,6 +100,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources-plugin.version}</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <!-- 过滤后缀为pem、pfx的证书文件 -->
@@ -126,12 +129,25 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <!--打印编译时错误堆栈信息-->
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                     <encoding>${maven.compiler.encoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <!--<tagBase>https://github.com/FutaoSmile/starter-fustack</tagBase>-->
+                    <!--是否自动为子模块分配父版本。如果设置为false，将提示用户输入每个子模块的版本。-->
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <!--tag标签名-->
+                    <tagNameFormat>release-by-maven-${version}</tagNameFormat>
                 </configuration>
             </plugin>
         </plugins>
@@ -183,6 +199,18 @@
         <maven.compiler.target>11</maven.compiler.target>
         <skipTests>true</skipTests>
 
+        <!--编译插件-->
+        <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
+        <sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+        <maven-model.version>3.6.3</maven-model.version>
+        <maven-javadoc-plugin.version>3.3.0</maven-javadoc-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+        <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
+        <maven-release-plugin.verson>3.0.0-M4</maven-release-plugin.verson>
+
+
         <!--核心版本依赖 修改 spring-boot.version 版本号后需要同时修改 spring-boot-starter-parent !!!-->
         <spring-boot.version>2.2.9.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
@@ -196,13 +224,11 @@
         <mybatis-springboot-starte.version>2.1.0</mybatis-springboot-starte.version>
         <sharding-jbdc.version>4.0.1</sharding-jbdc.version>
         <poi.version>3.17</poi.version>
-        <guava.version>20.0</guava.version>
         <itextpdf.version>5.5.13</itextpdf.version>
         <itext-asian.version>5.2.0</itext-asian.version>
         <bcprov-jdk15on.version>1.59</bcprov-jdk15on.version>
         <bucket4j-core.version>4.0.0</bucket4j-core.version>
         <javax.mail.version>1.5.0-b01</javax.mail.version>
-        <google.zxing.version>3.3.3</google.zxing.version>
         <apollo-client.version>1.4.0</apollo-client.version>
         <java-jwt.version>3.10.2</java-jwt.version>
         <swagger.version>2.9.2</swagger.version>
@@ -218,15 +244,14 @@
         <ip2region.version>1.7.2</ip2region.version>
         <UserAgentUtils.version>1.21</UserAgentUtils.version>
         <alipay-sdk-java.version>4.10.170.ALL</alipay-sdk-java.version>
-
-        <!-- springboot管理了elasticsearch版本,但版本不是所需要的，重写版本号依赖，覆盖默认的版本-->
         <elasticsearch.version>7.4.2</elasticsearch.version>
-        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <mockito.verson>2.0.2-beta</mockito.verson>
-        <sonar-maven-plugin.version>3.7.0.1746</sonar-maven-plugin.version>
-        <jacoco-maven-plugin.version>0.8.6</jacoco-maven-plugin.version>
         <javaparser-core.version>3.18.0</javaparser-core.version>
-        <maven-model.version>3.6.3</maven-model.version>
+        <guava.version>20.0</guava.version>
+        <google.zxing.version>3.3.3</google.zxing.version>
+        <libphonenumber.version>8.12.24</libphonenumber.version>
+        <libphonenumber-geocoder.version>2.160</libphonenumber-geocoder.version>
+        <libphonenumber-carrier.version>1.150</libphonenumber-carrier.version>
 
     </properties>
 
@@ -402,6 +427,24 @@
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-model</artifactId>
                 <version>${maven-model.version}</version>
+            </dependency>
+
+
+            <!--解析手机号信息（所属运营商，地区等）-->
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>libphonenumber</artifactId>
+                <version>${libphonenumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>geocoder</artifactId>
+                <version>${libphonenumber-geocoder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.libphonenumber</groupId>
+                <artifactId>carrier</artifactId>
+                <version>${libphonenumber-carrier.version}</version>
             </dependency>
 
 
