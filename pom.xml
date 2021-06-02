@@ -211,8 +211,8 @@
         <maven-release-plugin.verson>3.0.0-M4</maven-release-plugin.verson>
 
 
-        <!--核心版本依赖 修改 spring-boot.version 版本号后需要同时修改 spring-boot-starter-parent !!!-->
-        <spring-boot.version>2.2.9.RELEASE</spring-boot.version>
+        <!--核心版本依赖-->
+        <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
         <spring-alibaba.version>2.2.1.RELEASE</spring-alibaba.version>
 
