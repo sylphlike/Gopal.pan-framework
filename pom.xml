@@ -160,7 +160,11 @@
             <name>Nexus aliyun</name>
             <layout>default</layout>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-            <snapshots> <enabled>false</enabled> </snapshots>
+            <snapshots>
+                <enabled>false</enabled>
+                <!--快照版本自动更新最新版本-->
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
             <releases> <enabled>true</enabled> </releases>
         </repository>
     </repositories>

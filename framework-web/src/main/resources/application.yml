@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /demo-amoeba
+    encoding:
+      force-request: true
+      force-response: true
+  shutdown: graceful
