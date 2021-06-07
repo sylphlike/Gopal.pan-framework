@@ -2,56 +2,56 @@
   "groups": [
     {
       "name": "sylphlike.framework.thread.async",
-      "type": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig"
+      "type": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties"
     },
     {
       "name": "sylphlike.framework.thread.sync",
-      "type": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig"
+      "type": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolProperties",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolProperties"
     }
   ],
   "properties": [
     {
       "name": "sylphlike.framework.thread.async.core-pool-size",
       "type": "java.lang.Integer",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties",
       "defaultValue": 5
     },
     {
       "name": "sylphlike.framework.thread.async.keep-alive-time",
       "type": "java.lang.Long",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties",
       "defaultValue": 30
     },
     {
       "name": "sylphlike.framework.thread.async.maximum-pool-size",
       "type": "java.lang.Integer",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties",
       "defaultValue": 20
     },
     {
       "name": "sylphlike.framework.thread.async.queue-capacity",
       "type": "java.lang.Integer",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties",
       "defaultValue": 500
     },
     {
       "name": "sylphlike.framework.thread.sync.core-pool-size",
       "type": "java.lang.Integer",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolProperties",
       "defaultValue": 5
     },
     {
       "name": "sylphlike.framework.thread.sync.keep-alive-time",
       "type": "java.lang.Long",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolProperties",
       "defaultValue": 30
     },
     {
       "name": "sylphlike.framework.thread.sync.maximum-pool-size",
       "type": "java.lang.Integer",
-      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolConfig",
+      "sourceType": "com.github.sylphlike.framework.web.utils.thread.ThreadPoolProperties",
       "defaultValue": 20
     }
   ],

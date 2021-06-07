@@ -28,16 +28,16 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class AsyncThreadConfig {
 
 
-    private final AsyncThreadPoolConfig asyncThreadPoolConfig;
+    private final AsyncThreadPoolProperties asyncThreadPoolProperties;
 
-    public AsyncThreadConfig(AsyncThreadPoolConfig asyncThreadPoolConfig) {
-        this.asyncThreadPoolConfig = asyncThreadPoolConfig;
+    public AsyncThreadConfig(AsyncThreadPoolProperties asyncThreadPoolProperties) {
+        this.asyncThreadPoolProperties = asyncThreadPoolProperties;
     }
 
 
     @Bean
     @ConditionalOnMissingBean
-    public AsyncThreadPoolConfig asyncThreadPoolConfig(){ return new AsyncThreadPoolConfig(); }
+    public AsyncThreadPoolProperties asyncThreadPoolConfig(){ return new AsyncThreadPoolProperties(); }
 
 
 
@@ -62,9 +62,9 @@ public class AsyncThreadConfig {
 
     private Executor getExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(asyncThreadPoolConfig.getCorePoolSize());
-        executor.setMaxPoolSize(asyncThreadPoolConfig.getMaximumPoolSize());
-        executor.setQueueCapacity(asyncThreadPoolConfig.getQueueCapacity());
+        executor.setCorePoolSize(asyncThreadPoolProperties.getCorePoolSize());
+        executor.setMaxPoolSize(asyncThreadPoolProperties.getMaximumPoolSize());
+        executor.setQueueCapacity(asyncThreadPoolProperties.getQueueCapacity());
         executor.setThreadNamePrefix("customize default ");
         executor.setTaskDecorator(new ExecutorTaskDecorator());
         //关闭程序时，等待任务完成

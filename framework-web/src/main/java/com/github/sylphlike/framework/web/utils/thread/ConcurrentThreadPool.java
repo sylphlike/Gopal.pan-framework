@@ -53,18 +53,18 @@ public class ConcurrentThreadPool {
 
 
 
-    @Autowired private ThreadPoolConfig threadPoolConfig;
+    @Autowired private ThreadPoolProperties threadPoolProperties;
     @Autowired private ThreadPoolExecutor  threadPoolExecutor;
 
     @Bean
     @ConditionalOnMissingBean
-    public ThreadPoolConfig threadPoolConfig(){ return new ThreadPoolConfig(); }
+    public ThreadPoolProperties threadPoolConfig(){ return new ThreadPoolProperties(); }
 
 
     @Bean
     @ConditionalOnMissingBean
     public ThreadPoolExecutor threadPoolExecutor(){
-        return new ThreadPoolExecutor(threadPoolConfig.getCorePoolSize(),  threadPoolConfig.getMaximumPoolSize(), threadPoolConfig.getKeepAliveTime(),
+        return new ThreadPoolExecutor(threadPoolProperties.getCorePoolSize(),  threadPoolProperties.getMaximumPoolSize(), threadPoolProperties.getKeepAliveTime(),
                 TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
     }
 

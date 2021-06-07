@@ -12,10 +12,11 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  */
 
+
 @Data
 @Component
-@ConfigurationProperties(prefix = "sylphlike.framework.thread.sync")
-public class ThreadPoolConfig {
+@ConfigurationProperties(prefix = "sylphlike.framework.thread.async")
+public class AsyncThreadPoolProperties {
 
     // 核心线程数
     private int corePoolSize = 5;
@@ -23,4 +24,7 @@ public class ThreadPoolConfig {
     private int maximumPoolSize = 20;
     // 超时时间30秒
     private long keepAliveTime = 30;
+
+    //队列容量
+    private int queueCapacity = 500;
 }
