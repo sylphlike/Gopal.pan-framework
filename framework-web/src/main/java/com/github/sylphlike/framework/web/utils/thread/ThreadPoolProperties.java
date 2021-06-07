@@ -17,10 +17,10 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "sylphlike.framework.thread.sync")
 public class ThreadPoolProperties {
 
-    // 核心线程数
+    /** 核心线程数 */
     private int corePoolSize = 5;
-    // 最大线程数
+    /** 最大线程数 */
     private int maximumPoolSize = 20;
-    // 超时时间30秒
+    /** 超时时间30秒 */
     private long keepAliveTime = 30;
 }

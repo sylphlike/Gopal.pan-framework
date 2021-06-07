@@ -1,6 +1,11 @@
 {
   "groups": [
     {
+      "name": "sylphlike.framework.colony",
+      "type": "com.github.sylphlike.framework.web.config.colony.ColonyProperties",
+      "sourceType": "com.github.sylphlike.framework.web.config.colony.ColonyProperties"
+    },
+    {
       "name": "sylphlike.framework.thread.async",
       "type": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties",
       "sourceType": "com.github.sylphlike.framework.web.utils.thread.AsyncThreadPoolProperties"
@@ -12,6 +17,18 @@
     }
   ],
   "properties": [
+    {
+      "name": "sylphlike.framework.colony.group-name",
+      "type": "java.lang.String",
+      "description": "组名",
+      "sourceType": "com.github.sylphlike.framework.web.config.colony.ColonyProperties"
+    },
+    {
+      "name": "sylphlike.framework.colony.server-names",
+      "type": "java.util.List<java.lang.String>",
+      "description": "订阅的服务名称列表",
+      "sourceType": "com.github.sylphlike.framework.web.config.colony.ColonyProperties"
+    },
     {
       "name": "sylphlike.framework.thread.async.core-pool-size",
       "type": "java.lang.Integer",
