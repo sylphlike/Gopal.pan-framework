@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.config.colony;
+package com.github.sylphlike.framework.adapt.colony;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

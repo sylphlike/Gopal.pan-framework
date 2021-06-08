@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.basis;
+package com.github.sylphlike.framework.adapt;
 
 /**
  * <p>  time 17:56 2021/01/29  星期五 </p>

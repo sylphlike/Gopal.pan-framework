@@ -1,8 +1,8 @@
 package com.github.sylphlike.framework.web.log;
 
 
-import com.github.sylphlike.framework.basis.Constants;
-import com.github.sylphlike.framework.basis.UUIDCache;
+import com.github.sylphlike.framework.adapt.Constants;
+import com.github.sylphlike.framework.adapt.cache.UUIDCache;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.MDC;
 import org.springframework.core.Ordered;
@@ -55,7 +55,7 @@ public class LogFilter  implements Filter {
             HttpServletRequest hsr = (HttpServletRequest)servletRequest;
             String trace = hsr.getHeader(Constants.TRACE);
             if(StringUtils.isEmpty(trace)){
-                trace =UUIDCache.UUID();
+                trace = UUIDCache.UUID();
             }
 
             MDC.put(Constants.TRACE,trace);

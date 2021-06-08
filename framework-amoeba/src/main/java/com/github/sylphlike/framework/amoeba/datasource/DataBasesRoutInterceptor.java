@@ -1,7 +1,7 @@
 package com.github.sylphlike.framework.amoeba.datasource;
 
-import com.github.sylphlike.framework.basis.UserAttributes;
-import com.github.sylphlike.framework.basis.UserContextHolder;
+import com.github.sylphlike.framework.adapt.UserAttributes;
+import com.github.sylphlike.framework.adapt.UserContextHolder;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlCommandType;

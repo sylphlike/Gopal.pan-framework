@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.basis;
+package com.github.sylphlike.framework.adapt.cache;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.config.colony;
+package com.github.sylphlike.framework.adapt.colony;
 
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
 import com.alibaba.nacos.api.naming.NamingFactory;
@@ -59,7 +59,11 @@ public class ColonyServerRealRefresh  implements ApplicationRunner {
 
         NamingService namingService = NamingFactory.createNamingService(properties);
 
+
         List<String> serverNames = colonyProperties.getServerNames();
+        if(serverNames == null){
+            return;
+        }
         String groupName = colonyProperties.getGroupName();
         for (String serverName : serverNames) {
             namingService.subscribe(serverName,groupName, event -> {

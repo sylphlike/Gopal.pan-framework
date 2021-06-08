@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.web.config.colony;
+package com.github.sylphlike.framework.adapt.colony;
 
 import com.netflix.loadbalancer.PollingServerListUpdater;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.basis;
+package com.github.sylphlike.framework.adapt;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;

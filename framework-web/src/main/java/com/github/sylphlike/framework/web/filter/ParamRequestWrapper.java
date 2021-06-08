@@ -1,7 +1,7 @@
 package com.github.sylphlike.framework.web.filter;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.github.sylphlike.framework.basis.JsonConfig;
+import com.github.sylphlike.framework.adapt.JsonConfig;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

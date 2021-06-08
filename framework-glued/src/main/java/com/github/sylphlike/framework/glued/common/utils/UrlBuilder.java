@@ -1,6 +1,6 @@
 package com.github.sylphlike.framework.glued.common.utils;
 
-import com.github.sylphlike.framework.basis.Constants;
+import com.github.sylphlike.framework.adapt.Constants;
 import com.github.sylphlike.framework.norm.CharsetUtil;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;

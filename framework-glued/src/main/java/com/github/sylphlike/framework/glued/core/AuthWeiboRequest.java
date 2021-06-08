@@ -1,8 +1,8 @@
 package com.github.sylphlike.framework.glued.core;
 
 
-import com.github.sylphlike.framework.basis.JsonConfig;
-import com.github.sylphlike.framework.basis.UUIDCache;
+import com.github.sylphlike.framework.adapt.JsonConfig;
+import com.github.sylphlike.framework.adapt.cache.UUIDCache;
 import com.github.sylphlike.framework.glued.common.adaptation.AuthTokenAdaptation;
 import com.github.sylphlike.framework.glued.common.adaptation.UserInfoAdaptation;
 import com.github.sylphlike.framework.glued.common.adaptation.WeiboAuthToken;

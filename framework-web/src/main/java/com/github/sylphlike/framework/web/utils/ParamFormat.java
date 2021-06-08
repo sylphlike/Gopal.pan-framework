@@ -1,7 +1,7 @@
 package com.github.sylphlike.framework.web.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sylphlike.framework.basis.JsonConfig;
+import com.github.sylphlike.framework.adapt.JsonConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BeanPropertyBindingResult;

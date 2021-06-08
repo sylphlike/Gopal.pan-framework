@@ -1,7 +1,7 @@
 package com.github.sylphlike.framework.web.filter;
 
 
-import com.github.sylphlike.framework.basis.Constants;
+import com.github.sylphlike.framework.adapt.Constants;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 

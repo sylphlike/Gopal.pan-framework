@@ -1,6 +1,6 @@
 package com.github.sylphlike.framework.web.endpoint;
 
-import com.github.sylphlike.framework.basis.Constants;
+import com.github.sylphlike.framework.adapt.Constants;
 import com.github.sylphlike.framework.norm.CharsetUtil;
 import com.github.sylphlike.framework.norm.Response;
 import org.apache.commons.lang3.ObjectUtils;

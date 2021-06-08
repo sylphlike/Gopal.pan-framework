@@ -2,7 +2,7 @@ package com.github.sylphlike.framework.web.config.aspect;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sylphlike.framework.basis.UserContextHolder;
+import com.github.sylphlike.framework.adapt.UserContextHolder;
 import com.github.sylphlike.framework.norm.Response;
 import com.github.sylphlike.framework.web.exception.AssertUtils;
 import com.github.sylphlike.framework.web.utils.ParamFormat;

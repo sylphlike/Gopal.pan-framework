@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.basis;
+package com.github.sylphlike.framework.adapt;
 
 /**
  * 系统常量接口

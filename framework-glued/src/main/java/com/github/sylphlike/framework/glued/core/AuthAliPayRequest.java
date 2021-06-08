@@ -7,7 +7,7 @@ import com.alipay.api.request.AlipaySystemOauthTokenRequest;
 import com.alipay.api.request.AlipayUserInfoShareRequest;
 import com.alipay.api.response.AlipaySystemOauthTokenResponse;
 import com.alipay.api.response.AlipayUserInfoShareResponse;
-import com.github.sylphlike.framework.basis.UUIDCache;
+import com.github.sylphlike.framework.adapt.cache.UUIDCache;
 import com.github.sylphlike.framework.glued.common.config.source.AuthSource;
 import com.github.sylphlike.framework.glued.common.config.source.DefaultAuthSource;
 import com.github.sylphlike.framework.glued.common.exception.GluedException;

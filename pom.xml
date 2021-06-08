@@ -109,6 +109,10 @@
                         <nonFilteredFileExtension>pfx</nonFilteredFileExtension>
                         <nonFilteredFileExtension>p12</nonFilteredFileExtension>
                     </nonFilteredFileExtensions>
+                    <delimiters>
+                        <delimiter>@</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
                 </configuration>
             </plugin>
 
@@ -151,6 +155,13 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
 
@@ -185,13 +196,13 @@
     <modules>
         <module>framework-norm</module>
         <module>framework-amoeba</module>
-        <module>framework-basis</module>
         <module>framework-redis</module>
         <module>framework-security</module>
         <module>framework-utils</module>
         <module>framework-web</module>
         <module>framework-glued</module>
         <module>framework-boxing</module>
+        <module>framework-adapt</module>
     </modules>
 
     <properties>
@@ -450,8 +461,6 @@
                 <artifactId>carrier</artifactId>
                 <version>${libphonenumber-carrier.version}</version>
             </dependency>
-
-
         </dependencies>
     </dependencyManagement>
 

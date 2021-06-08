@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.basis.cache;
+package com.github.sylphlike.framework.adapt.cache;
 
 import java.io.*;
 import java.util.concurrent.ConcurrentHashMap;

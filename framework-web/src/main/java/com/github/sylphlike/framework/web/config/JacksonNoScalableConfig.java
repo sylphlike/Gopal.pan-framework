@@ -1,7 +1,7 @@
 package com.github.sylphlike.framework.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.sylphlike.framework.basis.JsonConfig;
+import com.github.sylphlike.framework.adapt.JsonConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
