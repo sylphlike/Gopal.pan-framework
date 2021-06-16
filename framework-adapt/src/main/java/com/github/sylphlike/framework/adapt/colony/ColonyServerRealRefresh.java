@@ -75,7 +75,7 @@ public class ColonyServerRealRefresh  implements ApplicationRunner {
                             LOGGER.info("【服务刷新】订阅的服务实例信息[{}]",instance.getInstanceId());
                         });
                     }else {
-                        LOGGER.info("【服务刷新】订阅的服务下午可用实例");
+                        LOGGER.info("【服务刷新】订阅的服务下无可用实例");
                     }
                     ServerListUpdater.UpdateAction updateAction = colonyServerListUpdate.getUpdateAction();
                     if (updateAction != null){

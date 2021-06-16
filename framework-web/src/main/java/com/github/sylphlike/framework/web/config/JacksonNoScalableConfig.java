@@ -26,7 +26,6 @@ public class JacksonNoScalableConfig {
     @Bean(name = "mapper")
     @Primary
     public ObjectMapper serializingObjectMapper() {
-
        return JsonConfig.mapper();
     }
 

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 public class ColonyServerListUpdate extends PollingServerListUpdater {
     private UpdateAction updateAction;
 
-
     @Override
     public synchronized void start(UpdateAction updateAction) {
         super.start(updateAction);
