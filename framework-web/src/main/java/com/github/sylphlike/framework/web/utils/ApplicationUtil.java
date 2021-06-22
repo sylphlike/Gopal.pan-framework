@@ -81,7 +81,7 @@ public class ApplicationUtil {
                     projectName =  fullProjectPath.substring(projectIndex + 1);
 
                 }
-                projectVersion = "1.2.0-SNAPSHOT";
+                projectVersion = "1.2.1-SNAPSHOT";
             }
 
         } catch (IOException e) {
