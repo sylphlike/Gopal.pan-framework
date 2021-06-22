@@ -268,6 +268,8 @@
         <libphonenumber-geocoder.version>2.160</libphonenumber-geocoder.version>
         <libphonenumber-carrier.version>1.150</libphonenumber-carrier.version>
 
+        <redisson-spring-boot-starter.version>3.15.0</redisson-spring-boot-starter.version>
+
     </properties>
 
     <dependencyManagement>
@@ -460,6 +462,12 @@
                 <groupId>com.googlecode.libphonenumber</groupId>
                 <artifactId>carrier</artifactId>
                 <version>${libphonenumber-carrier.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-spring-boot-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

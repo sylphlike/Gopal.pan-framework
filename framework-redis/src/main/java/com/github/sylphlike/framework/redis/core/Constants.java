@@ -13,7 +13,7 @@ public interface Constants {
      int CAPACITY =  1000;
 
      /** 序列元数据 */
-     String SUFFIX = "_MAX_SERIAL";
+     String MATE_SUFFIX = "_MAX_SERIAL";
 
      /** 序列容量补充阀值*/
      double PERCENT = 0.2;
