@@ -7,7 +7,6 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
 import java.util.Date;
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -17,16 +16,7 @@ import java.util.concurrent.TimeUnit;
  * @version 1.0.0
  */
 
-public class JWTTokenUtils {
-
-    public static String[] chars = new String[] { "a", "b", "c", "d", "e", "f",
-            "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-            "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5",
-            "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I",
-            "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-            "W", "X", "Y", "Z" };
-
-
+public class JWTToken {
 
     private static final String ISSUER = "Gopal.pan";
 
@@ -69,8 +59,8 @@ public class JWTTokenUtils {
         }
 
         return JWT.create()
-                .withKeyId(sixUuid())
-                .withJWTId(sixUuid())
+                .withKeyId(EncryptHelper.sixUuid())
+                .withJWTId(EncryptHelper.sixUuid())
                 .withIssuer(ISSUER)
                 .withIssuedAt(new Date())
                 .withExpiresAt(new Date(new Date().getTime() +  millisExpires ))
@@ -116,24 +106,7 @@ public class JWTTokenUtils {
 
 
 
-    /**
-     * 6位随机数
-     * <p>  time 16:39 2021/4/21      </p>
-     * <p> email 15923508369@163.com  </p>
-     * @return  java.lang.String
-     * @author  Gopal.pan
-     */
-    public static String sixUuid() {
-        StringBuilder shortBuffer = new StringBuilder();
-        String uuid = UUID.randomUUID().toString();
-        for (int i = 0; i < 6; i++) {
-            String str = uuid.substring(i * 6, i * 6 + 6);
-            int x = Integer.parseInt(str.replace("-",""), 16);
-            shortBuffer.append(chars[x % 0x3E]);
-        }
-        return shortBuffer.toString();
 
-    }
 
 
 }

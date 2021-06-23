@@ -10,12 +10,10 @@ package com.github.sylphlike.framework.security;
 
 public enum SecurityTypeEnums {
 
-    /**
-     * 加密类型
-     */
     MD5("MD5"),
     AES("AES"),
     RSA("RSA"),
+    SM2("SM2"),
     ;
 
 

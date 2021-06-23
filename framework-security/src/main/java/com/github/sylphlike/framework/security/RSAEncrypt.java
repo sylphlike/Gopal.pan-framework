@@ -23,13 +23,13 @@ import java.util.Map;
  * @author Gopal.pan
  * @version 1.0.0
  */
-public class RSAEncryptUtils {
+public class RSAEncrypt {
 
     /** 加密算法RSA */
     public static final String KEY_ALGORITHM = "RSA";
 
     /** 签名算法 */
-    public static final String SIGNATURE_ALGORITHM = "MD5withRSA";
+    public static final String SIGNATURE_ALGORITHM = "SHA256WithRSA";
 
     /** 获取公钥的key */
     public static final String PUBLIC_KEY = "RSAPublicKey";
@@ -245,7 +245,7 @@ public class RSAEncryptUtils {
      * @author  Gopal.pan
      */
     public static String decryptByPrivateKey(String data,String privateKey) throws Exception {
-        byte[] bytes = RSAEncryptUtils.decryptByPrivateKey(Base64.getDecoder().decode(data), privateKey);
+        byte[] bytes = RSAEncrypt.decryptByPrivateKey(Base64.getDecoder().decode(data), privateKey);
         return new String(bytes);
 
     }
@@ -272,7 +272,8 @@ public class RSAEncryptUtils {
 
 
 
-    private static byte[] getBytes(byte[] data, KeyFactory keyFactory, Key publicK, int encryptMode, int maxEncryptBlock) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, IOException {
+    private static byte[] getBytes(byte[] data, KeyFactory keyFactory, Key publicK, int encryptMode, int maxEncryptBlock)
+            throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, IOException {
         Cipher cipher = getCipher(keyFactory, publicK, encryptMode);
         int inputLen = data.length;
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -296,7 +297,8 @@ public class RSAEncryptUtils {
     }
 
 
-    private static Cipher getCipher(KeyFactory keyFactory, Key privateK, int encryptMode) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {
+    private static Cipher getCipher(KeyFactory keyFactory, Key privateK, int encryptMode) throws NoSuchAlgorithmException,
+            NoSuchPaddingException, InvalidKeyException {
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(encryptMode, privateK);
         return cipher;

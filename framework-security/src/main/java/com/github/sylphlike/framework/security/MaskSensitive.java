@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
  * @version 1.0.0
  */
 
-public class MaskSensitiveUtils {
+public class MaskSensitive {
 
 
     /**

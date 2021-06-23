@@ -1,15 +1,16 @@
 package com.github.sylphlike.framework.security;
 
-import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.Base64;
 
 
 /**
@@ -20,7 +21,7 @@ import java.security.SecureRandom;
  * @version 1.0.0
  */
 
-public class AESEncryptUtils {
+public class AESEncrypt {
 
     private static final String PASSWORD            = "Gopal.pan";
     private static final String ALGORITHM           = "AES/ECB/PKCS5Padding";
@@ -37,7 +38,7 @@ public class AESEncryptUtils {
             //AES 要求密钥长度为 128
             keyGenerator.init(ENCRYPT_KEY_LENGTH, new SecureRandom(PASSWORD.getBytes()));
             SecretKey secretKey = keyGenerator.generateKey();
-            return Hex.encodeHexString(secretKey.getEncoded());
+            return Base64.getEncoder().encodeToString(secretKey.getEncoded());
         } catch (NoSuchAlgorithmException ex) {
             ex.printStackTrace();
         }
@@ -79,10 +80,10 @@ public class AESEncryptUtils {
 
     public static String encrypt(String data,String stringKey){
         try {
-            Key key = toKey(Hex.decodeHex(stringKey.toCharArray()));
+            Key key = toKey(Base64.getDecoder().decode(stringKey.getBytes(StandardCharsets.UTF_8)));
             Cipher cipher = Cipher.getInstance(ALGORITHM);
             cipher.init(Cipher.ENCRYPT_MODE, key);
-            return Base64.encodeBase64String(cipher.doFinal(data.getBytes(CHAR_SET)));
+            return Base64.getEncoder().encodeToString(cipher.doFinal(data.getBytes(CHAR_SET)));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -94,11 +95,11 @@ public class AESEncryptUtils {
     public static String decrypt(String data,String stringKey){
 
         try {
-            Key key = toKey(Hex.decodeHex(stringKey.toCharArray()));
+            Key key = toKey(Base64.getDecoder().decode(stringKey.getBytes(StandardCharsets.UTF_8)));
 
             Cipher cipher = Cipher.getInstance(ALGORITHM);
             cipher.init(Cipher.DECRYPT_MODE, key);
-            byte[] bytes = cipher.doFinal(Base64.decodeBase64(data));
+            byte[] bytes = cipher.doFinal(Base64.getDecoder().decode(data));
 
             return new String(bytes,CHAR_SET);
 
