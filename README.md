@@ -71,7 +71,6 @@ java general tools
          * <p> 系统规范的标准接口返回，所有接口返回该实体类，具体的业务参数为 T data.（第二段）
          * <p>  time 10/09/2020 18:19  星期四 (dd/MM/YYYY HH:mm)
          * <p> email 15923508369@163.com
-         * 
          * @author Gopal.pan
          * @version 1.0.0
          */

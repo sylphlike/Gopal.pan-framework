@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.utils.email;
+package com.github.sylphlike.framework.notice.email;
 
 import lombok.Data;
 

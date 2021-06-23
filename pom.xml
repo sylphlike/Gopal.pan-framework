@@ -203,6 +203,7 @@
         <module>framework-glued</module>
         <module>framework-boxing</module>
         <module>framework-adapt</module>
+        <module>framework-notice</module>
     </modules>
 
     <properties>

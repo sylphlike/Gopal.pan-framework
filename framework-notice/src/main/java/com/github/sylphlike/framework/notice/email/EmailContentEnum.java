@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.utils.email;
+package com.github.sylphlike.framework.notice.email;
 
 /**
  * <p>  time 17:56 2021/01/29  星期五 </p>
@@ -15,9 +15,9 @@ public enum EmailContentEnum {
 
    ;
 
-    private String code;
+    private final String code;
 
-    private String desc;
+    private final String desc;
 
 
     public String getCode() {

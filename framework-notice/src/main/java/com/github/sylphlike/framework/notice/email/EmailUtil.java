@@ -1,4 +1,5 @@
-package com.github.sylphlike.framework.utils.email;
+package com.github.sylphlike.framework.notice.email;
+
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
