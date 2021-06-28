@@ -1,6 +1,5 @@
 package com.github.sylphlike.framework.security;
 
-import com.alipay.api.internal.util.asymmetric.RSAEncryptor;
 
 import java.util.Map;
 
@@ -22,9 +21,6 @@ public class RSATest {
         String sign = RSAEncrypt.sign(data, privateKey);
         System.out.println(sign);
 
-        RSAEncryptor rsaEncryptor = new RSAEncryptor();
-        String sign1 = rsaEncryptor.sign(data, "UTF-8", privateKey);
-        System.out.println(sign1);
 
 
 
