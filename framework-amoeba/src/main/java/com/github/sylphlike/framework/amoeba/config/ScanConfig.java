@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.amoeba;
+package com.github.sylphlike.framework.amoeba.config;
 
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.boot.context.properties.bind.Binder;

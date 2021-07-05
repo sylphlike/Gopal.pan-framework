@@ -1,22 +1,23 @@
-package com.github.sylphlike.framework.amoeba;
+package com.github.sylphlike.framework.amoeba.config;
 
 import com.github.pagehelper.PageInterceptor;
-import com.github.sylphlike.framework.amoeba.config.MybatisConfigSupper;
 import com.github.sylphlike.framework.amoeba.datasource.DataBasesRoutInterceptor;
 import com.github.sylphlike.framework.amoeba.datasource.MultiRouteDataSource;
 import com.github.sylphlike.framework.amoeba.datasource.ResultSetHandlerInterceptor;
 import com.github.sylphlike.framework.amoeba.datasource.StatementHandlerInterceptor;
 import com.github.sylphlike.framework.amoeba.exception.MybatisException;
+import lombok.SneakyThrows;
+import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.util.StringUtils;
 
@@ -38,17 +39,18 @@ import java.util.jar.JarFile;
  * @version 1.0.0
  */
 
-@Configuration
-public class SessionConfig extends org.apache.ibatis.session.Configuration implements EnvironmentAware {
-    private final MultiRouteDataSource dataSource;
+@Component
+public class CustomizersConfiguration extends Configuration implements EnvironmentAware {
 
-    public SessionConfig(MultiRouteDataSource dataSource) {
+    private final MultiRouteDataSource dataSource;
+    public CustomizersConfiguration(MultiRouteDataSource dataSource) {
         this.dataSource = dataSource;
     }
 
     private String typeAliasesPackage;
     private String mapperLocations;
 
+    @SneakyThrows
     @Override
     public void setEnvironment(Environment environment) {
         Binder binder = Binder.get(environment);
@@ -56,6 +58,11 @@ public class SessionConfig extends org.apache.ibatis.session.Configuration imple
 
         this.typeAliasesPackage = mybatisConfigSupper.getTypeAliasesPackage();
         this.mapperLocations = mybatisConfigSupper.getMapperLocations();
+
+        super.setMapUnderscoreToCamelCase(true);
+        super.setCacheEnabled(true);
+
+
 
     }
 
