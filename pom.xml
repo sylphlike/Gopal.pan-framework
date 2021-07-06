@@ -204,6 +204,7 @@
         <module>framework-boxing</module>
         <module>framework-adapt</module>
         <module>framework-notice</module>
+        <module>framework-storage</module>
     </modules>
 
     <properties>
@@ -235,9 +236,10 @@
         <!--第三方jar包版本-->
         <logstash-logback-encoder.version>6.2</logstash-logback-encoder.version>
         <druid.version>1.1.22</druid.version>
-        <pagehelper.version>5.1.10</pagehelper.version>
-        <pagehelper-spring-boot-starter.version>1.2.13</pagehelper-spring-boot-starter.version>
-        <mybatis-springboot-starte.version>2.1.0</mybatis-springboot-starte.version>
+        <pagehelper.version>5.2.1</pagehelper.version>
+        <pagehelper-spring-boot-starter.version>1.3.11</pagehelper-spring-boot-starter.version>
+        <mybatis-springboot-starter.version>2.2.0</mybatis-springboot-starter.version>
+        <mybatis-plus-boot-starter.version>3.4.3.1</mybatis-plus-boot-starter.version>
         <sharding-jbdc.version>4.0.1</sharding-jbdc.version>
         <poi.version>3.17</poi.version>
         <itextpdf.version>5.5.13</itextpdf.version>
@@ -332,6 +334,12 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-spring-boot-starter.version}</version>
+            </dependency>
+
 
             <!--Three-party component dependency package-->
             <dependency>
@@ -402,6 +410,13 @@
                 <artifactId>pagehelper</artifactId>
                 <version>${pagehelper.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+
+
 
             <!--IP 到地名映射库-->
             <dependency>
@@ -424,7 +439,7 @@
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-springboot-starte.version}</version>
+                <version>${mybatis-springboot-starter.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
@@ -465,11 +480,7 @@
                 <version>${libphonenumber-carrier.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.redisson</groupId>
-                <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>${redisson-spring-boot-starter.version}</version>
-            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

@@ -6,7 +6,6 @@ import com.github.sylphlike.framework.amoeba.datasource.MultiRouteDataSource;
 import com.github.sylphlike.framework.amoeba.datasource.ResultSetHandlerInterceptor;
 import com.github.sylphlike.framework.amoeba.datasource.StatementHandlerInterceptor;
 import com.github.sylphlike.framework.amoeba.exception.MybatisException;
-import lombok.SneakyThrows;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -50,7 +49,6 @@ public class CustomizersConfiguration extends Configuration implements Environme
     private String typeAliasesPackage;
     private String mapperLocations;
 
-    @SneakyThrows
     @Override
     public void setEnvironment(Environment environment) {
         Binder binder = Binder.get(environment);
