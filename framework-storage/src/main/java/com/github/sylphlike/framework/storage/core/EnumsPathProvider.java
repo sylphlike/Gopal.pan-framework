@@ -1,5 +1,9 @@
 package com.github.sylphlike.framework.storage.core;
 
+import com.github.sylphlike.framework.norm.StorageInterface;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.JarURLConnection;
@@ -16,6 +20,9 @@ import java.util.jar.JarFile;
  * @version 1.0.0
  */
 public class EnumsPathProvider {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(EnumsPathProvider.class);
+
     public static List<Class<?>> getAllAssignedClass(Class<?> superClass) throws ClassNotFoundException {
         List<Class<?>> classes = new ArrayList<>();
 
@@ -96,6 +103,7 @@ public class EnumsPathProvider {
 
         for (File file : files) {
             if (file.isDirectory()) {
+                LOGGER.debug("【framework-storage】 获取到的包路径[{}]",file.getAbsolutePath());
                 getImplementationClass(file.getAbsolutePath(),classes);
             }else {
                 String absolutePath = file.getAbsolutePath();
@@ -106,7 +114,7 @@ public class EnumsPathProvider {
                 String targetPackageName = substring.replace(separator, ".");
 
                 Class<?> aClass = Class.forName(targetPackageName);
-                if(ModelEnum.class.isAssignableFrom(aClass)){
+                if(StorageInterface.class.isAssignableFrom(aClass)){
                     classes.add(aClass);
                 }
             }

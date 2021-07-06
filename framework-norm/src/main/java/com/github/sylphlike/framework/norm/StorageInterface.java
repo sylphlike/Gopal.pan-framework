@@ -1,4 +1,4 @@
-package com.github.sylphlike.framework.storage.core;
+package com.github.sylphlike.framework.norm;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @author Gopal.pan
  * @version 1.0.0
  */
-public interface ModelEnum<E extends Enum<E>,T> extends Serializable {
+public interface StorageInterface<E extends Enum<E>,T> extends Serializable {
 
 
     /** 持久层映射值 */

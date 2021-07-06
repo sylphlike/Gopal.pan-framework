@@ -1,11 +1,11 @@
 package com.github.sylphlike.framework.storage.core;
 
 /**
- * @create: Created by intelliJIDEA
- * @author: Gopan
- * @e-mail: 15923508369@163.com
- * @gmdate: 04/05/2020 14:32  星期一 (dd/MM/YYYY HH:mm)
- * @sidesc:
+ *
+ * <p>  time 19:28 2021/07/05  星期一 </p>
+ * <p> email 15923508369@163.com     </P>
+ * @author Gopal.pan
+ * @version 1.0.0
  */
 public class EnumsTypeException extends RuntimeException {
 
