@@ -23,10 +23,9 @@ public class EnumsPathProvider {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EnumsPathProvider.class);
 
-    public static List<Class<?>> getAllAssignedClass(Class<?> superClass) throws ClassNotFoundException {
+    public static List<Class<?>> getAllAssignedClass(String enumPackage) throws ClassNotFoundException {
         List<Class<?>> classes = new ArrayList<>();
 
-        String enumPackage = "com/github/sylphlike";
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         URL resource = classloader.getResource(enumPackage);
         if(resource == null){
@@ -53,25 +52,21 @@ public class EnumsPathProvider {
                 URL url = new URL("jar", null, 0, jarPath);
                 jarFile = ((JarURLConnection) url.openConnection()).getJarFile();
 
-                List<JarEntry> jarEntryList = new ArrayList<JarEntry>();
+                List<JarEntry> jarEntryList = new ArrayList<>();
 
                 Enumeration<JarEntry> ee = jarFile.entries();
                 while (ee.hasMoreElements()) {
-                    JarEntry entry = (JarEntry) ee.nextElement();
+                    JarEntry entry = ee.nextElement();
                     if (entry.getName().startsWith(enumPackage) && entry.getName().endsWith(".class")) {
-                        jarEntryList.add(entry);
+                        String className = entry.getName().replace('/', '.');
+                        className = className.substring(0, className.length() - 6);
+                        Class<?> aClass = Thread.currentThread().getContextClassLoader().loadClass(className);
+                        if(StorageInterface.class.isAssignableFrom(aClass)){
+                            classes.add(aClass);
+                        }
                     }
                 }
-                for (JarEntry entry : jarEntryList) {
-                    String className = entry.getName().replace('/', '.');
-                    className = className.substring(0, className.length() - 6);
 
-                    try {
-                        classes.add(Thread.currentThread().getContextClassLoader().loadClass(className));
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                }
             } catch (IOException e1) {
                 e1.printStackTrace();
             } finally {

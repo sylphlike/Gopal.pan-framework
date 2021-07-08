@@ -19,5 +19,5 @@ public enum  ResourceEnum {
     ;
 
 
-    private String code;
+    private final String code;
 }

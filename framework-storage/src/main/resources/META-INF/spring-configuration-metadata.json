@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "sylphlike.framework.storage",
+      "type": "com.github.sylphlike.framework.storage.config.ScanningProperties",
+      "sourceType": "com.github.sylphlike.framework.storage.config.ScanningProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sylphlike.framework.storage.enum-package",
+      "type": "java.lang.String",
+      "description": "数据库实体对应枚举类包路径",
+      "sourceType": "com.github.sylphlike.framework.storage.config.ScanningProperties"
+    }
+  ],
+  "hints": []
+}
