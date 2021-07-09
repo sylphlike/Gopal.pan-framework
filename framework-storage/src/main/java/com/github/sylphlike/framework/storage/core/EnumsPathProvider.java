@@ -32,27 +32,18 @@ public class EnumsPathProvider {
             return classes;
         }
         String protocol = resource.getProtocol();
-
-
         if(ResourceEnum.FILE.getCode().equals(protocol)){
             File fileDir = new File(resource.getFile());
             if (!fileDir.exists()) {
                 return classes;
             }
-
             getImplementationClass(resource.getFile(),classes);
-
-
-
         }else {
             String jarPath = resource.getPath();
             JarFile jarFile = null;
             try {
-
                 URL url = new URL("jar", null, 0, jarPath);
                 jarFile = ((JarURLConnection) url.openConnection()).getJarFile();
-
-                List<JarEntry> jarEntryList = new ArrayList<>();
 
                 Enumeration<JarEntry> ee = jarFile.entries();
                 while (ee.hasMoreElements()) {
@@ -68,7 +59,7 @@ public class EnumsPathProvider {
                 }
 
             } catch (IOException e1) {
-                e1.printStackTrace();
+                LOGGER.error("【framework-storage】解析jar包文件异常",e1);
             } finally {
                 if (null != jarFile) {
                     try {
@@ -76,7 +67,6 @@ public class EnumsPathProvider {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                 }
             }
         }

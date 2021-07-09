@@ -3,7 +3,6 @@ package com.github.sylphlike.framework.storage.core;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.github.pagehelper.PageInterceptor;
-import com.github.sylphlike.framework.norm.StorageInterface;
 import com.github.sylphlike.framework.storage.config.ScanningProperties;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 import org.slf4j.Logger;
