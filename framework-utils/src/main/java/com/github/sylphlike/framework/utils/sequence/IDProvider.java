@@ -3,7 +3,7 @@ package com.github.sylphlike.framework.utils.sequence;
 
 /**
  * ID生成客户端
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2018/06/29  星期五 </p>
  * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0

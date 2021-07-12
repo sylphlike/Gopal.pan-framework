@@ -24,7 +24,7 @@ import java.lang.reflect.Method;
 /**
  * web增强处理
  * <p> 1 入参出参日志记录 2 移除 ThreadLocal数据 </p>
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2018/06/29  星期五 </p>
  * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
@@ -79,7 +79,7 @@ public class WebAspect {
                         Response<?> response = (Response<?>) ret;
                         Response<Object> logStreamLine = new Response<>();
                         logStreamLine.setCode(response.getCode());
-                        logStreamLine.setMessage(response.getMessage());
+                        logStreamLine.setMsg(response.getMsg());
                         logStreamLine.setTimestamp(response.getTimestamp());
                         LOGGER.info("【framework-web】【response】过滤业务参数[{}]", mapper.writeValueAsString( logStreamLine) );
                     }else {

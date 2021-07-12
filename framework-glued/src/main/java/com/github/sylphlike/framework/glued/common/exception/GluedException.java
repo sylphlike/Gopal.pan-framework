@@ -17,22 +17,15 @@ public class GluedException extends UniteException {
     private static final long serialVersionUID = -1695036681341844113L;
 
 
-
-    public GluedException(RCode message) {
-        super(message.getMessage());
-        this.code    = message.getCode();
-        this.message = message.getMessage();
+    public GluedException(String message) {
+        super(message);
     }
 
-
-    public GluedException(RCode message, String detailMessage) {
-        super( message.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + detailMessage);
-        this.code    = message.getCode();
-        this.message = message.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + detailMessage;
+    public GluedException(RCode rCode) {
+        super(rCode);
     }
 
-
-
-
-
+    public GluedException(RCode rCode, String subMsg) {
+        super(rCode, subMsg);
+    }
 }

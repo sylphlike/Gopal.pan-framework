@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 /**
  * 导出实体字段属性注解，如果导出实体属性没有启用改注解，那么该字段将不会被导出
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2018/12/29  星期五 </p>
  * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0

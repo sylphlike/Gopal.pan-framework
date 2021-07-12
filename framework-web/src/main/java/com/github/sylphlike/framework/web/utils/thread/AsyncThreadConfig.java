@@ -17,7 +17,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 线程池配置 基于spring的线程池配置
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2010/10/29  星期五 </p>
  * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0

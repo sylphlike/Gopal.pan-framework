@@ -13,7 +13,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *      10位的数据机器位，可以部署在1024个节点，包括5位datacenterId和5位workerId
  *      12位序列，毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号
  * </p>
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2018/06/29  星期五 </p>
  * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 本地JVM 内存缓存简单实现 不保证缓存数据实时有效性，受限于该工具类刷新缓存的时间间隔，实际数据已过期，但在本工具类中还存在
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2019/01/29  星期五 </p>
  * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0

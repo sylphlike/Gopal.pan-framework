@@ -1,6 +1,5 @@
 package com.github.sylphlike.framework.web.exception;
 
-import com.github.sylphlike.framework.norm.CharsetUtil;
 import com.github.sylphlike.framework.norm.RCode;
 import com.github.sylphlike.framework.norm.UniteException;
 
@@ -17,22 +16,15 @@ public class ServiceException extends UniteException {
     private static final long serialVersionUID = -1695036681341844113L;
 
 
-
-    public ServiceException(RCode message) {
-        super(message.getMessage());
-        this.code    = message.getCode();
-        this.message = message.getMessage();
+    public ServiceException(String message) {
+        super(message);
     }
 
-
-    public ServiceException(RCode rCode, String detailMessage) {
-        super( rCode.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + detailMessage);
-        this.code    = rCode.getCode();
-        this.message = rCode.getMessage() + CharsetUtil.STRING_ENGLISH_COMMA_SPACE + detailMessage;
+    public ServiceException(RCode rCode) {
+        super(rCode);
     }
 
-
-
-
-
+    public ServiceException(RCode rCode, String subMsg) {
+        super(rCode, subMsg);
+    }
 }

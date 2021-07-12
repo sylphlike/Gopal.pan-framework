@@ -127,7 +127,7 @@ public class BaseController {
         try {
             return exception.execute();
         } catch (ServiceException e) {
-            LOGGER.error("【framework-web】【{}】{},业务异常,[{}]", logHeadline(),LogDesc,StringUtils.join("错误码:",e.getCode(),"错误描述:", e.getMessage()));
+            LOGGER.error("【framework-web】【{}】{},业务异常,[{}]", logHeadline(),LogDesc,StringUtils.join("错误码:",e.getCode(),"错误描述:", e.getMsg()));
             return Response.error(e);
         } catch (Exception e){
             LOGGER.error("【framework-web】【{}】{},系统异常", logHeadline(),LogDesc,e);

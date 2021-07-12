@@ -4,7 +4,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2018/01/29  星期五 </p>
  * <p> email 15923508369@163.com     </P>
  * @author Gopal.pan
  * @version 1.0.0
@@ -60,7 +60,7 @@ public class CharsetUtil {
 
     /**
      * 是否为Windows或者Linux（Unix）文件分隔符
-     * <p>  time 18:26 2021/1/29      </p>
+     * <p>  time 18:26 2018/1/29      </p>
      * <p> email 15923508369@163.com  </p>
      * @param c 字符
      * @return 是否为Windows或者Linux（Unix）文件分隔符
@@ -73,7 +73,7 @@ public class CharsetUtil {
 
     /**
      * 字符串UTF-8编码
-     * <p>  time 18:27 2021/1/29      </p>
+     * <p>  time 18:27 2018/1/29      </p>
      * <p> email 15923508369@163.com  </p>
      * @param originString  原始字符串
      * @return utf-8 编码后的字符串

@@ -33,7 +33,7 @@ import java.util.Set;
 /**
  * 全局异常处理
  * <p>业务中可以不捕获异常，交由该类通用处理，性能相对较差 业务本身捕获异常 </p>
- * <p>  time 17:56 2021/01/29  星期五 </p>
+ * <p>  time 17:56 2018/02/29  星期五 </p>
  * <p> email 15923508369@163.com     </p>
  * @author Gopal.pan
  * @version 1.0.0
@@ -56,7 +56,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public Response<Void> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex, HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_PARAM_PARSE_ERROR);
-        response.setMessage(StringUtils.join(response.getMessage() , CharsetUtil.STRING_ENGLISH_COMMA_SPACE, ex.getMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(ex.getMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -66,7 +67,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public Response<Void> handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException ex, HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_NO_SUPPORT_METHOD);
-        response.setMessage(StringUtils.join(response.getMessage(),CharsetUtil.STRING_ENGLISH_COMMA_SPACE, ex.getMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(ex.getMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -76,7 +78,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
     public Response<Void> handleHttpMediaTypeNotSupportedException(Exception ex, HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_NO_SUPPORT_TYPE);
-        response.setMessage(StringUtils.join(response.getMessage(),CharsetUtil.STRING_ENGLISH_COMMA_SPACE, ex.getMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(ex.getMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -86,7 +89,8 @@ public class GlobalExceptionHandler {
     public Response<Void> handleMissingServletRequestParameterException(MissingServletRequestParameterException ex,
                                                                 HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_PARAM_PARSE_ERROR);
-        response.setMessage(StringUtils.join(response.getMessage(), CharsetUtil.STRING_ENGLISH_COMMA_SPACE, ex.getMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(ex.getMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -95,7 +99,8 @@ public class GlobalExceptionHandler {
     public Response<Void> handleUnsatisfiedServletRequestParameterException(UnsatisfiedServletRequestParameterException ex, HttpServletRequest request) {
 
         Response<Void> response = new Response<>(FReply.FW_CLIENT_PARAM_ERROR);
-        response.setMessage(StringUtils.join(response.getMessage(), CharsetUtil.STRING_ENGLISH_COMMA_SPACE, ex.getMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(ex.getMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -106,7 +111,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BindException.class)
     public Response<Void> handleBindException(BindException ex, HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_PARAM_BIND);
-        response.setMessage(StringUtils.join(response.getMessage(),CharsetUtil.STRING_ENGLISH_COMMA_SPACE,Objects.requireNonNull(ex.getBindingResult().getFieldError()).getDefaultMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(Objects.requireNonNull(ex.getBindingResult().getFieldError()).getDefaultMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -115,7 +121,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Response<Void> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex, HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_PARAM_INVALID);
-        response.setMessage(StringUtils.join(response.getMessage(),CharsetUtil.STRING_ENGLISH_COMMA_SPACE,Objects.requireNonNull(ex.getBindingResult().getFieldError()).getDefaultMessage()));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(Objects.requireNonNull(ex.getBindingResult().getFieldError()).getDefaultMessage());
         writeLog(ex, request, response);
         return response;
     }
@@ -123,7 +130,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public Response<Void> handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException ex, HttpServletRequest request) {
         Response<Void> response = new Response<>(FReply.FW_CLIENT_PARAM_MISMATCH);
-        response.setMessage(StringUtils.join(response.getMessage(),CharsetUtil.STRING_ENGLISH_COMMA_SPACE,Objects.requireNonNull(ex.getMessage())));
+        response.setMsg(response.getMsg());
+        response.setSubMsg(Objects.requireNonNull(ex.getMessage(),""));
         writeLog(ex, request, response);
         return response;
     }
@@ -134,7 +142,8 @@ public class GlobalExceptionHandler {
     public Response<Void> handleServiceException(ServiceException ex, HttpServletRequest request) {
         Response<Void> rs = new Response<>();
         rs.setCode(ex.getCode());
-        rs.setMessage(ex.getMessage());
+        rs.setMsg(ex.getMsg());
+        rs.setSubMsg(ex.getSubMsg());
         writeLog(ex, request,rs);
         return rs;
     }
