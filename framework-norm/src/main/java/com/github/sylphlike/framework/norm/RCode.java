@@ -10,6 +10,11 @@ package com.github.sylphlike.framework.norm;
 
 public interface RCode {
 
+    String CODE      = "code";
+    String MSG       = "msg";
+    String SUB_MSG   = "subMsg";
+    String HTTP_CODE = "httpCode";
+
 
     /**
      * 响应码
